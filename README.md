@@ -1,7 +1,7 @@
 # LivrosDeJava
 RESUMO
 
-	Estou usando o Visual Studio Code como meu editor de texto para escrever, compilar e executar os programas em java.
+Estou usando o Visual Studio Code como meu editor de texto para escrever, compilar e executar os programas em java.
 
 Para programar em Java, precisa-se:
 
