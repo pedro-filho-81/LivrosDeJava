@@ -7,5 +7,7 @@
 
  Para programar em Java, precisa-se:
  • Criar um programa digitando em um arquivo por exemplo OlaMundo.java
+
  • Compilar digitando javac OlaMundo.java em uma janela de terminal. 
+ 
  • Executar (ou execute) digitando java OlaMundo (ou OlaMundo.java) na janela do terminal.
