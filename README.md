@@ -1,6 +1,7 @@
 # LivrosDeJava
 RESUMO
-Estou usando o Visual Studio Code como meu editor de texto para escrever, compilar e executar os programas em java.
+
+	Estou usando o Visual Studio Code como meu editor de texto para escrever, compilar e executar os programas em java.
 
 Para programar em Java, precisa-se:
 
@@ -9,6 +10,8 @@ Para programar em Java, precisa-se:
 • Compilar digitando javac OlaMundo.java em uma janela do terminal. 
 
 • Executar digitando java OlaMundo (ou OlaMundo.java) na janela do terminal.
+
+
 Comentários Java
 
 Comentários são usados ​​para explicar o código Java e torná-lo mais legível.
