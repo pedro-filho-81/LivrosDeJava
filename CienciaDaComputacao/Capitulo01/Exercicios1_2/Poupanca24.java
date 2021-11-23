@@ -13,7 +13,7 @@ package Exercicios1_2;
 // biblioteca
 import java.util.Scanner;
 
-public class Poupanca {
+public class Poupanca24 {
     public static void main(String[] args) {
 
         // cria o objeto input
