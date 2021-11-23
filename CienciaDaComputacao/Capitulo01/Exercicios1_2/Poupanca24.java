@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class Poupanca24 {
     public static void main(String[] args) {
 
-        // cria o objeto input
+        // cria o objeto input da classe Scanner
         Scanner input = new Scanner(System.in);
 
         // entrada de dados
