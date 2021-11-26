@@ -36,7 +36,7 @@ public class ExemplosDeVetor03 {
         System.out.println();
         System.out.println("soma de a = " + soma); 
 
-        // find the maximum
+        // find the maximum 
         double max = Double.NEGATIVE_INFINITY;
         for (int i = 0; i < n; i++) {
             if (a[i] > max) max = a[i];
@@ -76,8 +76,10 @@ public class ExemplosDeVetor03 {
         // dot product of a[] and b[]
         double dotProduct = 0.0;
         for (int i = 0; i < n; i++) {
+            // soma o produto de a[] e b[]
             dotProduct += a[i] * b[i];
-        }
-        System.out.println("dot product of a[] and b[] = " + dotProduct);
+        } // fim for
+        
+        System.out.println("soma do produto de a[] e b[] = " + dotProduct);
     } // fim main
 } // fim classe
