@@ -22,4 +22,5 @@ Por exemplo:
 
 // Este é um comentário de uma linha 
 
-System.out.println ("Olá, Mundo Java!"); // vai imprimir ( Olá, Mundo Java! ) na tela.
+System.out.println ("Olá, Mundo Java!"); // vai imprimir ( Olá, Mundo Java! ) na tela. 
+Isso também é um comentário de uma linha.
