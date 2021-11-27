@@ -33,6 +33,8 @@ public class Simples05 {
             int t = perm[r];
             perm[r] = perm[i];
             perm[i] = t;
+            
+            // imprime resultado
             System.out.println("perm[r] = " + perm[r] +
                                 "  perm[i] = " + perm[i]);
         } // fim for
