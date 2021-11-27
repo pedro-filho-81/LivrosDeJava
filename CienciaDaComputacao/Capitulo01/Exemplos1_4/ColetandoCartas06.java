@@ -1,4 +1,17 @@
 package Exemplos1_4;
+/*
+    Coletor de cupons. Suponha que você tenha um baralho de cartas 
+    embaralhado e as vire com a face para cima, uma a uma. Quantas 
+    cartas você precisa mostrar antes de ver uma de cada naipe? 
+    Este é um exemplo do famoso problema do coletor de cupons . 
+    Em geral, suponha que uma empresa de cartões comerciais emita 
+    cartões comerciais com n diferentes cartas possíveis: quantas 
+    você precisa coletar antes de ter todas as n possibilidades, 
+    supondo que cada possibilidade seja igualmente provável para 
+    cada cartão que você coletar? CouponCollector.java pega um 
+    argumento de linha de comando inteiro n e simula esse processo. 
+    Consulte o livro para obter detalhes.
+*/
 
 import java.util.Scanner;
 
