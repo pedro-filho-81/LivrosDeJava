@@ -1,4 +1,4 @@
-import java.net.SocketPermission;
+
 import java.util.Scanner;
 
 public class SomaSenoCosseno02 {
@@ -28,6 +28,6 @@ public class SomaSenoCosseno02 {
 
         // imprime
         System.out.println("A soma entre: \nMath.sin( " + num1 + " ) + " +
-                            " Math.cos( " + num2 + " )" + " = " + soma);
+                " Math.cos( " + num2 + " )" + " = " + soma);
     } // fim main
 } // fim classe

@@ -15,6 +15,7 @@ public class PodeSerTriangulo15 {
      * Nota: Para construir um triângulo é necessário que a medida de qualquer
      * um dos lados seja menor que a soma das medidas dos outros dois e maior
      * que o valor absoluto da diferença entre essas medidas.
+     * 
      * Pedro, 28/11/2021
      */
 
