@@ -35,6 +35,7 @@ public class Poupanca24 {
         double juros = montante - capital;
 
         System.out.println("\nRENDIMENTO DE INVESTIMENTO");
+
         // mostra o resultado
         System.out.println("Você investiu R$ " + capital);
         System.out.println("Taxa de juros " + indice + "%");
