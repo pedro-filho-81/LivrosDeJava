@@ -1,3 +1,5 @@
+package Exercicios1_2;
+
 public class Exercicio09 {
     /*
      * 1.2.9 O que cada um dos itens a seguir imprime?

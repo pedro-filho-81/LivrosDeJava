@@ -1,3 +1,5 @@
+package Exemplos1_3;
+
 // jogo da moeda cara ou coroa
 public class CaraOuCoroa01 {
 

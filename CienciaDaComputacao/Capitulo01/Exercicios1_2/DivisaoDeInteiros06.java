@@ -1,3 +1,5 @@
+package Exercicios1_2;
+
 public class DivisaoDeInteiros06 {
     /*
      * Por que 10/3 dá 3 e não 3,33333333 ?

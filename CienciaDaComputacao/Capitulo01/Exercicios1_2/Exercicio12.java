@@ -1,3 +1,5 @@
+package Exercicios1_2;
+
 
 // importar biblioteca Scanner
 import java.util.Scanner;

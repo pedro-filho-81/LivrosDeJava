@@ -1,3 +1,5 @@
+package Exercicios1_2;
+
 public class Exercicio11 {
     /*
         1.2.11 Suponha que uma variável a seja declarada como 

@@ -1,3 +1,5 @@
+package Exemplos1_2;
+
 public class Ruler { 
     public static void main(String[] args) 
     {

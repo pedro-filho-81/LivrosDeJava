@@ -1,5 +1,4 @@
-
-import java.io.IOException;
+package Exemplos1_2;
 
 // cria a classe Aritimética
 public class Aritimetica {

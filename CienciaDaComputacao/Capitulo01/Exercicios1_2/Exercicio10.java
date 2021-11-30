@@ -1,3 +1,5 @@
+package Exercicios1_2;
+
 public class Exercicio10 {
     /*
      * 1.2.10 Suponha que uma variável a seja declarada como int a = 2147483647

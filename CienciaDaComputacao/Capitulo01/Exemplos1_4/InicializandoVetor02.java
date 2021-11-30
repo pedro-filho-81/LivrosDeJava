@@ -1,3 +1,5 @@
+package Exemplos1_4;
+
 public class InicializandoVetor02 {
     public static void main(String[] args) {
 
