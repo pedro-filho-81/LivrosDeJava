@@ -27,11 +27,11 @@ public class IguaisOuDiferentes01 {
         System.out.print("Digite mais um inteiro: ");
         int n3 = entrada.nextInt();
 
-        // condições se forem iguais
-        if( n1 == n2 && n1 == n3 && n2 == n3)
+        // condição se forem iguais
+        if( n1 == n2 && n1 == n3 )
             // imprima
             System.out.println("São iguais.");
-        else // se não
+        else // se não 
             // imprima
             System.out.println("São diferentes.");        
 
