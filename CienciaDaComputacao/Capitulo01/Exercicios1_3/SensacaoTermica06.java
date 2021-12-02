@@ -30,28 +30,40 @@ public class SensacaoTermica06 {
         // declara o objeto entrada para a classe Scanner e inicializa
         Scanner entrada = new Scanner(System.in);
 
-        // entrada de dados
-        System.out.print("Informe a temperatura em Fahrenheit: ");
-        double tFahren = entrada.nextDouble(); // temperatura em Fahrenheit
+        // variável
+        int continuar = 1;
 
-        System.out.print("Informe a temperatura em Celsius: ");
-        double tCelcius = entrada.nextDouble(); // temperatura em Celsius
+        do { // faça enquanto continuar diferente de -1
+            
+            // entrada de dados
+            System.out.print("Informe a temperatura em Fahrenheit: ");
+            double tFahren = entrada.nextDouble(); // temperatura em Fahrenheit
 
-        System.out.print("Informe a velocidade do vento: ");
-        double v = entrada.nextDouble(); // velocidade do vento
+            System.out.print("Informe a temperatura em Celsius: ");
+            double tCelcius = entrada.nextDouble(); // temperatura em Celsius
 
-        // cálculo sensação térmica Fahrenheit
-        double w = 35.74 + 0.6215 * tFahren + (0.4275 * tFahren - 35.75) * Math.pow(v, 0.16);
+            System.out.print("Informe a velocidade do vento: ");
+            double v = entrada.nextDouble(); // velocidade do vento
 
-        // cálculo sensação térmica Celsius
-        double celcius = 33 + (10 * Math.sqrt(v) + 10.45 - v ) * (tCelcius - 33) / 22;
-        
-        // mostra o resultado
-        System.out.println("\nSENSAÇÃO TÉRMICA FAHRENHEIT / CELSIUS");
-        System.out.println("Temperatura em Fahrenheit = " + tFahren);
-        System.out.println("Temperatura em Celsius = " + tCelcius);
-        System.out.println("Velocidade do vento  = " + v);
-        System.out.println("\nSensação térmica em Fahrenheit = " + w + "ºF\n");
-        System.out.println("Sensação térmica em Celsius = " + celcius + "ºC\n");
+            // cálculo sensação térmica Fahrenheit
+            double w = 35.74 + 0.6215 * tFahren + (0.4275 * tFahren - 35.75) * Math.pow(v, 0.16);
+
+            // cálculo sensação térmica Celsius
+            double celcius = 33 + (10 * Math.sqrt(v) + 10.45 - v ) * (tCelcius - 33) / 22;
+            
+            // mostra o resultado
+            System.out.println("\nSENSAÇÃO TÉRMICA FAHRENHEIT / CELSIUS");
+            System.out.println("Temperatura em Fahrenheit = " + tFahren);
+            System.out.println("Temperatura em Celsius = " + tCelcius);
+            System.out.println("Velocidade do vento  = " + v);
+            System.out.println("\nSensação térmica em Fahrenheit = " + w + "ºF\n");
+            System.out.println("Sensação térmica em Celsius = " + celcius + "ºC\n");
+
+            // pergunta
+            System.out.print("\nDeseja continuar ( 1 sim / -1 não )? ");
+            continuar = entrada.nextInt();
+
+        } while( continuar != -1 ); // enquanto continuar diferente de -1
+
     } // fim main
 } // fim classe
