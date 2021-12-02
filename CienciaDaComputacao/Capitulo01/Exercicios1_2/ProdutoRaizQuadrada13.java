@@ -1,3 +1,5 @@
+package Exercicios1_2;
+
 public class ProdutoRaizQuadrada13 {
     /*
         1.2.13 Avalie a expressão (Math.sqrt (2) * Math.sqrt (2) == 2).

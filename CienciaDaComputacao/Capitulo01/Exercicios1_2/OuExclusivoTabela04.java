@@ -1,3 +1,5 @@
+package Exercicios1_2;
+
 class OuExclusivo04 {
     public static void main(String[] args) {
         

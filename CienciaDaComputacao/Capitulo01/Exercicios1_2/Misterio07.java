@@ -1,3 +1,5 @@
+package Exercicios1_2;
+
 class Misterio07 {
     /*
         O que cada um dos seguintes imprime?

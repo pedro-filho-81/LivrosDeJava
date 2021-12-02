@@ -1,3 +1,5 @@
+package Exercicios1_2;
+
 public class QueImprime01 {
 
     /*

@@ -1,3 +1,5 @@
+package Exercicios1_2;
+
 public class Exercicio16 {
 
     /*
@@ -26,8 +28,8 @@ public class Exercicio16 {
         // imprime resultado
         System.out.println("\n\tNUMA EXPRESSÃO () => PARÊNTESE FAZ A DIFERENTE");
 
-        System.out.println("double expressao1 = G * massa1 + massa2 / r * r; = " + expressao1 );
+        System.out.println("double expressao1 = G * massa1 + massa2 / r * r; = " + expressao1);
 
-        System.out.println("double expressao2 = G * massa1 + massa2 / (r * r); = " + expressao2 + "\n" );
+        System.out.println("double expressao2 = G * massa1 + massa2 / (r * r); = " + expressao2 + "\n");
     } // fim main
 } // fim classe

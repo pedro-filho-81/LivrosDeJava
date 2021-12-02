@@ -1,3 +1,5 @@
+package Exercicios1_2;
+
 public class OuExclusivoBoolean05 {
     public static void main(String[] args) {
         
