@@ -18,7 +18,7 @@ public class Condicao5_PulaLinha09 {
         int PULA_LINHA = 10;
 
         // loop for limitado por CONSTANTES ( INICIO / FIM )
-        for (int i = INICIO; i <= FIM; i++) {
+        for (int i = INICIO; i < FIM; i++) {
             // imprime
             System.out.print(i + " ");
 
