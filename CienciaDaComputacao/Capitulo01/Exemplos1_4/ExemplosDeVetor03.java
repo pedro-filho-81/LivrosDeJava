@@ -1,72 +1,95 @@
 package Exemplos1_4;
 
+// biblioteca
 import java.util.Scanner;
 
 public class ExemplosDeVetor03 {
 
     public static void main(String[] args) {
 
-        // cria o objeto input da classe Scanner e inicializa
+        // cria o objeto input para a classe Scanner e inicializa
         Scanner input = new Scanner(System.in);
 
         // entrada de dados
-        System.out.print("Digite um inteiro: ");
-        int n = input.nextInt(); // entrada do usuário
+        System.out.print("Determine o tamanho do vetor: ");
+        int n = input.nextInt(); // aguarda a entrada do tamanho do vetor
 
-        // variáveis
+        // declara a variável soma e inicializa com o valor zero
         double soma = 0.0;
 
-        // cria o vetor a double e inicializa com valores aleatórios
+        // cria o vetor a double e inicializa para receber n elemantos
         double[] a = new double[n];
-        for (int i = 0; i < n; i++) {
-            // atribuindo valores aleatórios
-            a[i] = Math.random();
 
+        // loop para atribuir valores ao vetor a
+        for (int i = 0; i < n; i++) {
+            // atribuindo valores aleatórios 
+            // maiores que 0 zero menores que um 1
+            a[i] = Math.random();
         } // fim for
 
-        // loop para mostrar os valores do vetor a
-        System.out.println("a[]");
+        // cabeçalho
+        System.out.println("a[" + n + "]");
         System.out.println("-------------------");
+
+        // loop para mostrar os valores do vetor a
         for (int i = 0; i < n; i++) {
             // imprima
             System.out.println(a[i]);
-            soma += a[ i ]; // soma de vetor
+            soma += a[ i ]; // soma os valores do vetor
         } // fim for
 
         System.out.println();
         System.out.println("soma de a = " + soma); 
 
-        // find the maximum 
+        // declava a variável max para encontrar o maior valor do vetor
         double max = Double.NEGATIVE_INFINITY;
         for (int i = 0; i < n; i++) {
-            if (a[i] > max) max = a[i];
-        }
+            // se o valor do vetor for maior que max
+            if (a[i] > max) 
+                // max recebo esse valor
+                max = a[i];
+        } // fim for
+
+        // imprime o maior valor do vetor
         System.out.println("max = " + max);
 
-        // average
+        // declara a variável soma e atribui zero
         double sum = 0.0;
+
+        // loop para somar os valores do vetor
         for (int i = 0; i < n; i++) {
-            sum += a[i];
-        }
+            sum += a[i]; // soma os valores do vetor
+        } // fim for
+
+        // imprime a média dos valores do vetor
         System.out.println("average = " + sum / n);
 
-        // copy to another array
+        // cria o vetor b com n tamanho
         double[] b = new double[n];
-        for (int i = 0; i < n; i++) {
-            b[i] = a[i];
-        }
 
-        // reverse the order
+        // loop para copiar os valores do vetor a para o vetor b
+        for (int i = 0; i < n; i++) {
+            // vetor b recebe os valores do vetor a
+            b[i] = a[i];
+        } // fim min
+
+        // invertendo os valores do vetor b
         for (int i = 0; i < n/2; i++) {
+            // cria a variável double temp
             double temp = b[i];
+
             b[i] = b[n-i-1];
             b[n-i-1] = temp;
-        }
+        } // fim for inverte valor
 
-        // print array values, one per line
+        // pula uma linha
         System.out.println();
-        System.out.println("b[]");
+        
+        // imprime cabeçalho
+        System.out.println("b[" + n + "]");
         System.out.println("-------------------");
+
+        // loop paara mostra os valores do vetor b
         for (int i = 0; i < n; i++) {
             System.out.println(b[i]);
         }
