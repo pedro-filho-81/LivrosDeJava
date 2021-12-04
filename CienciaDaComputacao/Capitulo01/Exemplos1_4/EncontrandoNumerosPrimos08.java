@@ -20,11 +20,11 @@ public class EncontrandoNumerosPrimos08 {
             isPrime[i] = true; // assume verdadeiro para números primo
         } // fim for
 
-        // mark non-primes <= n using Sieve of Eratosthenes
+        //  marcar não-primos <= n usando a peneira de Eratóstenes
         for (int factor = 2; factor*factor <= n; factor++) {
 
-            // if factor is prime, then mark multiples of factor as nonprime
-            // suffices to consider mutiples factor, factor+1, ...,  n/factor
+            // se o fator for primo, então marque os múltiplos do fator como não primos 
+            // é suficiente para considerar o fator múltiplo, fator + 1, ..., n / fator
             if (isPrime[factor]) {
                 for (int j = factor; factor*j <= n; j++) {
                     isPrime[factor*j] = false;
@@ -42,7 +42,7 @@ public class EncontrandoNumerosPrimos08 {
         } // fim for
         
         // imprima o número primo
-        System.out.println("Foram encontrados " + primes + " números primos <= " + n);
+        System.out.println("\nForam encontrados " + primes + " números primos <= " + n);
 
     } // fim main    
 } // fim classe
