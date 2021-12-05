@@ -11,20 +11,30 @@ public class CartasDeJogar11 {
         // imprime uma carta
         System.out.println("\nMOSTRA A CARTA ESCOLHIDA");
 
+        int tamanho = NAIPE.length * CARTAS.length;
+
         // cria o vetor baralho
-        String[] baralho = new String[NAIPE.length * CARTAS.length];
+        String[] baralho = new String[ tamanho ];
 
         // loop para mostrar o baralho
-        for (int i = 0; i < NAIPE.length; i++)
-            for (int j = 0; j < CARTAS.length; j++)
+        for (int i = 0; i < CARTAS.length; i++)
+            for (int j = 0; j < NAIPE.length; j++)
                 // baralho recebe as cartas
-                baralho[NAIPE.length * i + j] = "\t" + CARTAS[j] + " de " + NAIPE[i];
-        
-        // variáveis
-        int i = (int) Math.random() *NAIPE.length;
-        int j = (int) Math.random() * CARTAS.length;
+                baralho[NAIPE.length * i + j] = "\t" + CARTAS[i] + " de " + NAIPE[j];
 
-        System.out.println("\t" + CARTAS[j] + " de " + NAIPE[i]);
+        for (int i = 0; i < tamanho; i ++) 
+        { 
+            int r = i + (int) (Math.random() * (tamanho - i)); 
+            String temp = baralho [r];
+            baralho[r] = baralho[i];
+            baralho[i] = temp;
 
+        } // fim for  
+
+        // print shuffled deck
+        for (int i = 0; i < tamanho; i++) {
+            System.out.println(baralho[i]);
+        } // fim for
+               
     } // fim main
 } // fim da classe
