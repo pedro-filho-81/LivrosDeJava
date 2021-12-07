@@ -3,7 +3,7 @@ package Exemplos;
 public class CalculandoValoresVetor03 {
     public static void main(String[] args) {
         
-        // cria CONSTANTE para o tamanho do vetor
+        // cria CONSTANTE ARRAY_LENGTH para o tamanho do vetor
         final int ARRAY_LENGTH = 10;
 
         // cria o vetor para 10 elementos
