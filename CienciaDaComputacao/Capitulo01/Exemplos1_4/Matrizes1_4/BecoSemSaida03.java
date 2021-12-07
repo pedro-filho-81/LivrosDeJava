@@ -27,7 +27,7 @@ public class BecoSemSaida03 {
                 if (a[x-1][y] && a[x+1][y] && a[x][y-1] && a[x][y+1]) {
                     becoSemSaida++;
                     break;
-                } 
+                } // fim if 
     
                 // mark (x, y) as visited
                 a[x][y] = true; 
@@ -50,9 +50,9 @@ public class BecoSemSaida03 {
                     if (!a[x][y-1])
                         y--;
                 }
-            } 
-        } 
+            }  // fim while
+        } // fim for
     
         System.out.println(100 * becoSemSaida/numeroDeTrilhas + "% beco sem saídas"); 
-        } // fim while
     } // fim main
+} // fim classe
