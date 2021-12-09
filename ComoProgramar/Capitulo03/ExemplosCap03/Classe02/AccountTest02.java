@@ -4,14 +4,16 @@
 
 public class AccountTest02 {
    public static void main(String[] args) {
-      // create two Account objects
+      // create two Account objects and assaing two String
+      // cria dois objetos de conta e atribui duas strings
       Account02 account1 = new Account02("Jane Green");
       Account02 account2 = new Account02("John Blue");
 
       // display initial value of name for each Account
+      // exibe o valor inicial do nome para cada conta
       System.out.printf("account1 name is: %s%n", account1.getName());
       System.out.printf("account2 name is: %s%n", account2.getName());
-   }
+   } // fim main
 } // end class AccountTest
 
 /**************************************************************************
