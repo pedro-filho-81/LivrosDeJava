@@ -2,7 +2,8 @@ package ExemplosCap02;
 
 // cria a classe OlaMundo01
 class OlaMundo01 {
-    // função principal
+    // função principal o método main
+    // é onde se executa os programas java
     public static void main(String[] args) {
 
         // imprime na tela
