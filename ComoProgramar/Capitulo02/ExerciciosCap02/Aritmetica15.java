@@ -9,23 +9,23 @@ class Aritmetica15 {
     */
     public static void main(String[] args) {
 
-        // cria Variável input para a classe Scanner
-        Scanner input = new Scanner(System.in);
+        try (// cria Variável input para a classe Scanner
+        Scanner input = new Scanner(System.in)) {
+            // entrada de dados
+            System.out.print("Digite um inteiro: ");
+            int x = input.nextInt();
+            System.out.print("Digite outro inteiro: ");
+            int y = input.nextInt();
 
-        // entrada de dados
-        System.out.print("Digite um inteiro: ");
-        int x = input.nextInt();
-        System.out.print("Digite outro inteiro: ");
-        int y = input.nextInt();
-
-        // mostra o resultado
-        System.out.println("\nARITMÉTICA" );
-        System.out.println("Para:\nint x = " + x + "\nint y = " + y );
-        System.out.printf("%s%d%n", "Soma = ", x + y );
-        System.out.printf("%s%d%n", "Subtração = ", x - y );
-        System.out.printf("%s%d%n", "Produto = ", x * y );
-        System.out.printf("%s%d%n", "Divisão = ", x / y );
-        System.out.printf("%s%d%n", "Resto = ", x % y );
+            // mostra o resultado
+            System.out.println("\nARITMÉTICA" );
+            System.out.println("Para:\nint x = " + x + "\nint y = " + y );
+            System.out.printf("%s%d%n", "Soma = ", x + y );
+            System.out.printf("%s%d%n", "Subtração = ", x - y );
+            System.out.printf("%s%d%n", "Produto = ", x * y );
+            System.out.printf("%s%d%n", "Divisão = ", x / y );
+            System.out.printf("%s%d%n", "Resto = ", x % y );
+        }
 
     } // fim main
 } // fim classe
