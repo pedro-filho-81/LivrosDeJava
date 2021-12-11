@@ -12,40 +12,40 @@ public class AritmeticaMaiorMenor17 {
      */
     public static void main(String[] args) {
 
-        // variável input para Scanner
-        Scanner input = new Scanner(System.in);
+        try (// variável input para Scanner
+        Scanner input = new Scanner(System.in)) {
+            // entrada de dados
+            System.out.print("Digite o primeiro inteiro: ");
+            int x = input.nextInt();
+            System.out.print("Segundo inteiro: ");
+            int y = input.nextInt();
+            System.out.print("Terceiro inteiro: ");
+            int z = input.nextInt();
 
-        // entrada de dados
-        System.out.print("Digite o primeiro inteiro: ");
-        int x = input.nextInt();
-        System.out.print("Segundo inteiro: ");
-        int y = input.nextInt();
-        System.out.print("Terceiro inteiro: ");
-        int z = input.nextInt();
+            // variáveis
+            int maior = x;
+            int menor = x;
 
-        // variáveis
-        int maior = x;
-        int menor = x;
+            // condição
+            if( y > maior )
+                maior = y;
 
-        // condição
-        if( y > maior )
-            maior = y;
+            if( z > maior )
+                maior = z;
+            
+            if( y < menor )
+                menor = y;
 
-        if( z > maior )
-            maior = z;
-        
-        if( y < menor )
-            menor = y;
+            if( z < menor )
+                menor = z;
 
-        if( z < menor )
-            menor = z;
-
-        // mostra resultado
-        System.out.println("\nCOMPARANDO NÚMEROS");
-        System.out.printf("%s\t\t%d%n", "Soma = ", x + y + z);
-        System.out.printf("%s\t%d%n", "Média = ", (x + y + z) / 3 );
-        System.out.printf("%s\t%d%n", "Produto = ", x * y * z);
-        System.out.printf("%s\t%d%n", "Maior = ", maior );
-        System.out.printf("%s\t%d%n", "Menor = ", menor );
+            // mostra resultado
+            System.out.println("\nCOMPARANDO NÚMEROS");
+            System.out.printf("%s\t\t%d%n", "Soma = ", x + y + z);
+            System.out.printf("%s\t%d%n", "Média = ", (x + y + z) / 3 );
+            System.out.printf("%s\t%d%n", "Produto = ", x * y * z);
+            System.out.printf("%s\t%d%n", "Maior = ", maior );
+            System.out.printf("%s\t%d%n", "Menor = ", menor );
+        }
     } // fim main
 } // fom classe
