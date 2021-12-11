@@ -55,6 +55,8 @@ public class Exercicio05 {
         // e atribua o resultado à variável result.
         result = x * y * z;
 
+        //k) Use System.out.printf para exibir a mensagem
+        // seguida pelo valor da variável result.
         System.out.printf("%s%d%n", "O valor do produto é ", result);  
   
     } // fim main
