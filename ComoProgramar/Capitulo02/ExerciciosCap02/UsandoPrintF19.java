@@ -4,7 +4,6 @@ public class UsandoPrintF19 {
      * System.out.printf("*%n**%n***%n****%n*****%n");
      * 11/12/2021
      */
-
     public static void main(String[] args) {
         // o que será mostrado?
         System.out.printf("*%n**%n***%n****%n*****%n");
