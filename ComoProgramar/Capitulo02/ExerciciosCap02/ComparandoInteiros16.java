@@ -11,27 +11,27 @@ public class ComparandoInteiros16 {
     */
     public static void main(String[] args) {
         
-        // Variável input para Scanner
-        Scanner input = new Scanner(System.in);
+        try (// Variável input para Scanner
+        Scanner input = new Scanner(System.in)) {
+            // entrada de dados
+            System.out.print("Digite um inteiro: ");
+            int x = input.nextInt();
+            System.out.print("Digite outro inteiro: ");
+            int y = input.nextInt();
 
-        // entrada de dados
-        System.out.print("Digite um inteiro: ");
-        int x = input.nextInt();
-        System.out.print("Digite outro inteiro: ");
-        int y = input.nextInt();
+            int maior = x; // maior é x
 
-        int maior = x; // maior é x
+            // se y maior que maior
+            if( y > maior ) {
+                maior = y;
+            } // fim if
 
-        // se y maior que maior
-        if( y > maior ) {
-            maior = y;
-        } // fim if
-
-        System.out.println("Maior valor = " + maior );
-        
-        // se s igural a y
-        if( x == y ){
-            System.out.println("Números iguais.");
+            System.out.println("Maior valor = " + maior );
+            
+            // se s igural a y
+            if( x == y ){
+                System.out.println("Números iguais.");
+            }
         }
 
     } // fim main
