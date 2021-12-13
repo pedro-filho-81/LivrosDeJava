@@ -20,8 +20,8 @@ public class Multiplos26 {
 
         // se n1 % n2 == 0 é multiplo
         if (n1 % n2 == 0)
-            System.out.printf("%d%s%d%s%n", n1, " % ", n2, " è multiplo.");
+            System.out.printf("%d%s%d%n", n1," è multiplo de ", n2 );
         if (n1 % n2 != 0)
-            System.out.printf("%d%s%d%s%n", n1, " % ", n2, " não è multiplo.");
+            System.out.printf("%d%s%d%n", n1, " não è multiplo de ", n2 );
     } // fim man
 } // fim classe
