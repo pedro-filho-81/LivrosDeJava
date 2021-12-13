@@ -29,15 +29,11 @@ public class InteiroDoCAractere29 {
         // variável Scanner
         Scanner input = new Scanner(System.in);
 
-        // variável 
-        int num;
-
         // entrada de dados
         System.out.print("Digite um caractere: ");
         char letra = input.nextLine().charAt(0);
 
         // imprime resultado
         System.out.printf("%nO caractere [ %c ] tem o valor inteiro ( %d )%n", letra, (int) letra );
-    }
-    
-}
+    } // fim main    
+} // fim classe
