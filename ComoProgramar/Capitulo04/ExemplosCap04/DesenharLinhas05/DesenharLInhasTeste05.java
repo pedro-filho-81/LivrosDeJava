@@ -16,5 +16,6 @@ public class DesenharLInhasTeste05 {
         aplicacao.add(painel); // adiciona a aplicação
         aplicacao.setSize(250, 250); // configura o tamanho em máximo
         aplicacao.setVisible(true); // mantem a aplicação
+
     } // fim main
-} // fim classe
+} // fim clase
