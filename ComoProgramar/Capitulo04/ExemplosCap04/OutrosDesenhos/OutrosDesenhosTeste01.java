@@ -1,5 +1,6 @@
 import java.awt.Graphics;
-import javax.swing.JPanel;
+
+import javax.swing.JFrame;
 
 public class OutrosDesenhosTeste01 {
     public static void main(String[] args) {
