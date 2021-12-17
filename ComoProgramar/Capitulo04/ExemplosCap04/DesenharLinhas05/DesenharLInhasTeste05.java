@@ -14,8 +14,8 @@ public class DesenharLInhasTeste05 {
         aplicacao.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         aplicacao.add(painel); // adiciona a aplicação
-        aplicacao.setSize(250, 250); // configura o tamanho em máximo
+        aplicacao.setSize(800, 810); // configura o tamanho em máximo
         aplicacao.setVisible(true); // mantem a aplicação
-
+        
     } // fim main
 } // fim clase
