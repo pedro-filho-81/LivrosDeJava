@@ -19,9 +19,9 @@ public class DesenharLinhas05 extends JPanel {
 
             // desenha uma linha a partir do canto inferior esquerdo até o canto superior
             // direito
-            g.drawLine(0, altura, i, 0);
+            g.drawLine(0, altura, i, 400);
             //g.drawLine(0, i, largura, 0);
-            g.drawLine(largura, altura, i, 0);
+            g.drawLine(0, largura, i, 100);
         } // fim loop
 
     } // fim paintComponent
