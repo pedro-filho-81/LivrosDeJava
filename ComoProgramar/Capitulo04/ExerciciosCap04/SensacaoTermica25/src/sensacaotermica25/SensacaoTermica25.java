@@ -29,13 +29,19 @@ public class SensacaoTermica25 {
         Scanner input = new Scanner(System.in);
         
         // entrada de dados
-        System.out.print("Digite o primeiro inteiro: ");
-        double n1 = input.nextDouble();
-        System.out.print("Segundo inteiro: ");
-        double n2 = input.nextDouble();
+        System.out.print("Digite a temperatura: ");
+        double temperatura = input.nextDouble();
+        System.out.print("Digite a velocidade do vento: ");
+        double velocidadeDoVento = input.nextDouble();
+        
+        
+        // calcular w = 35,74 + 0,6215 T + (0,4275 Ttemperatura - 35,75) v * 0,16
+        double sensacao = 35.74 + 0.6215 * temperatura + (0.4275 * temperatura - 35.75) * velocidadeDoVento * 0.16;
         
         // mostra resultado
-        System.out.printf("A soma de %.2f + %.2f = %.2f%n", n1, n2, n1 + n2 );
+        System.out.println("Temperatura = " + temperatura + "º" );
+        System.out.println("Velocidade do vento = " + velocidadeDoVento );
+        System.out.printf("Sensação térmica:: %.2f%n", sensacao );
         
     } // fim main    
 } // fim classe
