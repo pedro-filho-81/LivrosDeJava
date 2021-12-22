@@ -26,27 +26,29 @@ public class Exercicio4_17 {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        // objeto Scanner
+        // objeto Scanner para entrada dos dados
         Scanner entrada = new Scanner(System.in);
     
         // variável
-        int kmDirigidos = 0;
-        int somaKm = 0;
-        int qtdGasolina = 0;
-        int somaCombustivel = 0;
-        float consumo = 0.0f;
-        float consumoTotal = 0.0f;
+        int kmDirigidos = 0; // quilometros dirigidos
+        int somaKm = 0; // total de quilômetros dirigidos
+        int qtdGasolina = 0; // abastecimento
+        int somaCombustivel = 0; // total de abastecimentos
+        float consumo = 0.0f; // média consumo km/litros
+        float consumoTotal = 0.0f; // média total km / litros
         
         // entrada de dados
         System.out.print("Digite a quilometragem dirigida (-1 = sair):: ");
-        kmDirigidos = entrada.nextInt();
+        kmDirigidos = entrada.nextInt(); // entreda de valores do usuário
         
-        
+        // enquanto kmDigitados diferente de menos um faça
         while( kmDirigidos != -1 ) {
             
-            somaKm += kmDirigidos; // soma os quilometros dirigid
+            somaKm += kmDirigidos; // soma os quilometros dirigidos
+            
+            // entrada de dados
             System.out.print("Infrome a quantidade de litros abastecidos: ");
-            qtdGasolina = entrada.nextInt();
+            qtdGasolina = entrada.nextInt(); // entreda do usuário
             somaCombustivel += qtdGasolina; // soma quantidade de abastecimentos
             
             // calcular o consumo
@@ -63,12 +65,12 @@ public class Exercicio4_17 {
             System.out.print("\nDigite a quilometragem dirigida (-1 = sair):: ");
             kmDirigidos = entrada.nextInt();
             
-            if( kmDirigidos == -1 )
-                break;
+            if( kmDirigidos == -1 ) // se kmDigitados igual a menos um
+                break; // sair do loop while
             
         } // fim while
         
-        // imprime resultado
+        // imprime o total do resultado
         System.out.println("\nTOTAL DO CONSUMO DE CONBUSTÍVEL EM TODAS AS VIAGENS");
         System.out.printf("Total de Km dirigidos: %d%n", somaKm);
         System.out.printf("Total dos abastecimentos %d litros%n", somaCombustivel);
