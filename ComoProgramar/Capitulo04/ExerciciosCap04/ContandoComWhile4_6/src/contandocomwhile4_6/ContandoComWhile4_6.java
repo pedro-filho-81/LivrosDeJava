@@ -18,6 +18,7 @@ public class ContandoComWhile4_6 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
         // variáveis
         int contar = 1;
         int soma = 0;
