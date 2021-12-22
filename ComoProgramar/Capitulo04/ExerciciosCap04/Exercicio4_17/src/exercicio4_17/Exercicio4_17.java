@@ -40,10 +40,11 @@ public class Exercicio4_17 {
         // entrada de dados
         System.out.print("Digite a quilometragem dirigida (-1 = sair):: ");
         kmDirigidos = entrada.nextInt();
-        somaKm += kmDirigidos; // soma os quilometros dirigid
+        
         
         while( kmDirigidos != -1 ) {
-
+            
+            somaKm += kmDirigidos; // soma os quilometros dirigid
             System.out.print("Infrome a quantidade de litros abastecidos: ");
             qtdGasolina = entrada.nextInt();
             somaCombustivel += qtdGasolina; // soma quantidade de abastecimentos
@@ -65,7 +66,6 @@ public class Exercicio4_17 {
             if( kmDirigidos == -1 )
                 break;
             
-            somaKm += kmDirigidos; // soma os quilometros dirigid    
         } // fim while
         
         // imprime resultado
