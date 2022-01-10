@@ -28,7 +28,7 @@ package exercicio4_27;
         System.out.println("#####"); 
         System.out.println("$$$$$"); 
         }
- * @author Pedro, 10/01/2022
+ * @author 10/01/2022
  */
 public class Exercicio4_27 {
 
