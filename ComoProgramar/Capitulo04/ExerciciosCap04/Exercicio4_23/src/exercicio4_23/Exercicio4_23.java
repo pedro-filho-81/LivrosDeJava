@@ -35,28 +35,32 @@ public class Exercicio4_23 {
             // entrada de dados
             System.out.printf("Digite o %dº  número inteiro: ", contador + 1);
             int numero = entrada.nextInt(); // entrada do usuário
-            
+       
+            // se o contador for igual a zero 
             if( contador == 0) {
-                maior = numero;
-                segundoMaior = numero;
+                maior = numero; // maior recebe o númreo
+                segundoMaior = numero; // segundoMaior recebe o númreo
             }  // fim if
             
-            // verifica se o número digitado é o maior vaçpr
+            // verifica se o número digitado é o maior valor
             if( numero > maior  ) { // se verdade
-                segundoMaior = maior;
+                segundoMaior = maior; // segundo maior recebe o valor maior
                 maior = numero; // maior recebe o número
             } // fim if
             
+            // se maior igual a segundo maior
             if( maior == segundoMaior ){
-                if(numero < maior ) {
-                    segundoMaior = numero;
+                if(numero < maior ) { // e se o número menor que maior
+                    segundoMaior = numero; // segundo maior recebe o número
                 } // fim if
             } // fim if externo
             
+            // se o número menor que maior
             if( numero < maior)
+                // se o número maior que o segundo maior
                 if( numero > segundoMaior) {
-                    segundoMaior = numero;
-                }
+                    segundoMaior = numero; // segundo maior recebe o número
+                } // fim if
             
             ++contador; // incrementa o contador
         } // fim while
@@ -64,5 +68,5 @@ public class Exercicio4_23 {
         // imprime o resultado
         System.out.printf("O maior valor é %d%n", maior );
         System.out.printf("Segundo maior é %d%n", segundoMaior);
-    }    
-}
+    }    // fim main
+} // fim classe
