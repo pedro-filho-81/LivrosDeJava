@@ -58,7 +58,7 @@ public class Exercicio4_28 {
                 // imprima
                 System.out.println("#####"); 
         
-        // imprima 
+        // imprima independente da condição if
          System.out.println("$$$$$"); 
          System.out.println("&&&&&");
          
