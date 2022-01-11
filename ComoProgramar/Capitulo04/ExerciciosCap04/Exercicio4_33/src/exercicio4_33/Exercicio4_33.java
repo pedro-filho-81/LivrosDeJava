@@ -17,11 +17,16 @@ public class Exercicio4_33 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        int contador = 1;
+        int contador = 1; // variável
+        
+        // enquanto contador diferente de zero faça
         while( contador != 0 ) {
+        
+            // mostra multiplos de 2
             System.out.printf( "%d * %d = %d %n", contador, 2, contador * 2);
-            contador += 2;
-        }
-    }
-    
-}
+            
+            contador += 2; // contador recebe 2
+        
+        } // fim while
+    } // fim main    
+} // fim classe
