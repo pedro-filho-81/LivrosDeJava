@@ -8,7 +8,7 @@ package exercicio4_34;
 /**
  * 4.34 (O que há de errado com esse código?) O que há de errado com a seguinte instrução? 
  * Forneça a instrução correta para adicionar 1 à soma de x e y.
-System.out.println(++(x + y));
+        System.out.println(++(x + y));
  * @author Pedro, 11/01/2022
  */
 
