@@ -22,8 +22,11 @@ public class Exp5_05 {
             
             // imprime o valor do coantador
             System.out.printf("%d ", contador );
+            
             contador++; // incrementa em 1
+            
         } while( contador <= 10 ); // enquanto contador menor ou igual a dez
+        
         System.out.println(); // pula linha
     } // fim main   
 } // fim classe
