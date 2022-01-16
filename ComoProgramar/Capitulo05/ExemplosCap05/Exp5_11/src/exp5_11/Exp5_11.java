@@ -33,6 +33,7 @@ public class Exp5_11 {
         aplicacao.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE);
         aplicacao.add(panel);
         aplicacao.setSize(500, 500);
-        aplicacao.setVisible(true);        
+        aplicacao.setVisible(true);
+        
     } // fim main    
 } // fim classe
