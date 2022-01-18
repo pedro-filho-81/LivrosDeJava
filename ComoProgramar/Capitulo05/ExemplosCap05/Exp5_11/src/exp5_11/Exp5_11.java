@@ -24,6 +24,19 @@ public class Exp5_11 {
         
         int choice = Integer.parseInt( input ); // converte a entrada em inteiro
         
+        double teste =1000.00;
+        System.out.printf("Testando = %,10.2f%n", teste);
+        
+        int opcao = 2;
+        
+        switch( opcao ) {
+            case 1:
+            case 2:
+            case 3:
+                System.out.printf("%nOpção = %d%n", opcao );
+                break;
+        } // fim switch
+        
         // cria o objeto da classe Shapes
         Shapes panel = new Shapes( choice );
         

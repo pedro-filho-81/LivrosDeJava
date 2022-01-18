@@ -31,12 +31,12 @@ public class Shapes extends JPanel
                     g.drawOval(10 + i * 10, 10 + i * 10, 50 + i * 10, 50 + i * 10 );
                     break; // sai do for
                     
-                case 3:
+                case 3: // desenha o oval dentro do quadrado
                    g.drawOval(10 + i * 10, 10 + i * 10, 50 + i * 10, 50 + i * 10 );
                    g.drawRect(10 + i * 10, 10 + i * 10, 50 + i * 10, 50 + i * 10 );
                    break;
                     
-                case 4:
+                case 4: // desenha uma circunferência dentro da outra
                     // ( coluna, linha, largura, altura )
                     g.drawOval(220 - i * 5, 220 - i * 5, 20 + i * 10, 20 + i * 10);
                     break;
