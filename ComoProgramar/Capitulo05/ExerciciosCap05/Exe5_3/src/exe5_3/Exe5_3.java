@@ -27,7 +27,7 @@ public class Exe5_3 {
         int soma = 0;
         int contar ;
         
-        System.out.println("\nA)"); // cabeçalho
+        System.out.println("\nA) Some os inteiros ímpares entre 1 e 99 utilizando uma instrução for.\n"); // cabeçalho
         
         // loop for para contar ate 99
         for( contar = 1; contar <= 99; contar++ ) {                        
@@ -46,7 +46,7 @@ public class Exe5_3 {
                 
         // b) Calcule o valor de 2.5 elevado à potência de 3, utilizando o método pow.
         
-        System.out.println("\nB)"); // cabeçalho
+        System.out.println("\nB) Calcule o valor de 2.5 elevado à potência de 3, utilizando o método pow."); // cabeçalho
         
         System.out.printf("%n2,5 elevado a potência de 3 é %.2f%n%n", Math.pow(2.5, 3 ) );
         
@@ -58,7 +58,7 @@ public class Exe5_3 {
                 imprimir o caractere de tabulação.]
         */
         
-        System.out.println("\nC) Loop com while."); // cabeçalho
+        System.out.println("\nC) Imprima os inteiros de 1 a 20, utilizando um loop while e a variável contadora i."); // cabeçalho
         
         int i;
         i = 1; // atribui 1 a i;
@@ -77,7 +77,7 @@ public class Exe5_3 {
         
         //d) Repita a parte (c) utilizando uma instrução for.
         
-        System.out.println("\nD) Loop com for."); // cabeçalho
+        System.out.println("\nD) Repita a parte (c) utilizando uma instrução for."); // cabeçalho
         
         // loop for
         for( i = 1; i <= 20; i++ ) {
@@ -89,6 +89,7 @@ public class Exe5_3 {
             else {
                 System.out.print("\t");
             } // fim else
-        }
+        } // fim for
+        
     } // fim main    
 } // fim classe
