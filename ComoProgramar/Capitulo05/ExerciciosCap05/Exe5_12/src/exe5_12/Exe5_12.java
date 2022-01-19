@@ -20,12 +20,12 @@ public class Exe5_12 {
         
         // loop for
         for( i = 1; i <= 15; i += 2 ) {
-            System.out.printf("%d ", i );
+            System.out.printf("%d ", i ); // imprime os números ímpares
             
-            produto *= i;
+            produto *= i; // calcula o produto dos números ímpares
         } // fim for
         
-        // imprime esultado
+        // imprime o resultado
         System.out.printf("%nO produto dos números ímpares é %d%n", produto );
     } // fim main    
 } // fim classe
