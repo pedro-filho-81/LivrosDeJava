@@ -24,10 +24,8 @@ public class Exe5_19 {
         // variáveis
         int i = 1, j = 2, k = 3, m = 5;
         
-        System.out.println("int i = 1, j = 2, k = 3, m = 5;");
-        
-        System.out.printf("i == 1 %b%n", i == 1 );
-        
+        System.out.println("int i = 1, j = 2, k = 3, m = 5;");        
+        System.out.printf("i == 1 %b%n", i == 1 );       
         System.out.printf("j == 3 %b%n", j == 3);
         System.out.printf("(i >= 1) && (j < 4) %b%n",  (i >= 1) && (j < 4));
         System.out.printf("(m <= 99) & (k < m) %b%n", (m <= 99) & (k < m));
