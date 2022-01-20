@@ -30,7 +30,6 @@ public class Exe5_17 {
         //variáveis
         int qtdVendida = 0;
         int numProduto = 0;
-        double vendas1, vendas2, vendas3, vendas4, vendas5;
         double totVendas1 = 0, totVendas2 = 0, totVendas3 = 0, totVendas4 = 0, totVendas5 = 0;
         
         System.out.println("  TABELA DE PREÇO");
