@@ -20,15 +20,18 @@ public class Exe5_21 {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        // FORÇA BRUTA
         for( int lado1 = 1; lado1 <= 500; lado1++ ) {
             for( int lado2 = 1;lado2 <= 500; lado2++ ) {
                 for( int hipo = 1; hipo <= 500; hipo++ ) {
+                    
                     if( ( Math.pow(lado1, 2) + Math.pow(lado2, 2) ) == Math.pow(hipo, 2) ) {
+                        
                         System.out.printf("%3d   + %3d   = %3d%n", lado1, lado2, hipo );
-                    }
-                }
-            }
-        }
-    }
-    
-}
+                        
+                    } // fim if
+                } // fim for hipo
+            } // fim for lado2
+        } // fim lado1
+    } // fim main    
+} // fim classe
