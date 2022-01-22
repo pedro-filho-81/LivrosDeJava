@@ -21,29 +21,22 @@ public class Exe5_20 {
         double pi = 0;
         int contar = 1;
         
-        for( int i = 1; i <= 600000; i += 2) {
+        for( int i = 1; i <= 300000; i += 2) {
                 
                 if( contar == 1 ){
-                    pi = 4 / (double) i;
-                }
+                    pi += 4 / (double) i; // aqui igua a 4 / 1
+                } // fim if 1
                 else if( contar >= 2 && contar % 2 != 0 ) {
-                    pi += 4 / (double) i;                    
-                    if(pi == 3.14159 ) {
-                        System.out.printf("%.6f%n", pi);
-                        break;
-                    }
-                }
+                    pi += 4 / (double) i;                  
+                } // fim else if
                 else {
                     pi -= 4 / (double) i;
-                    if(pi == 3.14159 ) {
-                        System.out.printf("%.6f%n", pi);
-                        break;
-                    }
-                }
+                } // fim else
+                   contar++;
                 // mostra resultado
-                System.out.printf("%.20f %n", pi);
-                contar++;
+                System.out.printf("%11.6f ", pi);
+                if( i % 11 == 0 )
+                    System.out.println();
         } // fim for
-    }
-    
-}
+    } // fim main    
+} // fim classe
