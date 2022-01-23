@@ -30,31 +30,32 @@ public class Exp6_03 {
         // loop para contar 6000000 vezes
         for( int contar = 1; contar <= 6000000; contar++ ) {
             
+            // gera números aleatórios entre 1 e 5
             int face = 1 + numeroAleatorio.nextInt(6);
         
             switch( face ) { 
                 
-                case 1:
+                case 1: // contagem do valor 1
                     frequencia1++;
                     break;
                 
-                case 2:
+                case 2: // contagem do valor 2
                     frequencia2++;
                     break;
                     
-                case 3:
+                case 3: // contagem do valor 3
                     frequencia3++;
                     break;
                 
-                case 4:
+                case 4: // valor 4
                     frequencia4++;
                     break;
                     
-                case 5:
+                case 5: // contagem do valor 5
                     frequencia5++;
                     break;
                     
-                case 6:
+                case 6: // contagem do valor 6
                     frequencia6++;
                     break;                    
             } // fim switch           
