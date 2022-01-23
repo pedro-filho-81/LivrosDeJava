@@ -29,7 +29,7 @@ public class Exp6_05 {
 
             useLocalVariable(); // useLocalVariable tem uma variável local x
             useField(); // useField utiliza o campo x da classe Scope
-             useLocalVariable(); // useLocalVariable reinicializa a variável local x
+            useLocalVariable(); // useLocalVariable reinicializa a variável local x
             useField(); // campo x da classe Scope retém seu valor
 
             System.out.printf("%nlocal x in main is %d%n", x);
