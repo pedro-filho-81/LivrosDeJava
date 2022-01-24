@@ -14,6 +14,7 @@ import javax.swing.JFrame;
 public class Exp6_07_2 {
 
     /**
+     * Desenha um alvo na tela
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -30,6 +31,5 @@ public class Exp6_07_2 {
         aplicacao.setSize(300, 300);
         aplicacao.setVisible(true);
 
-    }
-    
-}
+    } // fim main    
+} // fim classe
