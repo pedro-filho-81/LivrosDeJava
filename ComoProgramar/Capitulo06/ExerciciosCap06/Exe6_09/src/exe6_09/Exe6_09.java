@@ -33,7 +33,7 @@ public class Exe6_09 {
         
             double resultado = arredondar(numero );
         
-            System.out.printf("%nO número digitado foi %.2f%nO número arredondado é %.2f%n",
+            System.out.printf("%nO número digitado foi %.2f%nO número arredondado é %f%n",
                                             numero, resultado );
 
             // entrada de dados
