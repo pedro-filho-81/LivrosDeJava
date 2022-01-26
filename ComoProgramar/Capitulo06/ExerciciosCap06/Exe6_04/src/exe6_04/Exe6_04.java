@@ -22,9 +22,16 @@ public class Exe6_04 {
         
         // variáveis
         double hipot = hypotenuse(5, 9);
-        double small;
+        int small = smallest(5, 8, 3);
+        float resultado = intToFloat(5);
+        
         
         System.out.printf("hipotenuse = %.2f%n", hipot );
+        System.out.printf("maior valor = %d%n", small );
+        // chama a função instruction
+        instruction();
+        System.out.printf("inteiro para float %.2f%n", resultado);
+        
     } // fim main
 
         // 6.4 Forneça o cabeçalho de método para cada um dos seguintes métodos.
@@ -51,17 +58,13 @@ public class Exe6_04 {
            // c) O método instructions, que não aceita nenhum argumento e não retorna um valor. [Observação: esses métodos são comumente 
             // utilizados para exibição de instruções para o usuário.]
                     public static void instruction() {
-                        System.out.println("colocsr instruções aqui");
+                        System.out.println("coloque instruções aqui");
                     } // fim métoro
                     
             // d) O método intToFloat, que recebe um argumento number do tipo inteiro e retorna um float    
                     public static float intToFloat( int x ) {
-                                    
-                        System.out.printf("int x = %d%n", x);
                         
-                        float numero = (float) x;
-                        
-                        System.out.printf("float numero = %.2f%n", numero );
+                        float numero =  x;                        
                         
                         return numero;
                         
