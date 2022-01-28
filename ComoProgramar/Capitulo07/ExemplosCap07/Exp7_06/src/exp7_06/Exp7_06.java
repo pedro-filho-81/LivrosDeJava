@@ -33,7 +33,7 @@ public class Exp7_06 {
         // gera saída do valor de cada elemento do array
         for( int face = 1; face < frequencia.length; face++ )
             // mostra resultado
-            System.out.printf("%3d%12d%n", face, frequencia[ face ] );
+            System.out.printf("%3d%14d%n", face, frequencia[ face ] );
         
     } // fim main    
 } // fim classe
