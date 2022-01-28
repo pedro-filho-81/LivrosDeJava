@@ -14,22 +14,21 @@ public class Exp7_04 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        // cria a constante
-        final int TAMANHO = 10;
+        // variável
         int total = 0;
         
         // CRIA e inicializa um vetor
-        int[] vetor = { 12,23,32,36,65,45,98,78,85,25 };
+        int[] array = { 12,23,32,36,65,45,98,78,85,25 };
         
         // cabeçalho
         System.out.printf("%s%8s%n", "Ìndice", "Valor");
         
         // loop para mostrar valores
-        for( int i = 0; i < TAMANHO; i++ ) {
+        for( int i = 0; i < array.length; i++ ) {
             
-            total += vetor[ i ]; // soma os valores
+            total += array[ i ]; // soma os valores
             
-            System.out.printf("%3d%9d%n", i, vetor[ i ] );
+            System.out.printf("%3d%9d%n", i, array[ i ] );
         } // fim for
         
         System.out.println("\nO total dos valores do vetor é " + total );
