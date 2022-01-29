@@ -18,9 +18,17 @@ public class Exp7_07 {
         // TODO code application logic here
         
         // cria array de resposta
-        int[] respostas = { 1, 2, 5, 4, 3, 5, 2, 1, 3, 3, 1, 14, 3, 3, 3, 2, 3, 3, 2, 4 };
+        int[] respostas = { 1, 2, 5, 4, 3, 5, 2, 1, 3, 3, 1, 6, 3, 3, 3, 2, 3, 3, 2, 4 };
         
         int[] frequencia = new int[ 6 ];
+        
+        // cabeçalho
+        System.out.printf("%s%10s%n", "Índice", "Valores");
+        
+        // loop para mostrar os valores do vetor
+        for( int contar = 0; contar < respostas.length; contar++ ) {
+            System.out.printf("%3d%10d%n", contar, respostas[contar]);
+        } // fim for contar
         
         //para cada resposta, seleciona um elemento de respostas e utiliza esse valor
         // como índice de frequência para determinar o elemento e incrementar
@@ -32,7 +40,7 @@ public class Exp7_07 {
             catch(ArrayIndexOutOfBoundsException e )
             {
                 System.out.println( e ); // invoca o método toString
-                System.out.println("Índice do vetor fora dos limites da exceção");
+                System.out.println("Este elemento do vetor está fora dos limites da exceção [ " + respostas[ resposta ] + " ]" );
                 System.out.printf("respostas[ %d ] = %d%n%n", resposta, respostas[ resposta ] );
             } // fim catch
         } // fim for resposta
