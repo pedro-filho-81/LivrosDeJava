@@ -34,9 +34,9 @@ public class Exp04 {
 
         double root1 = (-b + sqroot) / 2.0;
         double root2 = (-b - sqroot) / 2.0;
-
+        
+        // imprime resultado
         System.out.println(root1);
         System.out.println(root2);
-    }
-    
-}
+    } // fim main 
+} // fim classe
