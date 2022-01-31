@@ -16,14 +16,17 @@ public class Exp06 {
         
         // cria e inicializa um array
         int[] vetor = { 12, 15, 35, 87, 98, 25, 69, 74, 49, 52, 39, 55 };
+        // variável
         int total = 0; // soma os valores do vetor
         
         // loop para  mostrar e somar os valores do vetor
         for( int contar : vetor ) {
             System.out.printf("%d ", contar ); // mostra elementos do vetor
             
-            total += contar;
+            total += contar; // soma os valores do vetor
         } // fim for
+        
+        // mostra o total usando concatenação
         System.out.println("\nTotal do valores do vetor = " + total ); // pula linha
     } // fim main    
 } // fim classe
