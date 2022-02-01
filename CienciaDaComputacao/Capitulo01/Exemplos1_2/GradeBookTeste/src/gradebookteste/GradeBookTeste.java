@@ -2,10 +2,10 @@
 package gradebookteste;
 
 /**
- *   // Figura 7.15: GradeBookTest.java
-     // GradeBookTest cria um objeto GradeBook utilizando um array de notas, 
-    // e, então, invoca o método processGrades para analisá-las.
- *  01/02/2022
+ *   // Figura 7.15: GradeBookTeste.java
+      // GradeBookTest cria um objeto GradeBook utilizando um array de notas, 
+      // e, então, invoca o método processGrades para analisá-las.
+ *   01/02/2022
  */
 public class GradeBookTeste {
 
