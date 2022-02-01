@@ -1,4 +1,4 @@
-package gradebookteste; 
+package gradebookteste;
 
 // classe GradeBook utiliza um array para armazenar as notas de teste
 
@@ -29,7 +29,7 @@ public class GradeBook {
     public void saidaDasNotas() {
         
         // imprime
-        System.out.println("As notas são: ");
+        System.out.println("\nAs notas são: ");
         
         // loop para mostrar as notas
         for( int estudante = 0; estudante < notas.length; estudante++ ) {
@@ -92,7 +92,7 @@ public class GradeBook {
     // cria gráfico de barras
     public void graficoDeBarras() {
         // distribuição das notas CABEÇALHO
-        System.out.println("\nDISTRIBUIÇÃO DAS NOTAS");
+        System.out.println("\n\nDISTRIBUIÇÃO DAS NOTAS");
         
         // cria vetor frânquia
         int[] franquia = new int[ 11 ];
@@ -128,7 +128,7 @@ public class GradeBook {
         saidaDasNotas();
         
         // chama a função get média e mostra a média da classe
-        System.out.printf("A média da classe é %.2f%n", 
+        System.out.printf("%nA média da classe é %.2f%n", 
                                     getMediaDaClasse() );
         
         // chama o método get menor valor e get maior valor
