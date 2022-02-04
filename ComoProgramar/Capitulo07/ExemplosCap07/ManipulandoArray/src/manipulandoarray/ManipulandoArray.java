@@ -37,7 +37,7 @@ public class ManipulandoArray {
         // cria um arrayOriginal
         int[] arrayOriginal = { 1, 2, 3, 4, 5, 6, };
         
-        displayArrayInt(arrayOriginal, "Valores que serão copiados para o arrayCopia: ");
+        displayArrayInt(arrayOriginal, "arrayOriginal com os valores que serão\ncopiados para o arrayCopia: ");
         
         // cria o arrayCopia com o índice o tamanho do arrayOriginal
         int[] arrayCopia = new int[ arrayOriginal.length ]; 
@@ -45,9 +45,31 @@ public class ManipulandoArray {
         // usa o System.arraycopy para copiar o array original para o arrayCopia
         System.arraycopy(arrayOriginal, 0, arrayCopia, 0, arrayOriginal.length );
         
-        displayArrayInt(arrayCopia, "Valores copiados do arrayOriginal: ");
-       
-    } // fim main    
+        displayArrayInt(arrayCopia, "arrayCopia com valores copiados do arrayOriginal: "); // mostra o array cópia
+        
+        System.out.println("\nCOMPARANDO ARRAYs");
+        
+        // verifica a igualdade de arrayOriginal e arrayCopia
+        boolean b = Arrays.equals( arrayOriginal, arrayCopia );
+        System.out.printf( "arrayOriginal %s arrayCopia%n", ( b ? "==" : "!=" ) );
+        
+        // verifica a igualdade de arrayOriginal e arrayCopia
+        b = Arrays.equals( arrayOriginal, arraySete );
+        System.out.printf( "arrayOriginal %s arraySete%n", ( b ? "==" : "!=" ) );       
+ 
+        // pesquisando valor no array
+        System.out.println("\nPESQUISANDO UM ELEMENTO NO ARRAY");
+        
+        // pesquisa se o número 5 é um elemento do arrayOriginal
+        int localizacao = Arrays.binarySearch(arrayOriginal, 5 );
+        
+        if( localizacao >= 0 )
+            System.out.printf("O valor 5 foi encontrado no arrayOriginal%n%n");
+        else
+            System.out.printf("O valor 5 NÃO foi encontrado no arrayOriginal%n%n");
+        
+        
+    } // fim main
     
     // cria método displayArray
     public static void displayArrayDouble( double[] array, String descricao ) {
