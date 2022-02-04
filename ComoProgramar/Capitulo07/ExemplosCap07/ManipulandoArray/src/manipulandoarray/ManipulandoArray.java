@@ -64,9 +64,18 @@ public class ManipulandoArray {
         int localizacao = Arrays.binarySearch(arrayOriginal, 5 );
         
         if( localizacao >= 0 )
-            System.out.printf("O valor 5 foi encontrado no arrayOriginal%n%n");
+            System.out.printf("O valor 5 foi encontrado no arrayOriginal%n");
         else
-            System.out.printf("O valor 5 NÃO foi encontrado no arrayOriginal%n%n");
+            System.out.printf("O valor 5 NÃO foi encontrado no arrayOriginal%n");
+        
+        // pesquisa se o número 5 é um elemento do arrayOriginal
+        localizacao = Arrays.binarySearch(arrayOriginal, 8745 );
+        
+        if( localizacao >= 0 )
+            System.out.printf("O valor 8745 foi encontrado no arrayOriginal%n");
+        else
+            System.out.printf("O valor 8745 NÃO foi encontrado no arrayOriginal%n");
+        
         
         
     } // fim main
