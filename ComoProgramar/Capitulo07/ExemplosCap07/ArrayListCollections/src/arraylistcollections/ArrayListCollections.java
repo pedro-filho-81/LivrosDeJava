@@ -16,14 +16,19 @@ public class ArrayListCollections {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        // cria um ArrayListe para Strings com capacidade para 10 elementos
+        //   o ArrayList String itens com capacidade para 10 elementos
         ArrayList<String> itens = new ArrayList<String>();
+        System.out.println("ArrayList<String> itens = new ArrayList<String>();");
+        System.out.println("Cria o array list String itens.");
         
         itens.add("Vermelho"); // adiciona um item a lista
+        System.out.printf("\nitens.add(\"Vermelho\"); ->\nadiciona a Strint Vermelho ao array itens:\n");
+        
         itens.add(0, "Amarelo"); // adiciona o item amarelo no índice zero
+        System.out.printf("\nitens.add(0, \"Amarelo\"); ->\nAdiciona a String Amarelo na posição 0\n");
         
         // cabeçalho
-        System.out.print("Mostra a lista de elementos do Array itens:\n{");
+        System.out.print("\nMostra a lista de elementos do Array itens:\n{");
         
         // loop para mostrar os itens da lista
         for( int i = 0; i < itens.size(); i++ ) {
@@ -31,7 +36,7 @@ public class ArrayListCollections {
         } // fim for
         System.out.println("  }"); // pula linha  
         
-        display(itens, "Mostra os elementos do Array com o método display:\n" );
+        display(itens, "\nMostra os elementos do Array com o método display:\n" );
         
         itens.add("Verde"); // adiciona a cor verde
         display(itens, "\nitens.add(\"Verde\"); -> Adiciona a String Verde ao array itens\n");
