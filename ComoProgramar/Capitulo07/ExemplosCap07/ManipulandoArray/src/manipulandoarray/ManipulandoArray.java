@@ -74,9 +74,7 @@ public class ManipulandoArray {
         if( localizacao >= 0 )
             System.out.printf("O valor 8745 foi encontrado no arrayOriginal%n");
         else
-            System.out.printf("O valor 8745 NÃO foi encontrado no arrayOriginal%n");
-        
-        
+            System.out.printf("O valor 8745 NÃO foi encontrado no arrayOriginal%n");      
         
     } // fim main
     
