@@ -38,20 +38,22 @@ public class CriaUmaMatriz {
         System.out.println("Declara e cria a matriz t ( 2 x 3 ):\nint[][] t = new int[2][3];");
         
         // b) Quantas linhas tem t?
-        System.out.println("O array t tem 2 linhas.");
+        System.out.println("\nO array t tem 2 linhas.");
         
         // c) Quantas colunas tem t?
-        System.out.println("O array t tem três colunas");
+        System.out.println("O array t tem 3 colunas");
         
         // d) Quantos elementos tem t?
         System.out.println("O array t tem 6 elementos.");
         
         // e) Escreva expressões de acesso para todos os elementos na linha 1 de t.
+        System.out.println("\nMostra todos os elementos da linha 1:");
         for(int coluna = 0; coluna < 3; coluna++ )
             System.out.printf("t[1][%d] = %d ", coluna, t[1][coluna]);
         System.out.println();
         
         // f) Escreva expressões de acesso para todos os elementos na coluna 2 de t.
+         System.out.println("\nMostra todos os elementos da coluna 2:");
         for( int linha = 0; linha < 2; linha++ )
             System.out.printf("t[%d][2] = %d ", linha, t[linha][2] );
         System.out.println();
@@ -99,18 +101,46 @@ public class CriaUmaMatriz {
             } // fim for coluna
         } // fim for linha
         
+        System.out.println("O menor valor encontrado em t é " + menorValor);
+        
         // l) Escreva uma única instrução printf que exibe os elementos da primeira linha de t.
         System.out.println("\nA primeira linha do array t tem:");
         System.out.printf("t[0][0] = %d\nt[0][1] = %d\nt[0][2] = %d\n", t[0][0], t[0][1], t[0][2] );
         
         // m) Escreva uma instrução que soma os elementos da terceira coluna de t. Não utilize repetição.
         int soma = t[0][2] + t[1][2];
-        System.out.printf("\nt[0][2] = %d\nt[1][2] = %d\n", t[0][2], t[1][2]);
+        System.out.printf("\nOs elementos da terceira coluna de t são:\nt[0][2] = %d\nt[1][2] = %d\n", t[0][2], t[1][2]);
         System.out.println("A soma dos elementos da terceira coluna de t é " + soma );
         
         /* n) Escreva uma série de instruções que exibe o conteúdo de t no formato tabular. 
             Liste os índices de coluna como títulos na parte superior 
             e liste os índices de linha à esquerda de cada linha */
+        
+        // cabeçalho
+        System.out.println("\nOs elementos de t em formato tabular:");
+        // cria espaço em branco antes do título das colunas
+        System.out.print("           ");
+        // loop para mostrar os títulos das colunas
+            for( int titulo = 0; titulo < 3; titulo++ ) {         
+                // mostra os titulos das colunas
+                System.out.printf("%5s%d", "Col", titulo + 1);
+            } // fim col
+        // pula uma linha
+        System.out.println();
+        
+        // loop para mostrar as linhas e os valores
+        for( int linha = 0; linha < 2; linha++ ) {
+            // mostra a linha
+            System.out.printf("Linha%3d -> ", linha + 1);
+            // loop para mostrar os elementos das colunas
+            for( int coluna = 0; coluna < 3; coluna++) {   
+                // mostra os valores das colunas
+                System.out.printf("%5d", t[linha][coluna]);
+            } // fim for coluna
+             if(linha % 2 == 0 ) // se a linha for a última
+                System.out.println(); // pule uma linha
+        } // fim for linha
+        System.out.println(); // pula linha
         
     } // fim main    
 } // fim classe
