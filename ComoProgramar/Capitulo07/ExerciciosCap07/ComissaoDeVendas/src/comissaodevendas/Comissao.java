@@ -53,20 +53,21 @@ public class Comissao {
         return menor;
     } // fim menor valor
     
+    public int getSomar( int[] vetor) {
+        
+        int somar = 0;
+        
+        for( int valor : salarios )
+            somar += valor;
+        
+        return somar;
+    } // fim somar vetor
+    
     // enconta a média dos salários
     public float getMediaDosSalarios() {
         
-        // var
-        int total = 0;
-        
-        // loop para achar a média
-        for( int salario : salarios ) {
-            
-            total += salario; // soma todos os salários
-        } // fim for
-        
         // retorne a média
-        return ( float ) total / salarios.length;
+        return ( float ) getSomar(salarios) / salarios.length;
         
     } // fim média
     
