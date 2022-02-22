@@ -6,7 +6,6 @@
 package eliminaduplicatasrepetidas;
 
 import java.security.SecureRandom;
-import java.util.Arrays;
 
 /**
  * 7.12 (Eliminação de duplicatas) Utilize um array unidimensional para resolver o seguinte problema: 
@@ -24,7 +23,7 @@ public class EliminaDuplicatasRepetidas {
         // TODO code application logic here
 
         // declara o vetor para 5 elementos
-        int[] vetor = new int[ 5 ];
+        int[] vetor = new int[ 10 ];
         
         // loop para dicionar valores ao vetor
         for( int adicionar = 0; adicionar < vetor.length; adicionar++ ) {
@@ -53,19 +52,20 @@ public class EliminaDuplicatasRepetidas {
             // gera um número aleatório entre 10 e 100 inclusive
             resultado = 10 + numAleatorio.nextInt(90);
             
-            // loop para adicionar valores no vetor
+            // loop para pesquisar os valores no vetor
             for( int valor = 0; valor < vetor.length; valor++ ) {            
             
-                // verifica se o vetor é igual ao resultado
-                if( vetor[ valor ] == resultado )
+                // verifica se o valor no vetor é igual ao resultado
+                if( vetor[ valor ] == resultado ) // se igual                
+                   
+                    //  imprime o valor que já tem no vetor
+                    System.out.printf("%dº -> %d repetido? %b%n", valor + 1, resultado, vetor[valor]);
                 
-                    // retorne 0
-                    System.out.printf("%d repetido? %b%n", resultado, vetor[valor]);
-                
-            } // fim for adicionar valor
+            } // fim for pesquisar valor
         } // fim for adicionar valor
         
-        return resultado; 
+         // retorna o valor aleatório que não tem no vetor
+        return resultado;
         
     } // fim método adicionar valor
     
