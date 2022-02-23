@@ -22,24 +22,93 @@ public class InteirosAleatoriosVariaveis {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        
+      
         // cria o objeto secure random
         SecureRandom numeroAleatorio = new SecureRandom();
        
         // intervalo da impressão
-       System.out.println("a) n <= 1 && n <= 2.");
+       System.out.println("a) n >= 1 && n <= 2.");
         // vetor
        System.out.printf("vetor = { ");
        // loop para imprimir 10 valores
-       for( int i = 0; i < 10; i++ ) {
+       for( int i = 0; i < 10; i++ ) {      
            // recebe os números aleatórios
-           int aleatorio =  numeroAleatorio.nextInt(3);
+           int aleatorio = 1 + numeroAleatorio.nextInt(2);
            // imprime os numeros aleatórios
-           System.out.printf("%d ", aleatorio );
-       
+           System.out.printf("%d ", aleatorio );       
        } // fim for
        // imprime a fecha-chave e pula uma linha
        System.out.println(" };"); // pula linha
-        
+
+       // intervalo da impressão
+       System.out.println("b) n >= 1 && n <= 100");
+        // vetor
+       System.out.printf("vetor = { ");
+       // loop para imprimir 10 valores
+       for( int i = 0; i < 10; i++ ) {      
+           // recebe os números aleatórios
+           int aleatorio =  1 + numeroAleatorio.nextInt(100);
+           // imprime os numeros aleatórios
+           System.out.printf("%d ", aleatorio );       
+       } // fim for
+       // imprime a fecha-chave e pula uma linha
+       System.out.println(" };"); // pula linha
+
+       // intervalo da impressão
+       System.out.println("c) n >= 0 && n <= 9.");
+        // vetor
+       System.out.printf("vetor = { ");
+       // loop para imprimir 10 valores
+       for( int i = 0; i < 10; i++ ) {      
+           // recebe os números aleatórios
+           int aleatorio = numeroAleatorio.nextInt(10) ;
+           // imprime os numeros aleatórios
+           System.out.printf("%d ", aleatorio );       
+       } // fim for
+       // imprime a fecha-chave e pula uma linha
+       System.out.println(" };"); // pula linha
+
+       // intervalo da impressão
+       System.out.println("d) n >= 1000 && n <= 1112.");
+        // vetor
+       System.out.printf("vetor = { ");
+       // loop para imprimir 10 valores
+       for( int i = 0; i < 10; i++ ) {      
+           // recebe os números aleatórios
+           int aleatorio = 1000 + numeroAleatorio.nextInt(113) ;
+           // imprime os numeros aleatórios
+           System.out.printf("%d ", aleatorio );       
+       } // fim for
+       // imprime a fecha-chave e pula uma linha
+       System.out.println(" };"); // pula linha
+
+       // intervalo da impressão
+       System.out.println("e) n >= -1 && n <= 1.");
+        // vetor
+       System.out.printf("vetor = { ");
+       // loop para imprimir 10 valores
+       for( int i = 0; i < 10; i++ ) {      
+           // recebe os números aleatórios
+           int aleatorio = -1 + numeroAleatorio.nextInt(3) ;
+           // imprime os numeros aleatórios
+           System.out.printf("%d ", aleatorio );       
+       } // fim for
+       // imprime a fecha-chave e pula uma linha
+       System.out.println(" };"); // pula linha
+       
+       // intervalo da impressão
+       System.out.println("f) n >= -3 && n <= 11.");
+        // vetor
+       System.out.printf("vetor = { ");
+       // loop para imprimir 10 valores
+       for( int i = 0; i < 10; i++ ) {      
+           // recebe os números aleatórios
+           int aleatorio = -3 + numeroAleatorio.nextInt(15) ;
+           // imprime os numeros aleatórios
+           System.out.printf("%d ", aleatorio );       
+       } // fim for
+       // imprime a fecha-chave e pula uma linha
+       System.out.println(" };"); // pula linha
+
     } // fim main    
 } // fim classe
