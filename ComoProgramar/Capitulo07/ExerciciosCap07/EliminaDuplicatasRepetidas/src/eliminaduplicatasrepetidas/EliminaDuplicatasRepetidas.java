@@ -23,17 +23,21 @@ public class EliminaDuplicatasRepetidas {
         // TODO code application logic here
 
         // declara o vetor para 5 elementos
-        int[] vetor = new int[ 10 ];
+        int[] vetor = new int[ 15 ];
+        
+        // cabeçalho
+        System.out.println("Índice  Valor  Repetido");
         
         // loop para dicionar valores ao vetor
         for( int adicionar = 0; adicionar < vetor.length; adicionar++ ) {
            
             // vetor recebe valores do método adicionarValor
+            // após a verificação pelo método se o valor é um número repedido
             vetor[ adicionar ] = adicionarValor(vetor);
         
         } // fim for adicionar valor
         
-        mostrarValores(vetor);
+        mostrarValores(vetor); // mostra os elementos do vetor
         
     } // fim main
     
@@ -49,19 +53,22 @@ public class EliminaDuplicatasRepetidas {
         // loop para adicionar valores
         for( int adicionar = 0; adicionar < vetor.length; adicionar++ ) {
             
-            // gera um número aleatório entre 10 e 100 inclusive
+            // gera um (valor) número aleatório entre 10 e 100 inclusive
+            // e atribui a variável resultado
             resultado = 10 + numAleatorio.nextInt(90);
             
             // loop para pesquisar os valores no vetor
+            // toda vez que é gerado um valor o loop for pesquisa o vetor
             for( int valor = 0; valor < vetor.length; valor++ ) {            
             
                 // verifica se o valor no vetor é igual ao resultado
                 if( vetor[ valor ] == resultado ) // se igual                
                    
                     //  imprime o valor que já tem no vetor
-                    System.out.printf("%dº -> %d repetido? %b%n", valor + 1, resultado, vetor[valor]);
-                
+                    System.out.printf("%3dº  %5d  %8b%n",valor + 1, resultado, vetor[valor]);  
+                                    
             } // fim for pesquisar valor
+            
         } // fim for adicionar valor
         
          // retorna o valor aleatório que não tem no vetor
