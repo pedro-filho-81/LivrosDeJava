@@ -57,13 +57,18 @@ public class InteirosAleatoriosVariaveis {
        
         // vetor
        System.out.printf("vetor = { ");
-       // loop para imprimir 10 valores
+       
+// loop para imprimir 10 valores
        for( int i = 0; i < 10; i++ ) {      
+
            // recebe os números aleatórios
            int aleatorio = inicio + numeroAleatorio.nextInt(fim);
+
            // imprime os numeros aleatórios
            System.out.printf("%d ", aleatorio );       
+
        } // fim for
+
        // imprime a fecha-chave e pula uma linha
        System.out.println(" };"); // pula linha
         
