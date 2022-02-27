@@ -30,7 +30,7 @@ public class EliminaDuplicataRepetida2 {
         while( numero != -1 ) {
           
             // entrada de dados
-            System.out.print("Digite um inteiro ( -1 para sair ): ");
+            System.out.print("Digite o número da duplicata ( -1 para sair ): ");
             // aguarda entrada do usuário
             numero = entrada.nextInt();
             
@@ -40,14 +40,15 @@ public class EliminaDuplicataRepetida2 {
                 break;
             
             // verifica se o número digitado consta no vetor
-            if( duplicatas.contains(numero) == false ) // se não
+            if( duplicatas.contains(numero) == false ) // se falso
                 // adiciona o número ao vetor
                 duplicatas.add(numero);
             else 
-                System.out.println("Repetido");
+                System.out.println("Duplicata repetida");
                                 
         } // fim while
         
+        System.out.println("\nDuplicatas cadastradas:");
         mostrarValores(duplicatas);
         
         // pula linha
