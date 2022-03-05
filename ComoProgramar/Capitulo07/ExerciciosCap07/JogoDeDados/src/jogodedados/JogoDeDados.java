@@ -33,6 +33,9 @@ public class JogoDeDados {
         
         // declara e cria o vetor
         int[][] somaDosDados = new int[ LINHA ][ COLUNA ];
+        // declara o vetor
+        int[] frequencia = new int[12];
+        
         
         adicionarValor(somaDosDados, LINHA, COLUNA);
         
