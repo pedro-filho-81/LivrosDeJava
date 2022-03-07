@@ -42,6 +42,9 @@ public class JogoDeDadosCraps {
        
         Status statusDoJogo; // pode contar CONTINUE, VENCEU, PERDEU
         
+        // constante do vetor
+        final int NUMERO = 50;
+        
         // variáveis
         int venceuNaPrimeira = 0;
         int perdeuNaPrimeira = 0;
@@ -50,8 +53,11 @@ public class JogoDeDadosCraps {
         int contarPerdeu = 0;
         int i;
         
+        // declara um vetor
+        int[] vetor = new int[NUMERO];
+        
         // loop for para executar o jogo
-        for( i = 0; i < 1000000; i++ ) {
+        for( i = 0; i < NUMERO; i++ ) {
         
             int somaDosDados = rolaDados(); // recebe o valor do método rola dados
             
@@ -81,15 +87,20 @@ public class JogoDeDadosCraps {
             
             // se statusDoJogo diferente de Status.CONTINUE
             if( statusDoJogo != Status.CONTINUE && statusDoJogo == Status.VENCEU ) {
-                venceuNaPrimeira += 1; //
+                venceuNaPrimeira += 1;
+                if( i <= NUMERO )
+                    vetor[ i ] = 1;
             } // fim if
             else if( statusDoJogo != Status.CONTINUE && statusDoJogo == Status.PERDEU ) {
                 perdeuNaPrimeira += 1;
-            } // fim else if
-                
+                if( i <= NUMERO )
+                    vetor[ i ] = 2;
+            } // fim else if                
+            
+            // ENQUANTO O status do jogo igual ao status continue faça
             while( statusDoJogo == Status.CONTINUE ) {
 
-                somaDosDados = rolaDados();
+                somaDosDados = rolaDados(); 
 
                 // se soma dos dados igual a meus pontos
                 if( somaDosDados == meusPontos )
@@ -113,11 +124,19 @@ public class JogoDeDadosCraps {
         
         // imprime relatório
         System.out.println("\nRESUMO DAS JOGADAS");
-        System.out.printf("Você jogou %d vezes%n", i );
+        System.out.printf("Você rolou os dados %d vezes%n", i );
         System.out.printf("Venceu %d e perdeu %d vezes%n", contarVenceu, contarPerdeu);
-        System.out.printf("Venceu na primeira jogada %d vezes%n", venceuNaPrimeira );
-        System.out.printf("Perdeu na primeira jogada %d vezes%n", perdeuNaPrimeira );
-        System.out.printf("Não venceu ou perdeu na 1ª jogada %d vezes%n", contaContinue);
+        
+        System.out.printf("Venceu na primeira rolagem %d vezes%n", venceuNaPrimeira );
+        somaVenceu(vetor);
+        
+        System.out.printf("Perdeu na primeira rolagem %d vezes%n", perdeuNaPrimeira );
+        somaPerdeu(vetor);
+        
+        System.out.printf("Não venceu ou perdeu na 1ª rolagem %d vezes%n", contaContinue);
+        
+        //mostraVetor(vetor);
+        
         
     } // fim main
     
@@ -134,4 +153,35 @@ public class JogoDeDadosCraps {
         return soma;
         
     } // fim rola dados
+    
+    public static void mostraVetor( int[] vetor ) {
+        System.out.printf("%s%8s%n", "Índice", "Valor");
+        for( int num = 0; num < vetor.length; num++ ) {
+            System.out.printf("%3d%8d%n", num + 1, vetor[ num ]);
+        } // fim for
+    } //fim MOSTRA VETOR
+    
+    // somaVenceu
+    public static void somaVenceu( int[] vetor ) {
+        System.out.print( "Na {" );
+        // loop para mostrar a posição que venceu na primeira jogada
+        for( int soma = 0; soma < vetor.length; soma++ ) {
+            if( vetor[ soma ] == 1 )
+                System.out.printf("%3dª", soma + 1);            
+        } // fim for soma
+        System.out.println(" } Rolagem,\n");
+    }// fim soma venceu
+    
+    
+    // somaVenceu
+    public static void somaPerdeu( int[] vetor ) {
+        System.out.print( "Na {" );
+        // loop para mostrar a posição que venceu na primeira jogada
+        for( int soma = 0; soma < vetor.length; soma++ ) {
+            if( vetor[ soma ] == 2 )
+                System.out.printf("%3dª", soma + 1);
+        } // fim for soma
+        System.out.println(" } Rolagem,\n");
+    }// fim soma venceu
+    
 } // fim classe
