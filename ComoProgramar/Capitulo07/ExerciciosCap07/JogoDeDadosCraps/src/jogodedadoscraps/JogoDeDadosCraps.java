@@ -18,6 +18,9 @@ import java.security.SecureRandom;
  * e) As chances de ganhar aumentam com a duração do jogo?
  * @author Pedro 05/03/2022
  */
+
+import java.util.ArrayList;
+
 public class JogoDeDadosCraps {
     
     // cria o gerador de números aleatorio para rodar no método rola dados
@@ -46,20 +49,30 @@ public class JogoDeDadosCraps {
         final int NUMERO = 50;
         
         // variáveis
+        int contagem = 0;
         int venceuNaPrimeira = 0;
         int perdeuNaPrimeira = 0;
+        int venceuDepois = 0;
+        int perdeuDepois = 0;
         int contaContinue = 0;
         int contarVenceu = 0;
         int contarPerdeu = 0;
+        int contarRolaDados = 0;
         int i;
         
-        // declara um vetor
-        int[] vetor = new int[NUMERO];
+        // declara e cria um vetor
+        ArrayList<Integer> vetor = new ArrayList<Integer>();
         
         // loop for para executar o jogo
         for( i = 0; i < NUMERO; i++ ) {
         
+            // cria a variável soma dos dados que recebe o valor de rola dados
             int somaDosDados = rolaDados(); // recebe o valor do método rola dados
+            
+            // se a soma dos dados maior que zero
+            if( somaDosDados > 0 )
+                // soma a contagem de rola dados
+                contarRolaDados++;
             
             // DETERMINA o estado do jogo
             switch( somaDosDados ) {
@@ -81,62 +94,64 @@ public class JogoDeDadosCraps {
                     meusPontos = somaDosDados;
                     System.out.printf("Meus pontos são: %3d%n", meusPontos);
                     break;
-            } // fim switch
-
-            int contador = 0;
+            } // fim switch           
             
             // se statusDoJogo diferente de Status.CONTINUE
             if( statusDoJogo != Status.CONTINUE && statusDoJogo == Status.VENCEU ) {
                 venceuNaPrimeira += 1;
-                if( i <= NUMERO )
-                    vetor[ i ] = 1;
+                vetor.add(1);
             } // fim if
             else if( statusDoJogo != Status.CONTINUE && statusDoJogo == Status.PERDEU ) {
                 perdeuNaPrimeira += 1;
-                if( i <= NUMERO )
-                    vetor[ i ] = 2;
-            } // fim else if                
+                vetor.add(2);
+            } // fim else if  2        
             
             // ENQUANTO O status do jogo igual ao status continue faça
             while( statusDoJogo == Status.CONTINUE ) {
 
                 somaDosDados = rolaDados(); 
-
+                
+                // se a soma dos dados maior que zero
+                if( somaDosDados > 0 )
+                    // soma a contagem de rola dados
+                    contarRolaDados++;
+            
                 // se soma dos dados igual a meus pontos
-                if( somaDosDados == meusPontos )
-                    statusDoJogo = Status.VENCEU;                        
-                else
-                    if( somaDosDados == SETE )
+                if( somaDosDados == meusPontos ) {
+                    statusDoJogo = Status.VENCEU;
+                    venceuDepois += 1;
+                    vetor.add(3);
+                } // fim if
+                else if( somaDosDados == SETE ) {
                         statusDoJogo = Status.PERDEU;
-               
+                        perdeuDepois += 1;
+                        vetor.add(4);
+                } // fim else if
+                
+                contaContinue++;
+                
             } // fim while
            
             // se status do jogo igual a venceu
             if( statusDoJogo == Status.VENCEU ) {
                 System.out.println("Você venceu.");
-                contarVenceu += 1;               
+                contarVenceu += 1;                 
             } // fim if
             else {
                 System.out.println("Você perdeu.");
-                contarPerdeu += 1;
+                contarPerdeu += 1;                 
             } // fim else
         } // fim for
         
         // imprime relatório
         System.out.println("\nRESUMO DAS JOGADAS");
-        System.out.printf("Você rolou os dados %d vezes%n", i );
-        System.out.printf("Venceu %d e perdeu %d vezes%n", contarVenceu, contarPerdeu);
-        
-        System.out.printf("Venceu na primeira rolagem %d vezes%n", venceuNaPrimeira );
-        somaVenceu(vetor);
-        
-        System.out.printf("Perdeu na primeira rolagem %d vezes%n", perdeuNaPrimeira );
-        somaPerdeu(vetor);
-        
-        System.out.printf("Não venceu ou perdeu na 1ª rolagem %d vezes%n", contaContinue);
-        
-        //mostraVetor(vetor);
-        
+        System.out.printf("Você rolou os dados %d vezes%n", contarRolaDados);        
+        System.out.printf("Venceu %d e perdeu %d vezes%n", contarVenceu, contarPerdeu);        
+        System.out.printf("1 => Venceu  na primeira rolagem %d vezes%n", venceuNaPrimeira );        
+        System.out.printf("2 => Perdeu na primeira rolagem %d vezes%n", perdeuNaPrimeira );        
+        System.out.printf("3 => Venceu depois da primeira rolagem %d vezes%n", venceuDepois );        
+        System.out.printf("4 => Perdeu depois da primeira rolagem %d vezes%n", perdeuDepois );
+        somaFrequencia(vetor);
         
     } // fim main
     
@@ -152,36 +167,34 @@ public class JogoDeDadosCraps {
         
         return soma;
         
-    } // fim rola dados
+     } // fim rola dados
+        
+    // cria método frequência
+    public static void somaFrequencia( ArrayList<Integer> vetor ) {
+        
+        // declara e cria o vetor frequência
+        int[] frequencia = new int[ 5 ];
+        
+        // loop para contar os valores dos elementos do vetor
+        for( int valor : vetor ) {
+            ++frequencia[ valor ];
+        } // fim for
+        
+        System.out.printf("%n%s%12s%n", "Índice", "Frequência");
+        
+        // loop para mostrar os valores da frequencia
+        for( int valor = 0; valor < frequencia.length; valor++ ) {
+            if( valor > 0)
+                System.out.printf("%3d%8d%n", valor, frequencia[valor] );
+        } // fim for
+        
+    } // fim frequencia
     
-    public static void mostraVetor( int[] vetor ) {
+    public static void mostraVetor( ArrayList<Integer> vetor  ) {
         System.out.printf("%s%8s%n", "Índice", "Valor");
-        for( int num = 0; num < vetor.length; num++ ) {
-            System.out.printf("%3d%8d%n", num + 1, vetor[ num ]);
+        for( int num = 0; num < vetor.size(); num++ ) {
+            System.out.printf("%3d%8d%n", num + 1, vetor.get(num) );
         } // fim for
     } //fim MOSTRA VETOR
-    
-    // somaVenceu
-    public static void somaVenceu( int[] vetor ) {
-        System.out.print( "Na {" );
-        // loop para mostrar a posição que venceu na primeira jogada
-        for( int soma = 0; soma < vetor.length; soma++ ) {
-            if( vetor[ soma ] == 1 )
-                System.out.printf("%3dª", soma + 1);            
-        } // fim for soma
-        System.out.println(" } Rolagem,\n");
-    }// fim soma venceu
-    
-    
-    // somaVenceu
-    public static void somaPerdeu( int[] vetor ) {
-        System.out.print( "Na {" );
-        // loop para mostrar a posição que venceu na primeira jogada
-        for( int soma = 0; soma < vetor.length; soma++ ) {
-            if( vetor[ soma ] == 2 )
-                System.out.printf("%3dª", soma + 1);
-        } // fim for soma
-        System.out.println(" } Rolagem,\n");
-    }// fim soma venceu
-    
+
 } // fim classe
