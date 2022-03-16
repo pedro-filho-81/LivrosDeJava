@@ -33,19 +33,29 @@ public class PassagensAereas7_19 {
     public static void main(String[] args) {
 
         // cria objeto Scanner
+
         Scanner entrada = new Scanner(System.in);
 
         // constante
         final int TAMANHO = 10;
         
+        int[] teste = { 1, 2, 3, 4, 5 };
+        int valorTeste = 3;
+        for( int i = 0; i < teste.length; i++)
+            if( teste[i] == valorTeste )
+                System.out.printf("%nO valor %2d é o %dº número.%n", valorTeste, i + 1);
+
         // declara e cria o vetor
         boolean[] passagemAerea = new boolean[TAMANHO];
         
         // loop para atribuir passagens
-        for( int i = 0; i < TAMANHO; i++ ) {
+        while( true ) {
             
             menu();
             int opcao = entrada.nextInt();
+
+            if(opcao == -1 )
+            break;
 
             switch( opcao ) {
                 case 1:
@@ -61,6 +71,7 @@ public class PassagensAereas7_19 {
                     break;
 
             } // fim switch
+
         } // fim for adicionar valor
 
     } // fim main
@@ -69,10 +80,28 @@ public class PassagensAereas7_19 {
     public static void menu() {
         
         System.out.println("    ****** MENU ******* ");
-        System.out.println("* 1 para primeira classe  *");
+        System.out.println("* 1 para primeira classe   *");
         System.out.println("* 2 para classe econômica *");
+        System.out.println("*       -1 para sair       *");
         System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         System.out.print("Qual é a sua opção? ");
     } // fim menu
+
+    public static void adicionarValor() {
+        // objeto Scanner
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Valor");
+    } // fim adicionar valor 
+
+    public static void primeiraClasse( int[] vetor, int chave )
+    {
+        for( int i = 0; i < 5; i++ ) {
+            if( vetor[ i ] != chave && chave <= 5 )
+                vetor[i] = i + 1;
+            else
+                System.out.println("Valor já lançado.");
+        } // fim for
+    } // fim método
 
 } // fim classe
