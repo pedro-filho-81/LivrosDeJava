@@ -1,6 +1,16 @@
 import java.util.Scanner;
 
-public class VerificandoPedidos27 {
+public class VerificandoPedidos28 {
+    /**
+     * 1.2.28 Verificação do pedido. Escreva um programa que receba três 
+     * argumentos de linha de comando duplos x, yez e imprima true se os 
+     * valores forem estritamente crescentes ou decrescentes 
+     * (x < y < z ou x > y > z), e false caso contrário.
+     * Sedgewick, Robert; Wayne, Kevin. Ciência da Computação (pág. 47). 
+     * Pearson Educação. Edição do Kindle.
+     * @autor Pedro 17/04/2022
+     */
+    
     public static void main(String[] args) {
         
         // objeto Scanner
