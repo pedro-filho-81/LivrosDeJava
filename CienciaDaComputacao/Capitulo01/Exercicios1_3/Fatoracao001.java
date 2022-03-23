@@ -21,7 +21,6 @@ public class Fatoracao001 {
             while (n % factor == 0) {
                 System.out.print(factor + " "); 
                 n /= factor;
-                System.out.printf("%nn = %d%n", n);
             } // fim while
              
         } // fim for
