@@ -15,7 +15,7 @@ public class LerCaractereDoTeclado {
         char letra = entrada.next().charAt(0);
 
         // mostra o caractere digitado pelo usuário
-        System.out.println("Você digitou o caractere: " + letra );
-        
+        System.out.println("Você digitou o caractere: " + letra);
+
     } // fim main
 } // fim classe
