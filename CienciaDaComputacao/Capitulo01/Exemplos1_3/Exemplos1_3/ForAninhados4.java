@@ -30,7 +30,7 @@ public class ForAninhados4 {
                     System.out.print("* ");
                 } // fim if
                 else {
-                    System.out.print(" ");
+                    System.out.print("  ");
                 } // fim else                
             } // fim for interno
             
