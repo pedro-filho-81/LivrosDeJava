@@ -28,5 +28,6 @@ public class ValoresDeMeN13 {
             n = n / 10;
             System.out.printf("%10d%10d%n", m, n);
         } // fim while
+        
     } // fim main    
 } // fim classe
