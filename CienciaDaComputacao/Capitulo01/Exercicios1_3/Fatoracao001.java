@@ -12,10 +12,10 @@ public class Fatoracao001 {
         // command-line argument
         long n = input.nextInt();
 
-        System.out.print("A fatoração de n é " + n + " é: ");
+        System.out.print("A fatoração de " + n + " é: ");
 
         // for each potential factor
-        for (long factor = 2; factor*factor <= n; factor++) {
+        for (long factor = 2; factor <= n / factor; factor++) {
 
             // if factor is a factor of n, repeatedly divide it out
             while (n % factor == 0) {
