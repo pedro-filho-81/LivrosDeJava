@@ -44,6 +44,7 @@ public class SimulacaoDeJogo23 {
 
         System.out.print("Informe o número de tentativas: ");
         int tentativas = input.nextInt();
+        System.out.println();
 
         // variáveis
         int apostas = 0;
@@ -72,7 +73,7 @@ public class SimulacaoDeJogo23 {
 
             if (dinheiro == queroGanhar) {
                 vitorias++;
-                System.out.printf("\tVocê venceu na posta numero %d%n", contar + 1);
+                System.out.printf("\tVocê venceu na aposta numero %d%n", contar + 1);
             } // fim if vitorias
             else
                 System.out.printf("Você perdeu na aposta número %d%n", contar + 1);
@@ -87,13 +88,13 @@ public class SimulacaoDeJogo23 {
         int jogosGanhos = 100 * vitorias / tentativas;
 
         // imprime o resultado
-        System.out.printf("Em %d tentativas você venceu %d vezes%n", tentativas, vitorias);
+        System.out.printf("\nEm %d tentativas você venceu %d vezes%n", tentativas, vitorias);
         System.out.printf("Ganhou R$ %d%n", ganhou);
         System.out.printf("Perdeu R$ %d%n", perdeu);
         System.out.printf("Ficou com R$ %d%n", ganhou - perdeu);
 
         if (perdeu < ganhou)
-            System.out.printf("Abatendo a aposta de R$ %d Lucrou de R$ %d%n", perdeu,
+            System.out.printf("Abatendo a aposta de R$ %d Lucrou R$ %d%n", perdeu,
                                 (ganhou - perdeu) - perdeu);
         else
             System.out.printf("Teve um prejuizo de R$ %d%n", ganhou - perdeu);
