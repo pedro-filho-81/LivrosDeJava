@@ -42,6 +42,14 @@ public class NumeroPrimo7 {
             nummeroPrimo[i] = true;
         } // fim for
 
+        System.out.print("Vetor = ");
+        // loop para mostrar vetor
+        for (int i = 2; i <= tamanho; i++) {
+            // imprima
+            System.out.printf("%7b", nummeroPrimo[i]);
+        } // fim for
+        System.out.println();
+
         // loop for para a repetição
         for (int i = 2; i <= tamanho / i; i++) {
 
