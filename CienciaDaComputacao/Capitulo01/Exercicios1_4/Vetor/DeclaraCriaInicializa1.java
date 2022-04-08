@@ -1,3 +1,4 @@
+package Vetor;
 public class DeclaraCriaInicializa1 {
     /**
      * 1.4.1 Escreva um programa que declare, crie e inicialize um array a[] 
