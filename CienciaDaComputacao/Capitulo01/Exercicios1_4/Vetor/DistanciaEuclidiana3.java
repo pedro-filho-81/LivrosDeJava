@@ -31,6 +31,11 @@ public class DistanciaEuclidiana3 {
 
         // loop for para calcular a distância
         for( int i = 0; i < x1.length; i++) {
+            /*
+                (a raiz quadrada das somas dos 
+                quadrados das diferenças entre 
+                os elementos correspondentes)
+            */
             // calcula a distância de x1 e x2
             double distancia = Math.sqrt(Math.pow(x2[i], 2) - Math.pow(x1[i], 2));
             // vetor soma recebe o valor da distância
