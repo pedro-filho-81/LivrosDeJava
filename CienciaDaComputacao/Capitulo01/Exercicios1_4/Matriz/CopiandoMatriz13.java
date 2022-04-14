@@ -34,15 +34,14 @@ public class CopiandoMatriz13 {
 
         // declara e cria a matriz B
         int[][] matrizB = new int[LINHA][COLUNA];
-        int[][] matrizC = new int[LINHA][COLUNA];
 
         System.out.println("\nMatriz A original:");
         // chama método mostrar para matrizA
-        mostrar(matrizA, LINHA, COLUNA);
+        mostrar(matrizA);
 
         // loop para copiar a matriz A para B
-        for( int i = 0; i < LINHA; i++) {
-            for(int j = 0; j < COLUNA; j++) {
+        for( int i = 0; i < matrizA.length; i++) {
+            for(int j = 0; j < matrizA[i].length; j++) {
                 // matriz B recebe os elementos da matriz A
                 matrizB[i][j] = matrizA[i][j];
             } // fim for coluna
@@ -51,11 +50,11 @@ public class CopiandoMatriz13 {
         // mostra  matris B
         System.out.println("\nMatriz B Cópia da A:");
         // chama método mostrar para matrizA
-        mostrar(matrizB, LINHA, COLUNA);
+        mostrar(matrizB);
 
         // loop para a matriz A ser o quadrado de B
-        for( int i = 0; i < LINHA; i++) {
-            for(int j = 0; j < COLUNA; j++) {
+        for( int i = 0; i < matrizA.length; i++) {
+            for(int j = 0; j < matrizA[i].length; j++) {
                 // matriz A recebe o quadrado dos elementos da matriz B
                 matrizA[i][j] = matrizB[i][j] * matrizB[i][j];
             } // fim for coluna
@@ -63,20 +62,23 @@ public class CopiandoMatriz13 {
 
         System.out.println("\nMatriz A é o quadrado da matrizB:");
         // chama método mostrar para matrizA
-        mostrar(matrizA, LINHA, COLUNA);
+        mostrar(matrizA);
 
-        
     } // fim main
 
     // método mostrar valores
-    public static void mostrar(int[][] matriz, int linha, int coluna) {
+    public static void mostrar(int[][] matriz) {
 
-        for (int i = 0; i < linha; i++) {
-            for (int j = 0; j < coluna; j++) {
-                // imprime
+        // loop para linha
+        for (int i = 0; i < matriz.length; i++) {
+            // loop para a coluna
+            for (int j = 0; j < matriz[i].length; j++) {
+                // imprime oa elementos da matriz
                 System.out.printf("%5d", matriz[i][j]);
             } // fim for coluna
+            // pula linha
             System.out.println();
         } // fim for linha
     } // fim mostrar
+    
 } // fim classe
