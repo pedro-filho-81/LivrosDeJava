@@ -7,11 +7,11 @@ public class Quantos11 {
         int n = args.length;
 
         // mensagem de saída
-        System.out.print("Você digitou " + n + " argumento de linha de comando");
+        System.out.print("Você digitou " + n + " argumento(s) de linha de comando");
         if (n == 1)
             System.out.println(".");
         else
-            System.out.println("s.");
+            System.out.println(".");
 
     } // fim main
 } // fim classe
