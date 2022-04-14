@@ -34,6 +34,5 @@ public class DistribuicaoDiscreta12 {
         }
          
         System.out.println(event);
-    }  
-    
+    }      
 }
