@@ -15,40 +15,55 @@ public class MatrizBooleana16 {
 
         // variável para argumento de linha de comando
         int num = Integer.parseInt(args[0]);
-        int num1 = Integer.parseInt(args[1]);
-        int num2 = Integer.parseInt(args[2]);
+        int dividendo = Integer.parseInt(args[1]);
+        int divisor = Integer.parseInt(args[2]);
         int divisao = 1;
-
-        // declara e cria uma matriz boleana
-        boolean[][] matriz = new boolean[num + 1][num + 1];
-
-        // Adiciona valores a matriz
-        // loop linha
-        for (int i = 1; i <= num; i++) {
-            // loop para a coluna
-            for (int j = 1; j <= num; j++) {
-                matriz[i][j] = false;
-            } // fim for
-        } // fim for
         
-        while (num2 != 0) {
-            System.out.println("num1 = " + num1);
-            System.out.println("num2 = " + num2);
-            System.out.printf("%d / %d = %d%n", num1, num2, num1 / num2);
-            divisao = num1 / num2;
-            int resto = num1 % num2;
+        // declara e cria uma matriz boleana
+//        boolean[][] matriz = new boolean[num + 1][num + 1];
+
+        //for (int controle = 0; controle < 5; controle++) {
+/*
+            // Adiciona valores a matriz
+            // loop linha
+            for (int i = 1; i <= num; i++) {
+                // loop para a coluna
+                for (int j = 1; j <= num; j++) {
+                    matriz[i][j] = false;
+                } // fim for
+            } // fim for
+*/
+                    
+        while (divisor != 0) {
+                    
+            System.out.println("dividendo = " + dividendo);
+            System.out.println("divisor = " + divisor);
+
+            divisao = dividendo / divisor;
+            System.out.printf("%d / %d = %d%n", dividendo, divisor, divisao);
+                  
+            int resto = dividendo % divisor;
+               
             System.out.println("Resto = " + resto);
-            num1 = num2;
-            num2 = resto;
+               
+            dividendo = divisor;
+        
+            divisor = resto;
+               
         } // fim while
 
-        // imprime 
-        System.out.printf("num1 recebe o valor de num2 = %d%n", num1);
+        // imprime
+        System.out.printf("Quando o resto for 0\ndividendo recebe o valor do divisor = %d%n", dividendo);
+        System.out.println("Que e o valor do MDC.");
         // se número 1 igual a 1
-        if(num1 == 1) System.out.printf("MDC = %3d Sao primos entre si.%n", num1);
-        else          System.out.printf("MDC = %3d Nao sao primos entre si", num1);
+        if (dividendo == 1) {
+            System.out.printf("MDC = %3d Sao primos entre si.%n", dividendo);
+        } // fim if
+        else {
+            System.out.printf("MDC = %3d Nao sao primos entre si.%n", dividendo);
+        } // fim else
         System.out.println();
-
+        
     } // fim main
 
     // método mostrar
