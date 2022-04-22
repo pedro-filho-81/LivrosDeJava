@@ -13,10 +13,10 @@ public class LerMostrarEleentosA {
         // objeto Scanner
         Scanner input = new Scanner(System.in);
         // vetor
-        String[] palavras = new String[10];
+        String[] palavras = new String[3];
 
         // loop para adicionar noes
-        for( int i = 0; i < 10; i++) {
+        for( int i = 0; i < 3; i++) {
 
         // entrada de dados
         System.out.println("Digite un String: ");
@@ -24,9 +24,11 @@ public class LerMostrarEleentosA {
 
         } // fi for
 
+        // cabecalho
+        System.out.println("\nVetor:");
         // ostra noes
-        for(int i = 0; i < 10; i++) {
-            System.out.printf("%8s", palavras[i]);
+        for(int i = 0; i < 3; i++) {
+            System.out.printf("%12s", palavras[i]);
         } // fi ostrar
 
     } // fi ain
