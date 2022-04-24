@@ -6,7 +6,7 @@ class OrdenacaoVetor01 {
      * em ordem alfabética.
      * JOSE AUGUSTO NAVARRO GARCIA MANZANO. Algoritmos (p. 330). 
      * Editora Saraiva. Edição do Kindle.
-     * Pedro, 24/04/2022 
+     * 24/04/2022 
      */
     public static void main(String[] args) {
         
@@ -23,7 +23,7 @@ class OrdenacaoVetor01 {
         System.out.println("\nVetor em ordem decrescente:");
         mostrar(nomes);
         
-
+        
     } // fim main
 
     public static void mostrar(int[] vetor) {
