@@ -6,9 +6,14 @@ public class PesquisaNoVetor02 {
      * 
      */
     public static void main(String[] args) {
-        
+
+        // objeto Scanner
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Digite o valor a pesquisar:");
         // variável
-        int chave;
+        int chave = input.nextInt();
+        int elemento;
 
         // vetor
         int[] vetor = new int[10];
@@ -21,14 +26,19 @@ public class PesquisaNoVetor02 {
         ordenar(vetor);
         mostrar(vetor);
 
-        pesquisar(vetor, 25);
+        elemento = pesquisar(vetor, chave);
+
+        if(elemento == -1)
+            System.out.printf("%n%3d não encontrado%n", chave);
+        else
+            System.out.printf("%n%3d encontrado na posicao %d%n", chave, elemento);
 
     } // fim main
 
     public static void adicionar(int[] vetor) {
         SecureRandom aleatorio = new SecureRandom();
         for(int i = 0; i < vetor.length; i++) {
-            vetor[i] = 1 + aleatorio.nextInt(50);
+            vetor[i] = 1 + aleatorio.nextInt(10);
         } // fim for
     } // fim adicionar
 
@@ -50,18 +60,15 @@ public class PesquisaNoVetor02 {
         } // fim for i
     } // fim método
 
-    public static void pesquisar(int[] vetor, int chave) {
+    public static int pesquisar(int[] vetor, int chave) {
         for(int i = 0; i < vetor.length; i++) {
+            
             if(vetor[i] == chave) {
-                System.out.printf("\n%3d encontrado na posição %3d\n", chave, i + 1);
-                break;
+                return i + 1;
             } // fim if
-            else { 
-                System.out.printf("\n%3d não encontrado no vetor\n", chave);
-                break;
-            } // fim else
-
         } // fim for
+            
+        return -1;
     } // fim pesqiosar
 
 } // fim classe
