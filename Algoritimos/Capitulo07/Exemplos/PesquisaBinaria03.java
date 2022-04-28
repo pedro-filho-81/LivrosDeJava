@@ -41,7 +41,7 @@ public class PesquisaBinaria03 {
         if (elemento == -1) {
             System.out.printf("%n%3d nao encontrado.%n", chave);
         } // fim if
-        else { 
+        else {
             System.out.printf("%n%3d encontrado na posicao %d%n", chave, elemento);
         } // fi else
 
@@ -51,21 +51,21 @@ public class PesquisaBinaria03 {
 
     public static void adicionar(int[] vetor) {
         SecureRandom aleatorio = new SecureRandom();
-        for(int i = 0; i < vetor.length; i++) {
+        for (int i = 0; i < vetor.length; i++) {
             vetor[i] = 1 + aleatorio.nextInt(10);
         } // fim for
     } // fim adicionar
 
     public static void mostrar(int[] vetor) {
-        for(int i = 0; i < vetor.length; i++) {
+        for (int i = 0; i < vetor.length; i++) {
             System.out.printf("%3d", vetor[i]);
         } // fim for
     } // fim mostrar
 
     public static void ordenar(int[] vetor) {
-        for(int i = 0; i < vetor.length; i++) {
-            for(int j = 0; j < vetor.length; j++) {
-                if(vetor[i] < vetor[j]) {
+        for (int i = 0; i < vetor.length; i++) {
+            for (int j = 0; j < vetor.length; j++) {
+                if (vetor[i] < vetor[j]) {
                     int temp = vetor[i];
                     vetor[i] = vetor[j];
                     vetor[j] = temp;
@@ -74,25 +74,39 @@ public class PesquisaBinaria03 {
         } // fim for i
     } // fim método
 
-    public static int pesquisaBinaria(int[] vetor, int chave, int baixo, int alto) {
+    // Método para pesquisa binária
+    public static int pesquisaBinaria(int[] vetor, int chave, int inicio, int fim) {
 
+        // variável
         int meio;
 
-        while (baixo <= alto) {
-            meio = (baixo + alto) / 2;
+        // enquanto o inicio menor ou igual ao fim faça
+        while (inicio <= fim) {
 
+            //  meio recebe a soma de inicio e fim dividido por 2
+            meio = (inicio + fim) / 2;
+
+            // se a chave for igual ao valor do vetor meio
             if (chave == vetor[meio]) {
+                // retorne o valor meio
+                // retorne a posição onde a chave (valor pesquisado) foi encontrada
                 return meio;
             } // fim meio
+              // se não, se a chave menor que o valor do vetor meio
             else if (chave < vetor[meio]) {
-                alto = meio - 1;
+                // fim recebe o valor meio menos 1
+                fim = meio - 1;
             } // fim alto
+              // se não
             else {
-                baixo = meio + 1;
+                // inicio recebe meio mais u
+                inicio = meio + 1;
             } // fim baixo
 
         } // fim while
 
+        // se não encontrar o valor da chave retorne mmenos u
         return -1;
+
     } // fim pesquisa binária
 } // fim classe
