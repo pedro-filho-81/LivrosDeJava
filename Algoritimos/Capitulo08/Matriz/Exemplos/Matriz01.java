@@ -19,7 +19,8 @@ public class Matriz01 {
 
         System.out.println();
 
-        // organiza a matriz pelo tamanho (quantidade de letras do nome) do primeiro nome
+        // organiza a matriz pelo tamanho (quantidade de letras do nome) do primeiro
+        // nome
         // exp. Ana = 3 letras, Pedro = 5 letras, etc.
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz.length; j++) {
