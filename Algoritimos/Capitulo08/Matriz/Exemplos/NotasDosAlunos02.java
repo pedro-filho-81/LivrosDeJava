@@ -46,15 +46,15 @@ public class NotasDosAlunos02 {
 
     // adicionar notas
     public static void adicionarNotas(double[][] matriz, double[] vetor) {
-        
+
         Scanner input = new Scanner(System.in);
 
         // variáveis
         double somaNotas = 0.0;
 
-        for(int i = 0; i < 8; i++) {
-            for(int j = 0; j < 4; j++) {
-            
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 4; j++) {
+
                 System.out.printf("Digita a nota da linha %d coluna %d: ", i, j);
                 double nota = input.nextDouble();
                 matriz[i][j] = nota;
@@ -69,24 +69,26 @@ public class NotasDosAlunos02 {
             System.out.println();
 
         } // fim for i
-    } //0 fim adicionar notas
+    } // 0 fim adicionar notas
 
     // mostrar tudo
     public static void mostrarTudo(String[] nomes, double[][] notas, double[] medias) {
-        
+
         double somaMedia = 0.0;
 
-        for(int i = 0; i < 8; i++) {
-            
+        for (int i = 0; i < 8; i++) {
+
             System.out.printf("%-8s  ", nomes[i]);
-            
-            for(int j = 0; j < 4; j++) {
+
+            for (int j = 0; j < 4; j++) {
                 System.out.printf("%7.1f", notas[i][j]);
             } // fim for j
 
             System.out.printf("%7.1f%n", medias[i]);
             somaMedia += medias[i];
         } // fim for i
+
+        System.out.println("***********************************************");
 
         double totalDaMedia = somaMedia / 8;
 
