@@ -20,4 +20,4 @@ public class MostraTamanhoDoVetor2 {
         // mostra o tamanho do vetor usando vetor.length
         System.out.printf("O tamanho do vetor = %2d%n", vetor.length);
     } // fim main
-} // fim classe
+} // fim classejavac
