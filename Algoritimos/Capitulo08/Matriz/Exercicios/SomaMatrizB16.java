@@ -19,17 +19,22 @@ public class SomaMatrizB16 {
 
         // matriz
         double[][] matrizA = new double[LINHA][COLUNA];
-        double[] vetor = new double[LINHA];
+        double[] vetorA = new double[LINHA];
+        double[] vetorB = new double[COLUNA];
 
         // adicionar
         adicionar(matrizA, LINHA, COLUNA);
-        somaLinhaMtz(vetor, matrizA, LINHA, COLUNA);
+        somaLinhaMtz(vetorA, vetorB, matrizA, LINHA, COLUNA);
 
         // mostrar matriz
         System.out.println("\nMatrizA:");
         mostrarMtrz(matrizA, LINHA, COLUNA);
-        System.out.println("\nVetor: e a soma das linhas da matriz.");
-        mostraVtr(vetor);
+        
+        System.out.println("\nVetorA: e a soma das linhas da matriz.");
+        mostraVtr(vetorA);
+
+        System.out.println("\nVetorB: e a soma das colunas da matriz.");
+        mostraVtr(vetorB);
 
     } // fim main
 
@@ -47,19 +52,27 @@ public class SomaMatrizB16 {
     } // fim adicionar
 
     // adicionar matriz a para b
-    public static void somaLinhaMtz(double[] vetor, double[][] matriz, int linha, int coluna) {
+    public static void somaLinhaMtz(double[] vetorA, double[] vetorB, double[][] matriz, int linha, int coluna) {
 
         double soma = 0.0;
 
         System.out.print("\nSoma numeros pares: ");
-
+        // loop para sommar as linhas da matriz
         for (int i = 0; i < linha; i++) {
             for (int j = 0; j < coluna; j++) {
-
                 soma += matriz[i][j];
-
             } // fi j
-            vetor[i] = soma;
+            vetorA[i] = soma;
+            soma = 0;
+        } // fim for i
+
+        // loop para sommar as linhas da matriz
+        for (int i = 0; i < coluna; i++) {
+            for (int j = 0; j < linha; j++) {
+                soma += matriz[j][i];
+            } // fi j
+            vetorB[i] = soma;
+            soma = 0;
         } // fim for i
 
         System.out.printf(" = %.2f\n", soma);
@@ -109,6 +122,6 @@ public class SomaMatrizB16 {
         for(int i = 0; i < vetor.length; i++) {
             System.out.printf("%7.2f", vetor[i]);
         } // fim for
-    } // fim mmmmostra vetpr
+    } // fim mostra vetpr
 
 } // fim classe
