@@ -83,13 +83,42 @@ public class MatrizErecebeVetores18 {
         } // fim for
     } // fim mostrar
 
+    // mostrar matriz
     public static void mostrarMtrz(int[][] matriz, int tamanho) {
-        for(int i = 0; i < tamanho; i++) {
-            for(int j = 0; j < tamanho; j++) {
-                System.out.printf("%5d", matriz[i][j]);
-            } // fi for j
+
+        // 11 espaços em branco para a coluna
+        System.out.print("            ");
+
+        // loop para imprimir os núeros das colunar
+        for (int a = 0; a < tamanho; a++) {
+            // mostra os númmeros das colunas
+            System.out.printf("%7d", a + 1);
+        } // fim loop
+
+        // pula uma linha
+        System.out.println("");
+
+        System.out.print("            "); // 11 espaços
+        for (int a = 0; a < tamanho; a++) { // loop
+            System.out.printf("%7s", "*"); // imprime asterisco
+        } // fim loop
+        System.out.println(); // pula linha
+
+        // loop para a linha
+        for (int i = 0; i < tamanho; i++) {
+            // mostra a índice da linha
+            System.out.printf("linha %2d -> ", i + 1);
+
+            // loop para a coluna
+            for (int j = 0; j < tamanho; j++) {
+                // mostra o valor da coluna na matriz
+                System.out.printf("%7d", matriz[i][j]);
+            } // fim for j
+
+            // pula linha
             System.out.println();
-        } // fim for i
+
+        } // fimm for i
     } // fim mostrar matriz
 
 } // fim classe
