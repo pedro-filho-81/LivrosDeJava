@@ -33,7 +33,8 @@ public class MatrizErecebeVetores18 {
         adicionar(vetorB);
         adicionar(vetorC);
         adicionar(vetorD);
-        adicionarMtz(vetorA, vetorB, vetorC, vetorD, matrizE, TAMANHO);
+        adicionarMtz(vetorA, vetorB, vetorC, matrizE, TAMANHO);
+        fatorial(vetorD, matrizE, TAMANHO);
 
         // mostrar
         System.out.println("\nVetorA:");
@@ -55,24 +56,21 @@ public class MatrizErecebeVetores18 {
         SecureRandom aleatorio = new SecureRandom();
 
         for (int i = 0; i < vetor.length; i++) {
-            vetor[i] = 1 + aleatorio.nextInt(50);
+            vetor[i] = 1 + aleatorio.nextInt(10);
         } // fim for
 
     } // fim adicionar
 
     // adicionar matriz
-    public static void adicionarMtz(int[] vetorA, int[] vetorB, int[] vetorC, int[] vetorD, int[][] matrizE,
-            int tamanho) {
+    public static void adicionarMtz(int[] vetorA, int[] vetorB, int[] vetorC, int[][] matrizE, int tamanho) {
         for (int i = 0; i < tamanho; i++) {
             for (int j = 0; j < tamanho; j++) {
                 if (i == 0)
-                    matrizE[i][j] = vetorA[j];
+                    matrizE[i][j] = vetorA[j] * 2;
                 else if (i == 1)
-                    matrizE[i][j] = vetorB[j];
-                else if (i == 2)
-                    matrizE[i][j] = vetorC[j];
+                    matrizE[i][j] = vetorB[j] * 3;
                 else
-                    matrizE[i][j] = vetorD[j];
+                    matrizE[i][j] = vetorC[j] * 4;
             } // fim for j
         } // fim for i
     } // fim adicionar matrizes
@@ -92,7 +90,7 @@ public class MatrizErecebeVetores18 {
         // loop para imprimir os núeros das colunar
         for (int a = 0; a < tamanho; a++) {
             // mostra os númmeros das colunas
-            System.out.printf("%7d", a + 1);
+            System.out.printf("%9d", a + 1);
         } // fim loop
 
         // pula uma linha
@@ -100,7 +98,7 @@ public class MatrizErecebeVetores18 {
 
         System.out.print("            "); // 11 espaços
         for (int a = 0; a < tamanho; a++) { // loop
-            System.out.printf("%7s", "*"); // imprime asterisco
+            System.out.printf("%9s", "*"); // imprime asterisco
         } // fim loop
         System.out.println(); // pula linha
 
@@ -112,7 +110,7 @@ public class MatrizErecebeVetores18 {
             // loop para a coluna
             for (int j = 0; j < tamanho; j++) {
                 // mostra o valor da coluna na matriz
-                System.out.printf("%7d", matriz[i][j]);
+                System.out.printf("%9d", matriz[i][j]);
             } // fim for j
 
             // pula linha
@@ -120,5 +118,22 @@ public class MatrizErecebeVetores18 {
 
         } // fimm for i
     } // fim mostrar matriz
+
+    // fatorial
+    public static void fatorial(int[] vetor, int[][] matriz, int tamanho) {
+        int fat = 1;
+        int i, j;
+
+        for (i = 0; i < tamanho; i++) {
+            for (j = 0; j < tamanho; j++) {
+                
+                for(int f = 1; f <= vetor[j]; f++) {
+                    fat *= f;
+                } // fim for f
+                matriz[3][j] = fat;
+                fat = 1;
+            } // fim for j
+        } // fim for i
+    } // fim fatorial
 
 } // fim classe
