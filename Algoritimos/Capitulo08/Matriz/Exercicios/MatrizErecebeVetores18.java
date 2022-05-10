@@ -122,18 +122,17 @@ public class MatrizErecebeVetores18 {
     // fatorial
     public static void fatorial(int[] vetor, int[][] matriz, int tamanho) {
         int fat = 1;
-        int i, j;
+        int j;
 
-        for (i = 0; i < tamanho; i++) {
-            for (j = 0; j < tamanho; j++) {
-                
-                for(int f = 1; f <= vetor[j]; f++) {
-                    fat *= f;
-                } // fim for f
-                matriz[3][j] = fat;
-                fat = 1;
-            } // fim for j
-        } // fim for i
+        for (j = 0; j < tamanho; j++) {
+
+            for (int f = 1; f <= vetor[j]; f++) {
+                fat *= f;
+            } // fim for f
+            matriz[3][j] = fat;
+            fat = 1;
+
+        } // fim for j
     } // fim fatorial
 
 } // fim classe
