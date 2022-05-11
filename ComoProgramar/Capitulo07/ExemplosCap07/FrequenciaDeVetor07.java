@@ -9,6 +9,12 @@ public class FrequenciaDeVetor07 {
 
         int[] frequencia = new int[7];
 
+        for(int i = 0; i < vetor.length; i++) {
+            System.out.printf("%3d", vetor[i]);
+            if(i % 10 == 0)
+                System.out.println();
+        } // fim for i
+
         for (int resposta = 0; resposta < vetor.length; resposta++) {
 
             try {
