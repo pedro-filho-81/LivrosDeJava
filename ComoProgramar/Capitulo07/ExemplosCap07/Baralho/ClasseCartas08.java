@@ -1,16 +1,17 @@
 package Baralho;
+
 public class ClasseCartas08 {
-    private final String faceDaCarta;
-    private final String naipeDaCarta;
+    private final String carta;
+    private final String naipe;
 
     // construtor
-    public ClasseCartas08(String faceDaCarta, String naipeDaCarta) {
-        this.faceDaCarta = faceDaCarta;
-        this.naipeDaCarta = naipeDaCarta;
+    public ClasseCartas08(String carta, String naipe) {
+        this.carta = carta;
+        this.naipe = naipe;
     } // fim construtor
 
-    
-    public static void main(String[] args) {
-        
-    } // fim main    
+    public String toString() {
+        return carta + " de " + naipe;
+    } // fim toString
+
 } // fim classe
