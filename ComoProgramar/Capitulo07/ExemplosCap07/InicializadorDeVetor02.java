@@ -1,5 +1,3 @@
-package Exemplos;
-
 public class InicializadorDeVetor02 {
     public static void main(String[] args) {
 

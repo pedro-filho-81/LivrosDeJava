@@ -1,5 +1,3 @@
-package Exemplos;
-
 public class CalculandoValoresVetor03 {
     public static void main(String[] args) {
         

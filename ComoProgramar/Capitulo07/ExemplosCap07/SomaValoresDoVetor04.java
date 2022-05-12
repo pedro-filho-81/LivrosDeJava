@@ -1,5 +1,3 @@
-package Exemplos;
-
 public class SomaValoresDoVetor04 {
     public static void main(String[] args) {
         
