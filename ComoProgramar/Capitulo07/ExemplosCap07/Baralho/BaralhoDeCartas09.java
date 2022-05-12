@@ -1,5 +1,3 @@
-package Baralho;
-
 import java.security.SecureRandom;
 
 public class BaralhoDeCartas09 {

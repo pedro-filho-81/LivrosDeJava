@@ -1,5 +1,3 @@
-package Baralho;
-
 public class TestaBaralhoDeCartas10 {
     public static void main(String[] args) {
 
