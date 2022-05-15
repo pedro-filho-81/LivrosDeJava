@@ -2,9 +2,10 @@ public class GradeBook12 {
 
     // variáveis de instância
     private String nomeDoCurso;
+    // matriz para às notas
     private int[][] notas;
 
-    // construtor
+    // construtor da classe
     public GradeBook12(String nomeDoCurso, int[][] notas) {
         this.nomeDoCurso = nomeDoCurso;
         this.notas = notas;
@@ -27,7 +28,7 @@ public class GradeBook12 {
 
         // mostra menor e maior nota
         System.out.printf("\nMenor nota = %3d\nMaior nota = %3d\n\n",
-                getMenorValor(), getMaiorValor());
+                            getMenorValor(), getMaiorValor());
 
         graficoDeBarras();
 
@@ -71,7 +72,7 @@ public class GradeBook12 {
                 } // fim if
             } // fim for coluna
         } // fim for linha
-          // retorne maior valor
+        // retorne maior valor
         return maiorValor;
     } // fim get maior valor
 
@@ -106,11 +107,11 @@ public class GradeBook12 {
             } // fimm for coluna
         } // fim for nota
 
-        // para cadafrequencia de nota imprima gráfico de barras
+        // para cada frequencia de nota imprima gráfico de barras
         for (int contar = 0; contar < frequencia.length; contar++) {
 
             if (contar == 10) {
-                System.out.printf(" %5d ", 100);
+                System.out.printf("  %5d: ", 100);
             } // fimm if
             else {
                 System.out.printf("%02d - %02d: ", contar * 10, contar * 10 + 9);
@@ -130,22 +131,22 @@ public class GradeBook12 {
     public void mostraNotas() {
 
         // cabeçalho
-        System.out.println("As notas são: ");
-        System.out.print("                 ");
+        System.out.println("As notas sao: ");
+        System.out.print("            ");
 
         // cria o título das colunas
         for (int teste = 0; teste < notas[0].length; teste++)
-            System.out.printf("Teste %d ", teste + 1);
+            System.out.printf("%8s%d", "Teste", teste + 1);
 
-        System.out.println("Media:");
+        System.out.printf("%8s%n", "Media:");
 
         // for linha
         for (int estudante = 0; estudante < notas.length; estudante++) {
 
-            System.out.printf("Estudante %2d ", estudante + 1);
+            System.out.printf("Estudante%2d", estudante + 1);
 
             for (int teste : notas[estudante])
-                System.out.printf("%8d", teste);
+                System.out.printf("%7d", teste);
 
             double media = getMedia(notas[estudante]);
             System.out.printf("%9.2f%n", media);
