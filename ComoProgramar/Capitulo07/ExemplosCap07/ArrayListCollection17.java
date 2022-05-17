@@ -12,10 +12,11 @@ public class ArrayListCollection17 {
         itens.add(0, "amarelo");
 
         // cabeçalho
-        System.out.println("Elementos do array list itens:");
+        System.out.println("Mostra os elementos do array list itens: itens.get(i)");
 
         // loop para exibir os elementos do array list itens
         for( int i = 0; i < itens.size(); i++)
+            // exibe a lista com o métod  get
             System.out.printf(" %s", itens.get(i));
 
         System.out.println();
