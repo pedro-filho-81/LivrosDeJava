@@ -4,6 +4,16 @@ public class TesteTime01 {
         // cria o objeto Time01
         Time01 time = new Time01();
 
+        // as variáveis de instância [private] das classes 
+        // não podem ser acessadas fora da classe
+        // por exemplo:
+        // error: horas has private access in Time01
+        /*
+        time.horas = 9; // vai mostrar mensagem de erro na hora da compilação
+        time.minutos = 34; // error: minutos has private access in Time01
+        time.segundos = 29;// error: segundos has private access in Time01
+       */
+
         // mostra a hora no formato universal
         displayTime("Horas antes da alteracao", time);
         System.out.println(); // pula linha
