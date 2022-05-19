@@ -8,7 +8,8 @@ public class FrequenciaDeVetor07 {
                 2, 3, 1, 1, 6, 2 };
 
         int[] frequencia = new int[7];
-
+        
+        // mostra o vetor original
         for(int i = 0; i < vetor.length; i++) {
             System.out.printf("%3d", vetor[i]);
             if(i % 10 == 0)
@@ -29,7 +30,16 @@ public class FrequenciaDeVetor07 {
         System.out.printf("%s%15s%n", "Indice", "Frequencia");
 
         for (int mostrar = 1; mostrar < frequencia.length; mostrar++) {
-            System.out.printf("%3d%12d%n", mostrar, frequencia[mostrar]);
+            System.out.printf("%3d%12d", mostrar, frequencia[mostrar]);
+
+            System.out.print("\t");
+
+            for(int asterisco = 1; asterisco <= frequencia[vetor[mostrar]]; asterisco++) {
+                System.out.printf("%s", "*");
+            } // fim for asterisco
+
+            System.out.println();
+            
         } // fim for mostrar
 
     } // fim main
