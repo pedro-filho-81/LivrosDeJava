@@ -22,7 +22,7 @@ public class FrequenciaDeVetor07 {
                 ++frequencia[vetor[resposta]];
             } // fim try
             catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println("Indice da matriz fora dos limites de exceção");
+                System.out.println( "Indice da matriz fora dos limites de exceção");
                 System.out.printf("  vetor[%d} = %d%n%n", resposta, vetor[resposta]);
             } // fim catch
         } // fim for resposta
