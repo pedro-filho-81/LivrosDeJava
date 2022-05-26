@@ -19,7 +19,10 @@ public class JogoDeDados17 {
         // vetor
         int[] dados = new int[NUM_DE_VEZES];
 
+        // chama método adicionar
         adicionar(dados, NUM_DE_VEZES);
+
+        // chama método mmostrar
         mostrar(dados, NUM_DE_VEZES);
 
     } // fim main
@@ -37,7 +40,7 @@ public class JogoDeDados17 {
                 int dado1 = 1 + aleatorio.nextInt(6);
                 int dado2 = 1 + aleatorio.nextInt(6);
 
-                // calcular
+                // vetor recebe a soma dos dados
                 vetor[i] = dado1 + dado2;
 
             } // fim for
@@ -49,18 +52,22 @@ public class JogoDeDados17 {
         // vetor
         int[] frequencia = new int[13];
 
-        // loop for 
+        // loop for para atribuir valores ao vetor
         for(int i = 0; i < numDeVezes; i++) {
+            // vetor soma os valores
             ++frequencia[vetor[i]];
         } // fim for
 
         // cabeçalho
         System.out.printf("%s%15s%n", "Indice", "Frequência");
 
+        // loop for para mostra os valores da frequencia
         for(int j = 2; j < frequencia.length; j++) {
+            // mostra os valores da frequenia
             System.out.printf("%3d%15d%n", j, frequencia[j]);
-        }
+        } // fimm for
 
+        // pula linha
         System.out.println();
         
     } // fim mostrar
