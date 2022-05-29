@@ -1,5 +1,3 @@
-import java.security.SecureRandom;
-
 import java.util.Scanner;
 
 public class ReservaPassagensAereas19 {
@@ -55,64 +53,63 @@ public class ReservaPassagensAereas19 {
 
         while( contar < 10 ) {
 
-        // entrada de dados
-        
-        System.out.println("\n\n*** Passagens Aereas: ***\n\tDigite:");
-        System.out.println("*************************");
-        System.out.println(" 1 para primeira classe" +
-                        "\n 2 para classe economica:" + 
-                        "\n-1 para sair do sistema.");
-        System.out.println("*************************");
-        int opcao = input.nextInt();
-        
-
-        if( opcao == -1 || contar >= 9)
-            break;
-
-        // opção
-        switch( opcao )
-        {
-            case 1:
-                        
-                // se contar maior que 10 saia
-                if( contar >= 10)
-                break;
-                
-                if(contar < 5) { 
-                    vetor[contar] = true;
-                    System.out.println("*******************");
-                    System.out.printf("*Passage emitida: *\n*Primeira classe: *\n*Poltrona[%d]      *\n", 
-                                        contar + 1);
-                    System.out.println("*******************");
-                    contar++;
-                } // fim if
-                else {
-                    System.out.println("\nPrimeira classe esgotada.\nSo temos a classe economica.");
-                    contar--;
-                }
+            // entrada de dados
+            
+            System.out.println("\n\n*** Passagens Aereas: ***\n\tDigite:");
+            System.out.println("*************************");
+            System.out.println(" 1 para primeira classe" +
+                            "\n 2 para classe economica:" + 
+                            "\n-1 para sair do sistema.");
+            System.out.println("*************************");
+            int opcao = input.nextInt();
+            
+            if( opcao == -1 || contar >= 9)
                 break;
 
-            case 2:
-                
-                //classeEconomica();
-                if(contar < 10) { 
-                    vetor[contar2] = true;
-                    System.out.println("*******************");
-                    System.out.printf("*Passage emitida: *\n*Classe economica:*\n*Poltrona[%d]      *\n", 
-                                        contar2 + 1);
-                    System.out.println("*******************");
-                    contar2++;
-                } // fim if
-                else {
-                    System.out.println("\nClasse economica esgotada.\nSo temos na primeira classe.");
-                    contar2--;
-                }
-                break;
+            // opção
+            switch( opcao )
+            {
+                case 1:
+                            
+                    // se contar maior que 10 saia
+                    if( contar >= 10)
+                    break;
+                    
+                    if(contar < 5) { 
+                        vetor[contar] = true;
+                        System.out.println("*******************");
+                        System.out.printf("*Passagem emitida:*\n*Primeira classe: *\n*Poltrona[%d]      *\n", 
+                                            contar + 1);
+                        System.out.println("*******************");
+                        contar++;
+                    } // fim if
+                    else {
+                        System.out.println("\nPrimeira classe esgotada.\nSo temos a classe economica.");
+                        contar--;
+                    }
+                    break;
 
-            default:
-                System.out.println("Opçao indevida.");
-                break;
-        } // fim switch
+                case 2:
+                    
+                    //classeEconomica();
+                    if(contar < 10) { 
+                        vetor[contar2] = true;
+                        System.out.println("*******************");
+                        System.out.printf("*Passagem emitida:*\n*Classe economica:*\n*Poltrona[%d]      *\n", 
+                                            contar2 + 1);
+                        System.out.println("*******************");
+                        contar2++; 
+                    } // fim if
+                    else if(contar >= 5) {
+                        System.out.println("\nClasse economica esgotada.\nAceita focar na primeira classe.");
+                        contar2--;
+                    }
+                    break;
+
+                default:
+                    System.out.println("Opçao indevida.");
+                    break;
+            } // fim switch
 
         } // fim while
         
