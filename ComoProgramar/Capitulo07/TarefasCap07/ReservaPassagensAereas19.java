@@ -56,13 +56,17 @@ public class ReservaPassagensAereas19 {
         while( contar < 10 ) {
 
         // entrada de dados
-        System.out.println("\n   Passagens Aereas:\n\tDigite:");
+        
+        System.out.println("\n\n*** Passagens Aereas: ***\n\tDigite:");
+        System.out.println("*************************");
         System.out.println(" 1 para primeira classe" +
                         "\n 2 para classe economica:" + 
                         "\n-1 para sair do sistema.");
+        System.out.println("*************************");
         int opcao = input.nextInt();
+        
 
-        if( opcao == -1 || contar == 10)
+        if( opcao == -1 || contar >= 9)
             break;
 
         // opção
@@ -76,8 +80,10 @@ public class ReservaPassagensAereas19 {
                 
                 if(contar < 5) { 
                     vetor[contar] = true;
-
-                    System.out.printf("\nPassage emitida:\nPrimeira classe:\nPoltrona[%d]\n", contar + 1);
+                    System.out.println("*******************");
+                    System.out.printf("*Passage emitida: *\n*Primeira classe: *\n*Poltrona[%d]      *\n", 
+                                        contar + 1);
+                    System.out.println("*******************");
                     contar++;
                 } // fim if
                 else {
@@ -87,17 +93,14 @@ public class ReservaPassagensAereas19 {
                 break;
 
             case 2:
-                        
-                // se contar maior que 10 saia
-                if( contar >= 10)
-                break;
                 
                 //classeEconomica();
                 if(contar < 10) { 
                     vetor[contar2] = true;
-                    
-                    System.out.printf("\nPassage emitida:\nClasse economica:\nPoltrona[%d]\n", 
+                    System.out.println("*******************");
+                    System.out.printf("*Passage emitida: *\n*Classe economica:*\n*Poltrona[%d]      *\n", 
                                         contar2 + 1);
+                    System.out.println("*******************");
                     contar2++;
                 } // fim if
                 else {
@@ -126,6 +129,6 @@ public class ReservaPassagensAereas19 {
             System.out.printf("%7b", valor);
         } // fim for aprimorado
 
-    } // fim mostrar
+    } // fim mos
 
 } // fim classez
