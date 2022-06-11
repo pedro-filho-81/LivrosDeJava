@@ -128,17 +128,21 @@ public class GraficoDeTartaruga21 {
 
                 // 1 = para cima
             if(opcao1 == 1 && (opcao2 > 4.99 && opcao2 < 6) ) { 
-                divide = (opcao2 % 5) * 10;
+                                
+                divide = divisao(opcao2);
+
                 for(int i = 0; i < divide; i++) { 
                     // vira para cima
                     tabuleiro[linhaInicial - i][colunaInicial] = "*";
-                } // fomm for
+                } // fim for
                 linhaInicial -= (divide - 1);
 
             } // fimm if
 
             else if(opcao1 == 2 && (opcao2 > 4.99 && opcao2 < 6) ) { 
-                divide = opcao2 % 5 * 10;
+                
+                divide = divisao(opcao2);
+
                 for(int i = 0; i < divide; i++) { 
                     // vira para cima
                     tabuleiro[linhaInicial + i][colunaInicial] = "*";
@@ -149,8 +153,9 @@ public class GraficoDeTartaruga21 {
             // vira para a direita
             else if( opcao1 == 3 && (opcao2 > 4.99 && opcao2 < 6.0) ) { 
             
-                divide = (opcao2 % 5) * 10;
-                for(int i = 0; i < divide; i++) {
+                divide = divisao(opcao2);
+
+                for(int i = 0; i < divide - 1; i++) {
                     tabuleiro[linhaInicial][colunaInicial + i] = "*";
                 } // fim for
                 colunaInicial += (divide - 1);
@@ -159,7 +164,8 @@ public class GraficoDeTartaruga21 {
             // vira para a direita
             else if( opcao1 == 4 && (opcao2 > 4.99 && opcao2 < 6.0) ) { 
             
-                divide = (opcao2 % 5) * 10;
+                divide = divisao(opcao2);
+
                 for(int i = 0; i < divide; i++) {
                     tabuleiro[linhaInicial][colunaInicial - i] = "*";
                 } // fim for
@@ -169,6 +175,21 @@ public class GraficoDeTartaruga21 {
         } // fim while
 
     } // fim adicionar
+
+    public static double divisao(double opcao2)
+    {
+        double divide = 0.0;
+
+        if(opcao2 > 4.99 && opcao2 <= 5.15) { 
+            divide = (opcao2 % 5 * 100);
+            System.out.println("\nDivide = " + divide);
+            return (int) divide;
+        } // fim if
+
+        divide = (opcao2 % 5) * 10;
+        return divide;
+
+    } // fim sivisao
 
     // adicionar
     public static void inicializar(String[][] matriz, int tamanho) {
