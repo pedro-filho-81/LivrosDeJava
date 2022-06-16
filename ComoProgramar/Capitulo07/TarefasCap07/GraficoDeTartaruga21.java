@@ -55,7 +55,7 @@ public class GraficoDeTartaruga21 {
 
         // chama o menu
         menu();
-        inicializar(tabuleiro, TAMANHO);
+       // inicializar(tabuleiro, TAMANHO);
         adicionar(comandos, tabuleiro);
         mostrarComandos(comandos);
         mostrar(tabuleiro, TAMANHO);
@@ -94,6 +94,7 @@ public class GraficoDeTartaruga21 {
 
         // cabeçalho
         System.out.println("\nINICIA TABULEIRO:");
+
         // posição inicial no tabuleiro
         System.out.print("Informe a linha: ");
         linhaInicial = input.nextInt();
