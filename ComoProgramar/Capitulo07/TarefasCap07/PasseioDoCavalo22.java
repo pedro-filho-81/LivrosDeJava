@@ -30,7 +30,17 @@ public class PasseioDoCavalo22 {
      * e dois quadrados verticalmente para cima. Movimentos horizontais para a esquerda e 
      * movimentos verticais para cima são indicados com números negativos. Os oitos movimentos 
      * podem ser descritos por dois arrays unidimensionais, horizontal e vertical, como segue:
-     *Pedro, 11/06/2022
+     * Faça com que as variáveis currentRow e currentColumn indiquem, respectivamente, a linha e 
+     * a coluna da posição atual do cavalo. Para fazer um movimento do tipo moveNumber, em que 
+     * moveNumber está entre 0 e 7, seu aplicativo deve utilizar as instruções 
+     * currentRow += vertical[moveNumber]; 
+     * currentColumn += horizontal[moveNumber];
+     * Escreva um aplicativo para mover o cavalo pelo tabuleiro. Mantenha um contador que varia de 1 a 64. 
+     * Registre a última contagem em cada quadrado para o qual o cavalo se move. 
+     * Teste cada movimento potencial para ver se o cavalo já visitou esse quadrado. 
+     * Teste cada movimento potencial para assegurar que o cavalo não saia fora do tabuleiro. 
+     * Execute o aplicativo. Quantos movimentos o cavalo fez?
+     * Pedro, 11/06/2022
      */
     public static void main(String[] args) {
 
@@ -49,11 +59,12 @@ public class PasseioDoCavalo22 {
         System.out.print("Informe a coluna: ");
         int colunaInicial = input.nextInt();
 
-        // chamar
+        // indica a posição inicial do cavalo no tabuleiro
         posicaoDoCavalo(tabuleiro, linhaInicial, colunaInicial);
         
-        // EXERCiCIO ( B )
+        // EXERCiCIO ( B ) mover o cavalo no tabuleiro
         moveCavalo(tabuleiro, TAMANHO, linhaInicial, colunaInicial);
+        // mostrar o tabuleiro após as modificações
         mostrar(tabuleiro, TAMANHO);
 
         // EXERCiCIO ( C )
@@ -63,14 +74,15 @@ public class PasseioDoCavalo22 {
     // posição inicial
     public static void posicaoDoCavalo(int[][] tabuleiro, int linha, int coluna) 
     {
-        // posição do cavalo no tabuleiro
+        // posição inicial do cavalo no tabuleiro
         tabuleiro[linha][coluna] = 1;
     } // fim posição
 
-    // move o cavalo
+    // move o cavalo após a posição inicial
     public static void moveCavalo(int[][] tabuleiro, int tamanho, int linhaInicial, int colunaInicial)
     {
         // DECLARA E INICIALIZA OS VETORES
+        // horizontao = linha, vertical = coluna
         int[] linha = {-1, -2, -2, -1, 1, 2, 2, 1};
         int[] coluna = {2, 1, -1, -2, -2, -1, 1, 2};
 
@@ -127,4 +139,4 @@ public class PasseioDoCavalo22 {
 
     } // fim mostrar
 
-} // fim classe
+} // fim classe 
