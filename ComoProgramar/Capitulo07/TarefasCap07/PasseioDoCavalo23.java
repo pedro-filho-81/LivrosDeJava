@@ -1,0 +1,4 @@
+public class PasseioDoCavalo23 {
+    
+    
+}
