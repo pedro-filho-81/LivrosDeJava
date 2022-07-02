@@ -97,11 +97,11 @@ public class CrivoDeEratostenes27 {
         System.out.printf("%b ", primos[2]);
         // loop para mostrar os valores boleanos do vetor
         for(int i = 3; i < primos.length; i++) {
-            
+            // imprime
             System.out.printf("%b ", primos[i]);
             if(i % 10 == 0)
                 System.out.println();
-        } // fim for
+        } // fim for0
     
     } // fim mostrar
 
