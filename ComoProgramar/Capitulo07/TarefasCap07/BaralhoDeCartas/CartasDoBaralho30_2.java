@@ -1,4 +1,3 @@
-package BaralhoDeCartas;
 
 public class CartasDoBaralho30_2 {
     /**
