@@ -1,4 +1,3 @@
-package BaralhoDeCartas;
 
 import java.security.SecureRandom;
 
