@@ -1,4 +1,6 @@
-package BaralhoDeCartas;
+
+
+import java.security.SecureRandom;
 
 public class EmbaralhandoCartas30_3 {
     /**
@@ -25,10 +27,16 @@ public class EmbaralhandoCartas30_3 {
         adicionarCartas(cartas, naipe, baralho);
 
         // CABEÇALHO
-        System.out.printf("%50s"," BARALHO DE CARTAS:");
-
-        // exibi cartas
+        System.out.printf("%50s"," BARALHO DE CARTAS ORIGINAL:");
+        // exibi cartas 
         exibirCartas(baralho);
+        System.out.println(); // pula linha
+
+        System.out.printf("\n%50s","BARALHO DE CARTAS ALEATÓRIO:");
+        //embaralharCartas
+        embaralharCartas(baralho);
+        exibirCartas(baralho);
+        System.out.println(); // pula linha
 
     } // final principal
 
@@ -48,6 +56,27 @@ public class EmbaralhandoCartas30_3 {
         } // final for cartas
         
     } // final adicionar
+
+    // Embaralharcartas
+    public static void embaralharCartas(String[] baralho) {
+
+        // cria o objeto SecureRandom
+        SecureRandom aleatorio = new SecureRandom();
+
+        // loop para percorrer o vetor
+        for(int i = 0; i < baralho.length; i++) {
+
+            // cria constante índice
+            final int INDICE = aleatorio.nextInt(baralho.length);
+
+            // cria variável teporaria
+            String temp = baralho[INDICE];
+            baralho[INDICE] = baralho[i];
+            baralho[i] = temp;
+
+        } // final for i
+
+    } // final EmbaralharCartas
 
     // Exibir cartas
     public static void exibirCartas(String[] baralho) {
