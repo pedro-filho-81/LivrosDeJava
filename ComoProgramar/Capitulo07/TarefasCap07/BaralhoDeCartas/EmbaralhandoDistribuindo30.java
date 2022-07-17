@@ -26,23 +26,23 @@ public class EmbaralhandoDistribuindo30 {
         // o tamanho do naipe e das cartas coo ìndice
         String[] baralho = new String[INDICE];
         
-        // vetor poker
+        // vetor poker recebe as 5 cartas jogadas
         String[] poker = new String[INDICE_POKER];
+        // vetor recebe os valores das 5 cartas jogadas
         String[] cartasJogadas = new String[INDICE_POKER];
+        // vetor recebe os naipes das 5 cartas jogadas
         String[] naipesJogados = new String[INDICE_POKER];
 
-        // vetor cartasDoBaralho 
+        // vetor cartasDoBaralho recebe as 52 cartas embaralhadas
         String[] cartasDoBaralho = new String[INDICE];
-        // vetor naipesDoBaralho
+
+        // vetor naipesDoBaralho recebe os naipes embaralhados
         String[] naipesDoBaralho = new String[INDICE];
         
-        // objeto ArrayList1'
-        ArrayList array = new ArrayList<>();
-
-        // chaa função adicionar cartas ao baralho
+        // função adiciona cartas ao baralho, ao cartasDoBaralho, ao naipesDoBaralho
         adicionarCartas(cartas, naipe, baralho, cartasDoBaralho, naipesDoBaralho);
         
-        // embaralharCartas
+        // embaralharCartas no vetor baralho, cartasDoBaralho e naipesDoBaralho
         embaralharCartas(cartas, naipe, baralho, cartasDoBaralho, naipesDoBaralho);
 
         System.out.printf("\n%50s", "BARALHO ALEATORIO");
@@ -57,15 +57,25 @@ public class EmbaralhandoDistribuindo30 {
         exibirPoker(poker);
         System.out.println();
 
+        organizaCartasJogadas(cartasJogadas);
         System.out.printf("\n%50s\n", "VALOR DAS CARTAS JOGADAS");
         // exibir cartas jogadas
         exibirPoker(cartasJogadas);
         System.out.println();
 
+        // embaralharCartas
+        umPar(cartasJogadas); // duas cartas com valores iguais
+        doisPares(cartasJogadas); // duas cartas com valores iguais e duas com outro valor
+        trinca(cartasJogadas); // tres cartas com mesmo valor
+        quadra(cartasJogadas); // quatro cartas com mesmo valor
+        straight(cartasJogadas); // 5 cartas com valores consecutivos
+
         System.out.printf("\n%50s\n", "TIPO DOS NAIPES");
         // exibir naipes jogados
         exibirPoker(naipesJogados);
         System.out.println();
+
+        flush(naipesJogados);
 
     } // final principal
 
@@ -129,6 +139,23 @@ public class EmbaralhandoDistribuindo30 {
 
     } // final EmbaralharCartas
 
+    // organiza cartas jogadas
+    public static void organizaCartasJogadas(String[] cartasJogadas) {
+
+        // loop for i
+        for(int i = 0; i < cartasJogadas.length; i++) {
+            // loop for j
+            for(int j = 0; j < cartasJogadas.length; j++) {
+                int valorConvertido1 = Integer.parseInt(cartasJogadas[i]);
+                int valorConvertido2 = Integer.parseInt(cartasJogadas[j]);
+
+                if(valorConvertido1 < valorConvertido2)
+                    System.out.printf("%3d", valorConvertido1);
+            } // final for j
+        } // final for j
+
+    } // final organiza cartas jogadas
+
     // recebe cartas do poker
     public static void recebeCartasJogadas(String[] baralho, String[] poker,
                                             String[] cartasDoBaralho, String[] cartasJogadas,
@@ -151,7 +178,6 @@ public class EmbaralhandoDistribuindo30 {
         } // final for i
 
     } // final recebe cartas jogadas
-
 
     // Exibir cartas do poker
     public static void exibirPoker(String[] poker) {
@@ -243,6 +269,8 @@ public class EmbaralhandoDistribuindo30 {
         else if(cartasJogadas[3] == cartasJogadas[4]) {
             System.out.printf("Possui Um par -> %-5s = %5s", cartasJogadas[3], cartasJogadas[4]);
         } // final else if
+
+        System.out.println();
 
     } // final umPar
 
