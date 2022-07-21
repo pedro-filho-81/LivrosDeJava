@@ -47,7 +47,7 @@ public class EmbaralhandoDistribuindo30 {
 
         System.out.printf("\n%50s", "BARALHO ALEATORIO");
         exibirCartas(baralho);
-        System.out.println();
+        System.out.println(); 
 
         recebeCartasJogadas(baralho, poker, cartasDoBaralho, cartasJogadas,
                             naipesDoBaralho, naipesJogados);
@@ -57,25 +57,24 @@ public class EmbaralhandoDistribuindo30 {
         exibirPoker(poker);
         System.out.println();
 
-        organizaCartasJogadas(cartasJogadas);
         System.out.printf("\n%50s\n", "VALOR DAS CARTAS JOGADAS");
         // exibir cartas jogadas
         exibirPoker(cartasJogadas);
         System.out.println();
 
-        // embaralharCartas
-        umPar(cartasJogadas); // duas cartas com valores iguais
-        doisPares(cartasJogadas); // duas cartas com valores iguais e duas com outro valor
-        trinca(cartasJogadas); // tres cartas com mesmo valor
-        quadra(cartasJogadas); // quatro cartas com mesmo valor
-        straight(cartasJogadas); // 5 cartas com valores consecutivos
+        flush(naipesJogados);
+        fullHouse(cartasJogadas);
+        straight(cartasJogadas);
+        quadra(cartasJogadas);
+        trinca(cartasJogadas);
+        doisPares(cartasJogadas);
+        umPar(cartasJogadas);
 
+        flush(naipesJogados);; // 5 carta de naipes iguais
         System.out.printf("\n%50s\n", "TIPO DOS NAIPES");
         // exibir naipes jogados
         exibirPoker(naipesJogados);
         System.out.println();
-
-        flush(naipesJogados);
 
     } // final principal
 
@@ -139,23 +138,6 @@ public class EmbaralhandoDistribuindo30 {
 
     } // final EmbaralharCartas
 
-    // organiza cartas jogadas
-    public static void organizaCartasJogadas(String[] cartasJogadas) {
-
-        // loop for i
-        for(int i = 0; i < cartasJogadas.length; i++) {
-            // loop for j
-            for(int j = 0; j < cartasJogadas.length; j++) {
-                int valorConvertido1 = Integer.parseInt(cartasJogadas[i]);
-                int valorConvertido2 = Integer.parseInt(cartasJogadas[j]);
-
-                if(valorConvertido1 < valorConvertido2)
-                    System.out.printf("%3d", valorConvertido1);
-            } // final for j
-        } // final for j
-
-    } // final organiza cartas jogadas
-
     // recebe cartas do poker
     public static void recebeCartasJogadas(String[] baralho, String[] poker,
                                             String[] cartasDoBaralho, String[] cartasJogadas,
@@ -190,17 +172,75 @@ public class EmbaralhandoDistribuindo30 {
 
     } // final exibirPoker
 
+    // full house verifica se existe uma trinca e umPar
+    public static void fullHouse(String[] cartasJogadas) {
+        
+        if(cartasJogadas[0] == cartasJogadas[1] && cartasJogadas[1] == cartasJogadas[2] && // 0 = 1 = 2 & 3 = 4
+            cartasJogadas[3] == cartasJogadas[4] ||
+            cartasJogadas[0] == cartasJogadas[1] && cartasJogadas[1] == cartasJogadas[3] && // 0 = 1 = 3 & 2 = 4
+            cartasJogadas[2] == cartasJogadas[4] ||
+            cartasJogadas[0] == cartasJogadas[1] && cartasJogadas[1] == cartasJogadas[4] && // 0 = 1 = 4 & 2 = 3
+            cartasJogadas[2] == cartasJogadas[3] ||
+            cartasJogadas[0] == cartasJogadas[2] && cartasJogadas[2] == cartasJogadas[3] &&  // 0 = 2 = 3 & 1 = 4
+            cartasJogadas[1] == cartasJogadas[4] ||
+            cartasJogadas[1] == cartasJogadas[2] && cartasJogadas[3] == cartasJogadas[4] && // 1 = 2 = 3 & 0 = 4
+            cartasJogadas[4] == cartasJogadas[0] ||
+            cartasJogadas[1] == cartasJogadas[3] && cartasJogadas[3] == cartasJogadas[4] && // 1 = 3 = 4 & 0 = 2
+            cartasJogadas[0] == cartasJogadas[2] ||
+            cartasJogadas[1] == cartasJogadas[4] && cartasJogadas[2] == cartasJogadas[3] && // 1 = 4 = 0 & 2 = 3
+            cartasJogadas[3] == cartasJogadas[0]) 
+            {
+                System.out.println("\nFull house");
+            } // final if
+             
+    } // final fullHouse
+
+    // fluch verifica se existe 5 cartas de naipes iguais
+    public static void flush(String[] naipesJogados) {
+
+        if(naipesJogados[0] == naipesJogados[1] && naipesJogados[1] == naipesJogados[2] &&
+            naipesJogados[2] == naipesJogados[3] && naipesJogados[3] == naipesJogados[4])
+        {
+            System.out.printf("Flush de %5s", naipesJogados[0]);
+        }  // final if
+
+    } // final flush
+
+    // straight verifica se te 5 cartas de valores consecutivos
+    public static void straight(String[] cartasJogadas) {
+
+        if(cartasJogadas[0] == "As" && cartasJogadas[1] == "2" && cartasJogadas[2] == "3" &&
+           cartasJogadas[3] == "4" && cartasJogadas[4] == "5" ||
+           cartasJogadas[0] == "2" && cartasJogadas[1] == "3" && cartasJogadas[2] == "4" &&
+           cartasJogadas[3] == "5" && cartasJogadas[4] == "6" ||
+           cartasJogadas[0] == "3" && cartasJogadas[1] == "4" && cartasJogadas[2] == "5" &&
+           cartasJogadas[3] == "6" && cartasJogadas[4] == "7" ||
+           cartasJogadas[0] == "4" && cartasJogadas[1] == "5" && cartasJogadas[2] == "6" &&
+           cartasJogadas[3] == "7" && cartasJogadas[4] == "8")
+        {
+            System.out.printf("Straigt");
+        } // final  if
+
+    } // final straight
+
     // quadra verifica se existe 4 cartas iguais
     public static void quadra(String[] cartasJogadas) {
 
         // 0, 1, 2, 3 ou 1, 2, 3, 4
-        if(cartasJogadas[0] == cartasJogadas[1] && cartasJogadas[1] == cartasJogadas[2] &&
+        if(cartasJogadas[0] == cartasJogadas[1] && cartasJogadas[1] == cartasJogadas[2] && // 0, 1, 2, 3
            cartasJogadas[2] == cartasJogadas[3] ||
-           cartasJogadas[1] == cartasJogadas[2] && cartasJogadas[2] == cartasJogadas[3] &&
-            cartasJogadas[3] == cartasJogadas[4] ) {
+           cartasJogadas[0] == cartasJogadas[1] && cartasJogadas[1] == cartasJogadas[2] && // 0, 1, 2, 4
+           cartasJogadas[2] == cartasJogadas[4] ||
+           cartasJogadas[0] == cartasJogadas[1] && cartasJogadas[1] == cartasJogadas[3] && // 0, 1, 3, 4
+           cartasJogadas[3] == cartasJogadas[4] ||
+           cartasJogadas[0] == cartasJogadas[2] && cartasJogadas[2] == cartasJogadas[3] && // 0, 2, 3, 4
+           cartasJogadas[3] == cartasJogadas[4] ||
+           cartasJogadas[1] == cartasJogadas[2] && cartasJogadas[2] == cartasJogadas[3] && // 1, 2, 3, 4
+           cartasJogadas[3] == cartasJogadas[4] ) 
+           {
                 // exibe
-                System.out.printf("Possui uma Quadra\n");
-        }// final if
+                System.out.printf("Quadra\n");
+           }// final if
 
     } // final quadra
 
@@ -220,10 +260,10 @@ public class EmbaralhandoDistribuindo30 {
                cartasJogadas[2] == cartasJogadas[3] && cartasJogadas[3] == cartasJogadas[4] )  // 2,3,4 
                { 
                     // exibe
-                    System.out.printf("Possui uma Trinca\n");
+                    System.out.printf("Trinca\n");
                     // break;
-                } // fim if
-            
+               } // fim if
+
     } // trinca
 
     // dois pares verifica se existe 2 pares diferente de cartas
@@ -237,15 +277,16 @@ public class EmbaralhandoDistribuindo30 {
                cartasJogadas[0] == cartasJogadas[3] && cartasJogadas[1] == cartasJogadas[2] || //0,3 - 1,2
                cartasJogadas[0] == cartasJogadas[3] && cartasJogadas[1] == cartasJogadas[4] || //0,3 - 1,4
                cartasJogadas[0] == cartasJogadas[4] && cartasJogadas[1] == cartasJogadas[2] || //0,4 - 1,2
-               cartasJogadas[0] == cartasJogadas[4] && cartasJogadas[1] == cartasJogadas[3] || //0,1 - 1,3
+               cartasJogadas[0] == cartasJogadas[4] && cartasJogadas[1] == cartasJogadas[3] || //0,4 - 1,3
+               cartasJogadas[0] == cartasJogadas[1] && cartasJogadas[1] == cartasJogadas[3] || //0,1 - 1,3
                cartasJogadas[1] == cartasJogadas[2] && cartasJogadas[3] == cartasJogadas[4] || //1,2 - 3,4
                cartasJogadas[2] == cartasJogadas[3] && cartasJogadas[1] == cartasJogadas[4] )  //2,3 - 1,4
-            {
+               {
                     // exibe
-                    System.out.printf("Possui uma Dois pares\n");
+                    System.out.printf("Dois pares\n");
                     
-            } // final if
-        
+               } // final if
+
     } // final doisPares
 
     // umPar verifica se te 1 par de cartas iguais
@@ -273,34 +314,6 @@ public class EmbaralhandoDistribuindo30 {
         System.out.println();
 
     } // final umPar
-
-    // fluch verifica se existe 5 cartas de naipes iguais
-    public static void flush(String[] naipesJogados) {
-
-        if(naipesJogados[0] == naipesJogados[1] && naipesJogados[1] == naipesJogados[2] &&
-            naipesJogados[2] == naipesJogados[3] && naipesJogados[3] == naipesJogados[4])
-        {
-            System.out.printf("Flush de %5s", naipesJogados[0]);
-        }  // final if
-
-    } // final flush
-
-    // straight verifica se te 5 cartas de valores consecutivos
-    public static void straight(String[] cartasJogadas) {
-
-        if(cartasJogadas[0] == "As" && cartasJogadas[1] == "2" && cartasJogadas[2] == "3" &&
-           cartasJogadas[3] == "4" && cartasJogadas[4] == "5" ||
-           cartasJogadas[0] == "2" && cartasJogadas[1] == "3" && cartasJogadas[2] == "4" &&
-           cartasJogadas[3] == "5" && cartasJogadas[4] == "6" ||
-           cartasJogadas[0] == "3" && cartasJogadas[1] == "4" && cartasJogadas[2] == "5" &&
-           cartasJogadas[3] == "6" && cartasJogadas[4] == "7" ||
-           cartasJogadas[0] == "4" && cartasJogadas[1] == "5" && cartasJogadas[2] == "6" &&
-           cartasJogadas[3] == "7" && cartasJogadas[4] == "8")
-        {
-            System.out.printf("Straigt");
-        } // final if
-        
-    } // final straight
 
     // Exibir cartas
     public static void exibirCartas(String[] baralho) {
