@@ -33,14 +33,19 @@ public class PokerDoisJogadores31 {
                 
         // vetor poker recebe as 5 cartas jogadas
         String[] poker = new String[INDICE_POKER];
-        // vetor recebe os valores das 5 cartas jogadas
-        String[] cartasJogadas = new String[INDICE_POKER];
-        // vetor recebe os naipes das 5 cartas jogadas
-        String[] naipesJogados = new String[INDICE_POKER];
-
+        
         // declara e cria os vetores para os jogadores
         String[] jogador1 = new String[INDICE_POKER];
-        String[] jogador2 = new String[10];
+        // vetor recebe os valores das 5 cartas jogadas
+        String[] cartasJogadas1 = new String[INDICE_POKER];
+        // vetor recebe os naipes das 5 cartas jogadas
+        String[] naipesJogados1 = new String[INDICE_POKER];
+
+        String[] jogador2 = new String[INDICE_POKER];
+        // vetor recebe os valores das 5 cartas jogadas
+        String[] cartasJogadas2 = new String[INDICE_POKER];
+        // vetor recebe os naipes das 5 cartas jogadas
+        String[] naipesJogados2 = new String[INDICE_POKER];
 
         // função adiciona cartas ao baralho, ao cartasDoBaralho, ao naipesDoBaralho
         adicionarCartas(cartas, naipe, baralho, cartasDoBaralho, naipesDoBaralho);
@@ -48,30 +53,20 @@ public class PokerDoisJogadores31 {
         // embaralharCartas no vetor baralho, cartasDoBaralho e naipesDoBaralho
         embaralharCartas(cartas, naipe, baralho, cartasDoBaralho, naipesDoBaralho);
 
-        recebeCartasJogadas(baralho, jogador1, jogador2, cartasDoBaralho, cartasJogadas,
-                            naipesDoBaralho, naipesJogados);
+        recebeCartasJogadas(baralho, jogador1, jogador2, cartasDoBaralho, cartasJogadas1,
+                            naipesDoBaralho, naipesJogados1, cartasJogadas2, naipesJogados2);
         
         System.out.printf("\n%50s\n", "JOGADOR1 CARTAS DISTRIBUIDAS");
         // exibir poker
         exibirPoker(jogador1);
         System.out.println();
+        processaJogadas(cartasJogadas1, naipesJogados1);
 
         System.out.printf("\n%50s\n", "JOGADOR2 CARTAS DISTRIBUIDAS");
         // exibir poker
         exibirPoker(jogador2);
         System.out.println();
-
-
-//        processaJogadas(cartasJogadas, naipesJogados);
-
-/*
-        System.out.printf("\n%50s\n", "JOGADOR2 CARTAS DISTRIBUIDAS\n");
-        // exibir poker
-        exibirPoker(jogador2);
-        System.out.println();
-*/
-
-//        processaJogadas(cartasJogadas, naipesJogados);
+        processaJogadas(cartasJogadas2, naipesJogados2);
 
     } // final principal
 
@@ -137,32 +132,39 @@ public class PokerDoisJogadores31 {
 
     // recebe cartas do poker
     public static void recebeCartasJogadas(String[] baralho, String[] jogador1, String[] jogador2,
-                                            String[] cartasDoBaralho, String[] cartasJogadas,
-                                            String[] naipesDoBaralho, String[] naipesJogados) {
+                                            String[] cartasDoBaralho, String[] cartasJogadas1,
+                                            String[] naipesDoBaralho, String[] naipesJogados1,
+                                            String[] cartasJogadas2, String[] naipesJogados2) {
+
+        // variável contador
+        int contador = 0;
+        int contador2 = 0;
 
         /* loop para adicionar os valores das 
         5 prieiras cartas do baralho aos vetores
         poker, cartasJogadas e naipesJogados */
-        for(int i = 0; i < 5; i++) {
-                // jogador1 recebe as 5 prieiras cartas do baralho
-                jogador1[i] = baralho[i];            
-                // cartasJogadas recebe as 5 prieiras cartas do baralho
-                cartasJogadas[i] = cartasDoBaralho[i];
-                // naipesJogados recebe os 5 prieiros naipes distribuidos no baralho
-                naipesJogados[i] = naipesDoBaralho[i];
+        for(int i = 0; i < 10; i++) {
+
+            if(i < 5) { 
+            // jogador1 recebe as 5 prieiras cartas do baralho
+            jogador1[contador] = baralho[i];            
+            // cartasJogadas recebe as 5 prieiras cartas do baralho
+            cartasJogadas1[contador] = cartasDoBaralho[i];
+            // naipesJogados recebe os 5 prieiros naipes distribuidos no baralho
+            naipesJogados1[contador] = naipesDoBaralho[i];
+    
+            contador++; // increenta contador e 1
+
+            } // final if < 5
+            else if(i >= 5 && i < 10) {
+                jogador2[contador2] = baralho[i];
+                cartasJogadas2[contador2] = cartasDoBaralho[i];
+                naipesJogados2[contador2] = naipesDoBaralho[i];
+                contador2++;
+            } // final 
             
         } // final for i
     
-        for(int j = 5; j < 10; j++) {
-            // jogador1 recebe as 5 prieiras cartas do baralho
-            jogador2[j] = baralho[j];
-            // cartasJogadas recebe as 5 prieiras cartas do baralho
-            cartasJogadas[j] = cartasDoBaralho[j];
-            // naipesJogados recebe os 5 prieiros naipes distribuidos no baralho
-            naipesJogados[j] = naipesDoBaralho[j];
-        
-        } // final for i
-
     } // final recebe cartas jogadas
 
     // Exibir cartas do poker
