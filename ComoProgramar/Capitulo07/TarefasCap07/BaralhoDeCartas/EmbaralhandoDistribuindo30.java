@@ -1,11 +1,20 @@
 import java.security.SecureRandom;
-import java.util.Arrays;
-import java.util.ArrayList;
 
 public class EmbaralhandoDistribuindo30 {
     /**
-     * 
+     * 7.30 (Embaralhamento e distribuição) Modifique o aplicativo da Figura 7.11 
+     * para distribuir uma mão de cinco cartas de pôquer. Então, modifique a classe 
+     * DeckOfCards da Figura 7.10 para incluir métodos que determinam se uma mão contém
+     * a) um par
+     * b) dois pares
+     * c) trinca (por exemplo, três valetes)
+     * d) quadra (por exemplo, quatro ases)
+     * e) flush (isto é, cinco cartas do mesmo naipe)
+     * f) straight (isto é, cinco cartas de valores consecutivos)
+     * g) full house (isto é, duas cartas de um valor e três cartas de outro valor)
+     * [Dica: adicione os métodos getFace e getSuit à classe Card da Figura 7.9.
      */    
+    
     public static void main(String[] args) {
 
         // declara, cria e inicializa o vetor naipe
@@ -25,7 +34,11 @@ public class EmbaralhandoDistribuindo30 {
         // declara, cria o vetor baralho que utiliza
         // o tamanho do naipe e das cartas coo ìndice
         String[] baralho = new String[INDICE];
-        
+        // vetor cartasDoBaralho recebe os valoes das 52 cartas embaralhadas
+        String[] cartasDoBaralho = new String[INDICE];
+        // vetor naipesDoBaralho recebe os naipes embaralhados
+        String[] naipesDoBaralho = new String[INDICE];
+                
         // vetor poker recebe as 5 cartas jogadas
         String[] poker = new String[INDICE_POKER];
         // vetor recebe os valores das 5 cartas jogadas
@@ -33,21 +46,11 @@ public class EmbaralhandoDistribuindo30 {
         // vetor recebe os naipes das 5 cartas jogadas
         String[] naipesJogados = new String[INDICE_POKER];
 
-        // vetor cartasDoBaralho recebe as 52 cartas embaralhadas
-        String[] cartasDoBaralho = new String[INDICE];
-
-        // vetor naipesDoBaralho recebe os naipes embaralhados
-        String[] naipesDoBaralho = new String[INDICE];
-        
         // função adiciona cartas ao baralho, ao cartasDoBaralho, ao naipesDoBaralho
         adicionarCartas(cartas, naipe, baralho, cartasDoBaralho, naipesDoBaralho);
         
         // embaralharCartas no vetor baralho, cartasDoBaralho e naipesDoBaralho
         embaralharCartas(cartas, naipe, baralho, cartasDoBaralho, naipesDoBaralho);
-
-        System.out.printf("\n%50s", "BARALHO ALEATORIO");
-        exibirCartas(baralho);
-        System.out.println(); 
 
         recebeCartasJogadas(baralho, poker, cartasDoBaralho, cartasJogadas,
                             naipesDoBaralho, naipesJogados);
@@ -57,24 +60,8 @@ public class EmbaralhandoDistribuindo30 {
         exibirPoker(poker);
         System.out.println();
 
-        System.out.printf("\n%50s\n", "VALOR DAS CARTAS JOGADAS");
-        // exibir cartas jogadas
-        exibirPoker(cartasJogadas);
-        System.out.println();
-
-        flush(naipesJogados);
-        fullHouse(cartasJogadas);
-        straight(cartasJogadas);
-        quadra(cartasJogadas);
-        trinca(cartasJogadas);
-        doisPares(cartasJogadas);
-        umPar(cartasJogadas);
-
+        processaJogadas(poker, cartasJogadas, naipesJogados);
         flush(naipesJogados);; // 5 carta de naipes iguais
-        System.out.printf("\n%50s\n", "TIPO DOS NAIPES");
-        // exibir naipes jogados
-        exibirPoker(naipesJogados);
-        System.out.println();
 
     } // final principal
 
@@ -171,6 +158,19 @@ public class EmbaralhandoDistribuindo30 {
         } // final for i
 
     } // final exibirPoker
+
+    // função processa jogadas
+    public static void processaJogadas(String[] poker, String[] cartasJogadas, String[] naipesJogados) {
+
+        flush(naipesJogados);
+        fullHouse(cartasJogadas);
+        straight(cartasJogadas);
+        quadra(cartasJogadas);
+        trinca(cartasJogadas);
+        doisPares(cartasJogadas);
+        umPar(cartasJogadas);
+
+    } // final processaJogadas
 
     // full house verifica se existe uma trinca e umPar
     public static void fullHouse(String[] cartasJogadas) {
