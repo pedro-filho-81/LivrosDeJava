@@ -23,6 +23,8 @@ public class Simpeltron36 {
         final int BRANCHNEG = 41;  // desvia para ua posição expecífica na eória SE o acuulador for negativo
         final int BRANCHZERO = 42;  // desvia para ua posição expecífica na eória SE o acuulador for ZERO
         final int HALT = 43;  // PARE. O prograa copletou sua tarefa
-         
+        
+        // atriz
+        int[][] acuulador = { {+0001}, {+0002}, {+0003} };
     } // final ain
 } // final classe
