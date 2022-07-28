@@ -60,13 +60,11 @@ public class PokerDoisJogadores31 {
         // exibir poker
         exibirPoker(jogador1);
         System.out.println();
-        processaJogadas(cartasJogadas1, naipesJogados1);
 
         System.out.printf("\n%50s\n", "JOGADOR2 CARTAS DISTRIBUIDAS");
         // exibir poker
         exibirPoker(jogador2);
         System.out.println();
-        processaJogadas(cartasJogadas2, naipesJogados2);
 
     } // final principal
 
@@ -181,20 +179,14 @@ public class PokerDoisJogadores31 {
     } // final exibirPoker
 
     // função processa jogadas
-    public static void processaJogadas(String[] cartasJogadas, String[] naipesJogados) {
+    public static void verificandoJogadas(String[] cartasJogadas1, String[] naipesJogados1,
+                                            String[] cartasJogadas2, String[] naipesJogados2) {
 
-        flush(naipesJogados);
-        fullHouse(cartasJogadas);
-        straight(cartasJogadas);
-        quadra(cartasJogadas);
-        trinca(cartasJogadas);
-        doisPares(cartasJogadas);
-        umPar(cartasJogadas);
-
+                                                
     } // final processaJogadas
 
     // full house verifica se existe uma trinca e umPar
-    public static void fullHouse(String[] cartasJogadas) {
+    public static String fullHouse(String[] cartasJogadas) {
         
         if(cartasJogadas[0] == cartasJogadas[1] && cartasJogadas[1] == cartasJogadas[2] && // 0 = 1 = 2 & 3 = 4
             cartasJogadas[3] == cartasJogadas[4] ||
@@ -213,11 +205,13 @@ public class PokerDoisJogadores31 {
             {
                 System.out.println("\nFull house");
             } // final if
-             
+
+            return "1"; // te valor 1
+
     } // final fullHouse
 
     // fluch verifica se existe 5 cartas de naipes iguais
-    public static void flush(String[] naipesJogados) {
+    public static String flush(String[] naipesJogados) {
 
         if(naipesJogados[0] == naipesJogados[1] && naipesJogados[1] == naipesJogados[2] &&
             naipesJogados[2] == naipesJogados[3] && naipesJogados[3] == naipesJogados[4])
@@ -225,10 +219,12 @@ public class PokerDoisJogadores31 {
             System.out.printf("Flush de %5s", naipesJogados[0]);
         }  // final if
 
+        return "3"; // valor 3
+
     } // final flush
 
     // straight verifica se te 5 cartas de valores consecutivos
-    public static void straight(String[] cartasJogadas) {
+    public static String straight(String[] cartasJogadas) {
 
         if(cartasJogadas[0] == "As" && cartasJogadas[1] == "2" && cartasJogadas[2] == "3" &&
            cartasJogadas[3] == "4" && cartasJogadas[4] == "5" ||
@@ -242,10 +238,12 @@ public class PokerDoisJogadores31 {
             System.out.printf("Straigt");
         } // final  if
 
+        return "2"; // valor 2
+
     } // final straight
 
     // quadra verifica se existe 4 cartas iguais
-    public static void quadra(String[] cartasJogadas) {
+    public static String quadra(String[] cartasJogadas) {
 
         // 0, 1, 2, 3 ou 1, 2, 3, 4
         if(cartasJogadas[0] == cartasJogadas[1] && cartasJogadas[1] == cartasJogadas[2] && // 0, 1, 2, 3
@@ -263,10 +261,12 @@ public class PokerDoisJogadores31 {
                 System.out.printf("Quadra\n");
            }// final if
 
+           return "4";
+
     } // final quadra
 
     // trinca verifica se existe 3 cartas iguais
-    public static void trinca(String[] cartasJogadas) {
+    public static String trinca(String[] cartasJogadas) {
 
             // condições para verificar se exixte 3 cartas iguais
             // 0, 1, 2, 3, 4
@@ -285,10 +285,12 @@ public class PokerDoisJogadores31 {
                     // break;
                } // fim if
 
+               return "5";
+
     } // trinca
 
     // dois pares verifica se existe 2 pares diferente de cartas
-    public static void doisPares(String[] cartasJogadas) {
+    public static String doisPares(String[] cartasJogadas) {
 
             // condições ( 0, 1, 2, 3, 4 )
             if(cartasJogadas[0] == cartasJogadas[1] && cartasJogadas[2] == cartasJogadas[3] || //0,1 - 2,3
@@ -308,10 +310,12 @@ public class PokerDoisJogadores31 {
                     
                } // final if
 
+               return "6";
+
     } // final doisPares
 
     // umPar verifica se te 1 par de cartas iguais
-    public static void umPar(String[] cartasJogadas) {
+    public static String umPar(String[] cartasJogadas) {
 
         if(cartasJogadas[0] == cartasJogadas[1] || 
            cartasJogadas[0] == cartasJogadas[2] ||
@@ -333,6 +337,8 @@ public class PokerDoisJogadores31 {
         } // final else if
 
         System.out.println();
+        
+        return "7"; 
 
     } // final umPar
 
