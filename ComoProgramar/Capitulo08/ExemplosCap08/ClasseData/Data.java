@@ -13,12 +13,11 @@ public class Data {
                     { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
     
     // construtor: confira o valor adequado para ês dia e ano
-    public Data(int month, int day, int year) 
+    public Data(int day, int month, int year) throws IllegalAccessException 
     {
         // verifica se o month está entre 0 - 12
         if(month <= 0 || month > 12) 
-            throw new IllegalAccessException("month (" + month + 
-                                            ") deve ser entre 1 - 12");
+            throw new IllegalAccessException("month (" + month +  ") deve ser entre 1 - 12");
 
         // verifica se o dia esta diacordo co o month
         if(day <= 0 || day > daysPerMonth[month] && !(month == 2 && day == 29))
@@ -34,7 +33,15 @@ public class Data {
         this.day = day;
         this.month = month;
         this.year =year;
+
+        System.out.println("Construtor de objeto para a data: " + this);
         
     } // final construtor
+
+    // retorna o dia es e ano
+    public String toString()
+    {
+        return String.format("%d/%d/%d", day, month, year );
+    }
 
 } // final classe DAta
