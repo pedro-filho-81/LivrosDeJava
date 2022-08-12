@@ -8,9 +8,9 @@ public class Retangulo {
     public Retangulo(float largura, float altura)
     {
         if(largura <= 0.0f || largura >= 20.0f)
-            throw new IllegalArgumentException("Largura tem que está entre 1 e 20.");
+            throw new IllegalArgumentException("\n\tLargura tem que está entre 1 e 20.");
         if(altura <= 0.0f || altura > 20.0f)
-            throw new IllegalArgumentException("Altura tem que está entre 1 e 20");
+            throw new IllegalArgumentException("\n\tAltura tem que está entre 1 e 20");
         
         this.altura = altura;
         this.largura = largura;
@@ -31,6 +31,7 @@ public class Retangulo {
     } // final get altura
 
     public void setLargura( float largura)
+        // throws IllegalArgumentException
     {
         if(largura <= 0.0f || largura >= 20.0f)
             throw new IllegalArgumentException("Largura te que esté entre 1,00 e 20,00");
@@ -44,13 +45,18 @@ public class Retangulo {
     } // final getLargura
 
     public void perimetro()
+        throws IllegalArgumentException
     {
-        System.out.printf("Prei^tro do retângulo = %.2f\n", 2 * (getAltura() * getLargura()));
+        System.out.printf("Prei^tro do retângulo = %.2f\n", 
+                            2 * (getAltura() * getLargura()));
     } // final ir
 
     public void area() 
+        throws IllegalArgumentException
     {
-        System.out.printf("Area do retângulo = %.2f%n", getAltura() * getLargura());
+
+        System.out.printf("Area do retângulo = %.2f%n", 
+                            getAltura() * getLargura());
     } // final area
 
 } // final classe retângulo
