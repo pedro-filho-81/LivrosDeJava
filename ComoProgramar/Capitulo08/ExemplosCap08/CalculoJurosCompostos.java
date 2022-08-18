@@ -8,7 +8,8 @@ import java.text.NumberFormat;
 
  public class CalculoJurosCompostos {
     public static void main(String[] args)
-    {
+     {
+        
         //quantidade principal antes dos juros
         BigDecimal principal = BigDecimal.valueOf(1000.0); // R$ 1000,0
         // taxa de juros anual 5% ou 0,05 ou 5/100
@@ -21,10 +22,12 @@ import java.text.NumberFormat;
         for(int ano = 1; ano <= 10; ano++)
         {
             // calcula os novos valores com a taxa de juros anual
+            // multiply => 1 + pow(taxa, tempo)
             BigDecimal saldo = principal.multiply(taxa.add(BigDecimal.ONE).pow(ano));
         
             System.out.printf("%4d%20s%n", ano, 
                             NumberFormat.getCurrencyInstance().format(saldo));
+           
         } // final for
 
     } // final main
