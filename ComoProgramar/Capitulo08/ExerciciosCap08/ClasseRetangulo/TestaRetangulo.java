@@ -11,7 +11,7 @@ public class TestaRetangulo {
     public static void main(String[] args)
     {
         // cria objeto da classe retângulo
-        Retangulo retrangulo = new Retangulo(12.5f, 8.7f);
+        Retangulo retrangulo = new Retangulo(25f, 22f);
 
         System.out.println("Largura = " + retrangulo.getLargura());
         System.out.println("Altura = " + retrangulo.getAltura());
