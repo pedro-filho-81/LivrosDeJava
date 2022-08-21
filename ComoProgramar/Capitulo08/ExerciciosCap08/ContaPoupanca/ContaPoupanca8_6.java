@@ -8,6 +8,7 @@ public class ContaPoupanca8_6
     // variáveis instância
     private static int numeroDaConta;
     private static BigDecimal saldo;
+    private static BigDecimal novoSaldo;
     private static BigDecimal valorPrincipal;
     public BigDecimal taxaDeJurosAnual;
     public int tempo;
@@ -62,13 +63,13 @@ public class ContaPoupanca8_6
 
         this.tempo = tempo;
         
-    }// final tepo
+    }// final tempo
 
     public void calculaJurosCompostos(BigDecimal valor, BigDecimal taxa, int tempo)
     {
         // calcula os novos valores com a taxa de juros anual
         // multiply => 1 + pow(taxa, tempo)
-        saldo = valor.multiply(taxa.add(BigDecimal.ONE).pow(tempo)).add(valorPrincipal);
+        saldo = valor.multiply(taxa.add(BigDecimal.ONE).pow(tempo));
         
     } // final calcula juros copostos
 
@@ -76,5 +77,15 @@ public class ContaPoupanca8_6
     {
         return saldo;
     } // final getSaldo
+
+    public void modificarTaxaDeJuros(BigDecimal novaTaxa, BigDecimal valor, int tempo)
+    {
+        this.taxaDeJurosAnual = novaTaxa;
+        
+        // calcula os novos valores com a taxa de juros anual
+        // multiply => 1 + pow(taxa, tempo)
+        saldo = valor.multiply(taxaDeJurosAnual.add(BigDecimal.ONE).pow(tempo));
+        
+    } // final modificaTaxa
 
 } // final classe
