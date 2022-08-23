@@ -13,18 +13,31 @@ public class TestaContaPoupanca {
 
         // cria objeto poupança
         ContaPoupanca8_6 poupanca1 = new ContaPoupanca8_6(100, principal1, taxa, 1);
+        ContaPoupanca8_6 poupanca2 = new ContaPoupanca8_6(200, principal2, taxa, 1);
+
         poupanca1.calculaJurosCompostos(principal1, taxa, 1);      
-        exibirConta(poupanca1);
+        exibirConta(poupanca1); // 01
+        
         saldoAtual = poupanca1.getSaldo();
         poupanca1.modificarTaxaDeJuros(novaTaxa, saldoAtual, 1);
-        exibirConta(poupanca1);
+        exibirConta(poupanca1); // 02
         
-        ContaPoupanca8_6 poupanca2 = new ContaPoupanca8_6(200, principal2, taxa, 1);
+        saldoAtual = poupanca1.getSaldo();
+        novaTaxa = BigDecimal.valueOf(0.08);
+        poupanca1.modificarTaxaDeJuros(novaTaxa, saldoAtual, 1);
+        exibirConta(poupanca1); // 03
+
         poupanca2.calculaJurosCompostos(principal2, taxa, 1);
-        exibirConta(poupanca2);
+        exibirConta(poupanca2); // 01
+
         saldoAtual = poupanca2.getSaldo();
         poupanca2.modificarTaxaDeJuros(novaTaxa, saldoAtual, 1);
-        exibirConta(poupanca2);
+        exibirConta(poupanca2); // 02
+        
+        saldoAtual = poupanca2.getSaldo();
+        novaTaxa = BigDecimal.valueOf(0.02);
+        poupanca2.modificarTaxaDeJuros(novaTaxa, saldoAtual, 1);
+        exibirConta(poupanca2); // 03
 
     } // final main
 
