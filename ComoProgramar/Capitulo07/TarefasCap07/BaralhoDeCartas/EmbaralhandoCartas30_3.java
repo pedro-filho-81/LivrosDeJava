@@ -23,7 +23,7 @@ public class EmbaralhandoCartas30_3 {
         // o tamanho do naipe e das cartas coo ìndice
         String[] baralho = new String[INDICE];
 
-        // chaa função adicionar
+        // chama função adicionar
         adicionarCartas(cartas, naipe, baralho);
 
         // CABEÇALHO

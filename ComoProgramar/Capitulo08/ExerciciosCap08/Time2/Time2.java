@@ -1,5 +1,6 @@
 //package ExemplosCap08.Time2;
 
+// cria a classe 
 public class Time2 {
 
     // variáveis de instância
@@ -75,6 +76,8 @@ public class Time2 {
         if(horas < 0 || horas >= 24) {
             throw new IllegalAccessException("horas deve ser entre 0 e 23 ");
         }
+
+        // se horas maior que 24 horas igual a 01 Am
 
         this.horas = horas;
 

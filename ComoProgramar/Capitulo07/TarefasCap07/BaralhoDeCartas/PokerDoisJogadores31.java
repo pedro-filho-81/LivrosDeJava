@@ -41,6 +41,7 @@ public class PokerDoisJogadores31 {
         // vetor recebe os naipes das 5 cartas jogadas
         String[] naipesJogados1 = new String[INDICE_POKER];
 
+        // jogador 2
         String[] jogador2 = new String[INDICE_POKER];
         // vetor recebe os valores das 5 cartas jogadas
         String[] cartasJogadas2 = new String[INDICE_POKER];

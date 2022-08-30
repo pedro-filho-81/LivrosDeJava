@@ -67,7 +67,7 @@ public class Tarefa09 {
 
         //i) Escreva uma instrução for aninhada que inicializa cada elemento de t como zero.
         System.out.println("\ni) Escreva uma instrução for aninhada que inicializa cada elemento de t como zero.");
-        System.out.println("for(int linha = 0; linha < 2; linha++)0");
+        System.out.println("for(int linha = 0; linha < 2; linha++)");
         System.out.println("    for( int coluna = 0; coluna < 3; coluna++)");
         System.out.println("        t[linha][coluna] = 0");
         for(int linha = 0; linha < 2; linha++)
