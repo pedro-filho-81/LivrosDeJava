@@ -54,7 +54,7 @@ public class FaturaTeste12 {
         double valorDoItem = input.nextDouble();
         fatura.setPreco(valorDoItem);
 
-        System.out.println("\nOUTROS PRODUTO");
+        System.out.println("\nOUTROS PROD123UTO");
 
         // imprime primeiro
         System.out.printf( "%nFatura número %s%nProduto: %s%nQuqntidade: %d%nPreço unutário R$ %.2f%nValor Total R$ %.2f ",
