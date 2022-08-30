@@ -55,7 +55,7 @@ public class Fatura12 {
         return quantidade;
     } // fim getQuantidade
 
-    public void setPreco(double preco) {
+     public void setPreco(double preco) {
         if (preco > 0.0)
             this.preco = preco;
 
