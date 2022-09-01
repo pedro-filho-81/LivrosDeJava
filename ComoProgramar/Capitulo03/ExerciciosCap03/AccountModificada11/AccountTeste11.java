@@ -30,12 +30,17 @@ public class AccountTeste11 {
         System.out.print("\nDigite o valor do saque: ");
         int retirarValor = input.nextInt();
         account1.retirada(retirarValor);
-        
+
+        displayData(account1);
+    
+    } // fim main 
+    
+    public static void displayData(Account11 conta)
+    {
         // imprime Account1
         System.out.printf("A conta é de %s\ntem de saldo R$ %d\n ",
-                account1.getName(), 
-                account1.getBalance() );
+                conta.getName(), 
+                conta.getBalance() );
+    } // final displayData
 
-
-    } // fim main 
 } // fim classe
