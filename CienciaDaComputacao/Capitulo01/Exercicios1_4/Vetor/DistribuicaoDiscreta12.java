@@ -7,6 +7,7 @@ public class DistribuicaoDiscreta12 {
         int n = args.length;
         // vetor frequência
         int[] freq = new int[n];
+       
         // loop para adicionar valor ao vetor
         for (int i = 0; i < n; i++) {
             // vetor recebe valores da linha de comando
