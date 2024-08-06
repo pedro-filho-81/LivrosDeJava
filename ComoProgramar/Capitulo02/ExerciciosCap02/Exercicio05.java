@@ -23,6 +23,7 @@ public class Exercicio05 {
 
         // a) Declare que um programa calculará o produto de três inteiros.
         // este programa calculará o produto de três inteiros
+        System.out.println("Este programa calculará o produto de três inteiros");
 
         // b) Crie um Scanner chamado input que leia valores a partir da entrada padrão.
         Scanner input = new Scanner(System.in);
