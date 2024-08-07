@@ -57,7 +57,10 @@ public class Exercicio4_37 {
             System.out.println( fat );
             
             num++; // incrementa em 1
-                    
+            break;                    
         } // fim while externo   
+        
+        entrada.close();
+
     } // fim main    
 } // fim classe
