@@ -1,6 +1,15 @@
 package Exemplos1_2;
 
 /*
+ * Este programa testa se um inteiro corresponde a um ano bissexto no 
+ * calendário gregoriano. Um ano é bissexto se for divisível por 4 
+ * (2004), a menos que seja divisível por 100, caso em que não é (1900), 
+ * a menos que seja divisível por 400, caso em que é (2000).
+ * Sedgewick, Robert; Wayne, Kevin. Computer Science: An 
+ * Interdisciplinary Approach (p. 28). Pearson Education. 
+ * Edição do Kindle.
+ */
+/*
     Imprime verdadeiro se n corresponder a um ano bissexto e falso caso contrário.
   * Assume n> = 1582, correspondendo a um ano no calendário gregoriano.
 */
