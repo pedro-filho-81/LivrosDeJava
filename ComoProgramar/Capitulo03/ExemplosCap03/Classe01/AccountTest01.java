@@ -17,8 +17,8 @@ public class AccountTest01 {
 
       // prompt for and read name
       System.out.println("Please enter the name:");
-      String theName = input.nextLine(); // read a line of text
-      myAccount.setName(theName); // put theName in myAccount
+      // String theName = input.nextLine(); // read a line of text
+      myAccount.setName(input.nextLine()); // put theName in myAccount
       System.out.println(); // outputs a blank line
 
       // display the name stored in object myAccount
