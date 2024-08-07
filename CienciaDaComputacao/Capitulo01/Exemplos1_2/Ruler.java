@@ -1,5 +1,13 @@
 package Exemplos1_2;
-
+/*
+ * Este programa imprime os comprimentos relativos das subdivisões em uma régua. 
+ * A enésima linha de saída são os comprimentos relativos das marcas em uma régua 
+ * subdivididas em intervalos de 1/2n de uma polegada. Por exemplo, a quarta linha 
+ * de saída fornece os comprimentos relativos das marcas que indicam intervalos de 
+ * um dezesseis avos de uma polegada em uma régua.
+ * Sedgewick, Robert; Wayne, Kevin. Computer Science: An Interdisciplinary Approach 
+ * (p. 20). Pearson Education. Edição do Kindle.
+ */
 public class Ruler { 
     public static void main(String[] args) 
     {
