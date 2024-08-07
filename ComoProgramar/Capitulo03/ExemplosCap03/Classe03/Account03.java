@@ -28,7 +28,7 @@ public class Account03 {
 
    // method returns the account balance
    public double getBalance() {
-      return balance;
+      return balance; // retorna o saldo da conta
    }
 
    // method that sets the name
@@ -38,7 +38,7 @@ public class Account03 {
 
    // method that returns the name
    public String getName() {
-      return name;
+      return name; // retorna o nome
    }
 } // end class Account
 
