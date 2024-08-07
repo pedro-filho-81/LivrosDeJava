@@ -1,3 +1,4 @@
+1
 // Fig. 4.8: ClassAverage.java
 // Solving the class-average problem using sentinel-controlled repetition. 
 import java.util.Scanner; // program uses class Scanner
