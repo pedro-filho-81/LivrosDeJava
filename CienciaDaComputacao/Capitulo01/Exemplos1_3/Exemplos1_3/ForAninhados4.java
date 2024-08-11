@@ -38,6 +38,6 @@ public class ForAninhados4 {
             System.out.println(i);
 
        } // fim for externo
-        
+        input.close();
     } // fim main
 } // fim classe
