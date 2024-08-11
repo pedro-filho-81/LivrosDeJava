@@ -24,4 +24,5 @@ public class NumeroHarmonico5 {
         System.out.printf("Número harmônico = %f%n", soma );
 
     } // fim main
+    
 } // fim classe
