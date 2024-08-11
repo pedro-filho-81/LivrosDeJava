@@ -37,5 +37,8 @@ public class PotenciaDeDois3 {
             contador++;
 
         } // fim while
+
+        input.close();
+        
     } // fim main
 } // fim classe
