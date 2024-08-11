@@ -17,7 +17,10 @@ public class LoopDoWhile18 {
 
             // Escala x e y para ser aleatório em (-1, 1).
             x = 2.0 * Math.random() - 1.0;
+            System.out.println("x = " + x);
+
             y = 2.0 * Math.random() - 1.0;
+            System.out.println("y = " + y);
 
         } while (x * x + y * y > 1.0);
 
