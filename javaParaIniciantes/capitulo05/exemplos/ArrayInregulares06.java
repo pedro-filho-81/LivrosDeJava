@@ -23,8 +23,35 @@ public class ArrayInregulares06 {
       // variáveis
        int i, j;
 
+       // forja alguns dados ficticios
+       for(i = 0; i < 5; i++) {
+         for(j = 0; j < 10; j++) {
+            matriz[i][j] = i + j + 10;     
+         }
+       }
+       
+       //
+       for(i = 0; i < 5; i++) {
+         for(j = 0; j < 10; j++) {
+            System.out.print(matriz[i][j] + " ");     
+         }
+         System.out.println();
+       }
 
+       System.out.println();
 
+       for(i = 0; i < 7; i++) {
+         for(j = 0; j < 2; j++) {
+            matriz[i][j] = i + j + 10;     
+         }
+       }
 
+       //
+       for(i = 0; i < 7; i++) {
+         for(j = 0; j < 2; j++) {
+            System.out.print(matriz[i][j] + " ");     
+         }
+         System.out.println();
+       }
    } // end main
 } // end class
