@@ -11,8 +11,8 @@ public class StringDemo01 {
       String str3 = new String(str2);
 
       // exebe conteúdo dos objetos strings
-      System.out.println(str1);
-      System.out.println(str2);
+      System.out.printf("\"%s\" tem %d caracteres.%n", str1, str1.length());
+      System.out.printf("\"%s\"%nEssa string tem %d caracteres.\n", str2, str2.length());
       System.out.println(str3);
    } // end main
 } // end class
