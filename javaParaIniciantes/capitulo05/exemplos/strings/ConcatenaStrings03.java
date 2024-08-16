@@ -1,5 +1,14 @@
 package javaParaIniciantes.capitulo05.exemplos.strings;
-
+/*
+ * concatenação de strings - na programação qualquer coisa
+ * Entre aspas simples ('x') é um caractere
+ * Entre aspas duplas ("asd", "123", "w+9f") é uma string
+ * O sinal de ( + ) serve para a concateção
+ * Concatenação é a união de duas ou mais strings
+ * Na matemática o sinal de ( + ) é para adição
+ * com strings ele serve para a união. Por exemplo:
+ * "Pedro " + "Filho", aparece na tela como (Pedro Filho)
+ */
 public class ConcatenaStrings03 {
    public static void main(String[] args) {
       // variáves strings
