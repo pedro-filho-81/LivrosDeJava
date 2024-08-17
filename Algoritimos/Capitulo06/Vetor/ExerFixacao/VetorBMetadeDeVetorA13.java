@@ -31,9 +31,9 @@ public class VetorBMetadeDeVetorA13 {
          // vetorB recebe a metade do valor do vetorA
          vetorB[i] = (int) vetorA[i] / 2;
       } // end for
-
+      
       // exibe vetorB
-      System.out.println("\nVetorB:"); // cabeçalho
+      System.out.println("\nVetorB é a metade do vetorA:"); // cabeçalho
       exibir(vetorB); // exibe o vetor
 
    } // end main
