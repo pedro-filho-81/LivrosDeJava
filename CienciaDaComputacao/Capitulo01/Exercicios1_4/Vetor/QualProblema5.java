@@ -16,17 +16,20 @@ public class QualProblema5 {
         int[] vetor;
         // cria o vetor
         vetor = new int[10];
+        System.out.println("Um vetor (int[] vetor;) ele foi declarado, \nmas não foi criado, falta informar \no tamanho (vetor = new int[10]) \n10 é o tamanho do vetor, \ndepois pode ser inicializado.");
         // loop para inicializar o vetor
         for (int i = 0; i < 10; i++) {
             // inicializa o vetor
             vetor[i] = i * i;
         } // fim if
         
+        System.out.print("Vetor = {");
         // loop para mostrar o vetor
         for (int i = 0; i < 10; i++) {
             // mostra
             System.out.printf("%3d", vetor[i]);
         } // fim if
+        System.out.print(" }");
 
     } // fim main
 } // fim classe
