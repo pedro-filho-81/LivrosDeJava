@@ -1,4 +1,5 @@
 package Matriz;
+import java.util.Scanner;
 
 public class Transposicao14 {
     /**
@@ -15,8 +16,14 @@ public class Transposicao14 {
      */
     public static void main(String[] args) {
 
+        // objeto
+        Scanner input = new Scanner(System.in);
+
         // variável
-        int n = Integer.parseInt(args[0]); // entrada de dados na linha de comando
+        System.out.println("Digite o valor da transpodição: ");
+        int n = input.nextInt();
+        // int n = Integer.parseInt(args[0]); 
+        // entrada de dados na linha de comando
 
         // declara e cria uma matriz n por n
         int[][] matriz = new int[n][n];
