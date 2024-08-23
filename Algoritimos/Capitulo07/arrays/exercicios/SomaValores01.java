@@ -15,8 +15,6 @@ public class SomaValores01 {
  * 402). Editora Saraiva. Edição do Kindle. 
  */
    public static void main(String[] args) {
-      // objeto
-      SecureRandom alea = new SecureRandom();
 
       // constante
       final int LINHAS = 5;
