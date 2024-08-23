@@ -15,9 +15,6 @@ import java.security.SecureRandom;
 public class ColunaParColunaImpar02 {
    public static void main(String[] args) {
   
-      // objeto
-      SecureRandom alea = new SecureRandom();
-
       // constante
       final int LINHAS = 7;
       final int COLUNAS = 2;
