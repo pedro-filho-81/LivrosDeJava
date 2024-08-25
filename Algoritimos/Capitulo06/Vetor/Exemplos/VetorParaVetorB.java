@@ -26,18 +26,22 @@ public class VetorParaVetorB {
             }
         } // fim for
 
+        System.out.println("VetorA:");
         mostrar(vetorA);
         System.out.println();
 
+        System.out.println("VetorB:");
         mostrar(vetorB);
         System.out.println();
 
     } // fim main
 
     public static void mostrar(double[] vetor) {
+        System.out.print("{");
         for(int i = 0; i < vetor.length; i++ ) {
             System.out.printf("%7.1f", vetor[i]);
         } // fim for
+        System.out.println("  };");
     } // fim mostrar
 
 } // fim classe
