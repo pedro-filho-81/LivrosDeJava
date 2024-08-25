@@ -2,6 +2,12 @@ import java.util.Scanner;
 /*
  * Calcular a média das notas informadas pelo usuário
  * atribuindo as notas a 8 variáveis diferentes
+ * Elaborar um programa que calcule e apresente o 
+ * valor da média geral das médias individuais de 
+ * uma classe com oito alunos.
+ * JOSÉ AUGUSTO N. G. MANZANO, JAYR FIGUEIREDO DE 
+ * OLIVEIRA. Algoritmos (Portuguese Edition) 
+ * (p. 292). Editora Saraiva. Edição do Kindle. 
  */
 public class MediaGeralV1 {
    public static void main(String[] args) {
