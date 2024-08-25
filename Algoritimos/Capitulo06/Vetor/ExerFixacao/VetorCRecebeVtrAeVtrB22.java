@@ -44,7 +44,7 @@ public class VetorCRecebeVtrAeVtrB22 {
             vetorC[i] = vetorA[i];
          else // se não
             // vetorC recebe vetorB
-            vetorC[i] = vetorB[i - 12];
+            vetorC[i] = vetorB[i - SIZE];
       } // end for
 
       // exibe 
