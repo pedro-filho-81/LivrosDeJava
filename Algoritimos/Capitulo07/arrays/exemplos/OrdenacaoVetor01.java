@@ -10,7 +10,7 @@ public class OrdenacaoVetor01 {
     public static void main(String[] args) {
         
         // vetor
-        int[] nomes = {5, 4, 7, 1, 3, 2, 9, 0, 6, 8};
+        int[] nomes = {5, 4, 7, 1, 3, 2, 9, 0, 6, 8, 10, 15, 12, 22, 11, 13, 19, 35, 14, 16};
         System.out.println("\nVetor original:");
         mostrar(nomes);
 
@@ -26,9 +26,11 @@ public class OrdenacaoVetor01 {
     } // fim main
 
     public static void mostrar(int[] vetor) {
+        System.out.print("{");
         for(int i = 0; i < vetor.length; i++) {
             System.out.printf("%3d", vetor[i]);
         } // fim for
+        System.out.println(" };");
     } // fim mostrar
 
     // ordenação
