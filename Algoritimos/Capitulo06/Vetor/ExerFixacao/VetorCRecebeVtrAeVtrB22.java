@@ -109,15 +109,15 @@ public class VetorCRecebeVtrAeVtrB22 {
       int item = 0;
 
       do {
-         // adiciona valor
+         // adiciona valor a variável valorAlea
          int valorAlea = 1 + alea.nextInt(100);
-         item = 1;
+         item = 1; // torna o loop do while infinito
 
-         // se valor diferente de 5
+         // se valorAlea for um vlor não multiplo de 5
          if (valorAlea % 5 != 0) {
-            //
+            //vetor i recebe esse valor
             vetor[i] = valorAlea;
-            item = 0; //  reinicializa
+            item = 0; // informa ao contador do loop para incrementar i
          } // end if par
          
          for(j = 0; j < i; j++) {
