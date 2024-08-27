@@ -3,7 +3,18 @@ import java.util.Scanner;
 
 public class PesquisaLinear02 {
     /**
-     * 
+     * Elaborar um programa que leia dez nomes e 
+     * apresente pelo método de pesquisa sequencial 
+     * os nomes que porventura estejam armazenados na 
+     * matriz e que coincidam com o nome de entrada 
+     * de pesquisa. Além de apresentar o nome, o 
+     * programa deve indicar em que posição da matriz 
+     * ele está armazenado. Caso o nome pesquisado 
+     * não seja encontrado, deve informar que o nome 
+     * pesquisado não foi localizado.
+     * JOSÉ AUGUSTO N. G. MANZANO, JAYR FIGUEIREDO DE 
+     * OLIVEIRA. Algoritmos (Portuguese Edition) 
+     * (p. 339). Editora Saraiva. Edição do Kindle. 
      */
     public static void main(String[] args) {
 
@@ -38,7 +49,7 @@ public class PesquisaLinear02 {
     public static void adicionar(int[] vetor) {
         SecureRandom aleatorio = new SecureRandom();
         for(int i = 0; i < vetor.length; i++) {
-            vetor[i] = 1 + aleatorio.nextInt(10);
+            vetor[i] = 1 + aleatorio.nextInt(20);
         } // fim for
     } // fim adicionar
 
