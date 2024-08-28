@@ -38,6 +38,7 @@ public class OrdenaVetores02 {
          int valorAlea = 1 + alea.nextInt(50);
          item = 1; // indica que o valor aleatório existe
 
+         // vetor recebe o valoe aleatório
          vetor[i] = valorAlea;
          item = 0; // indica que o valor aleatória não existe
 
