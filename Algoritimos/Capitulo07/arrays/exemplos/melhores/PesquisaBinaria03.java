@@ -54,13 +54,15 @@ public class PesquisaBinaria03 {
       ordenar(vetor);
       exibir(vetor);
 
+      // entrada de dados
+      System.out.print("\nInforme o inteiro a pesquisar (-1 = sair): ");
+      // aguarda entrada do usuário
+      pesquisa = input.nextInt();
+
       // rotina para entrada de dados
       // loop while para pesquisar valores no vetor
-      while (resp == "s" || resp == "S") {
-         // entrada de dados
-         System.out.print("Informe um valor inteiro a pesquisar: ");
-         // aguarda entrada do usuário
-         pesquisa = input.nextInt();
+      while (pesquisa != -1) {
+
          // recebe o valor 1 para encontrado ou 0 não encontrado
          retorno = pesquisaBinaria(vetor, pesquisa);
 
@@ -72,15 +74,14 @@ public class PesquisaBinaria03 {
             // exibe não encontrado
             System.out.printf("%d não encontrado.", pesquisa);
          } // end if else retorno
-
-         // AINDA FALTA DÁ CONTINUIDADE A ESSA PARTE
-         // pergunta se quer continuar
-//         System.out.println("Deseja continuar (\"s/S\" ou \"n/N\"");
-         // aguarda resposta do usuário
-         resp = input.nextLine();
-
+         
+         // entrada de dados
+         System.out.print("\nInforme o inteiro a pesquisar (-1 = sair): ");
+         // aguarda entrada do usuário
+         pesquisa = input.nextInt();
+            
       } // end while
-
+      input.close();
    } // end Main
 
    // Método adicionar, não repete valores
