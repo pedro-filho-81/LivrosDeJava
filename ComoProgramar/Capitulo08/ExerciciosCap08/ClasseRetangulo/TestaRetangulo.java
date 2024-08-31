@@ -1,3 +1,5 @@
+package ComoProgramar.Capitulo08.ExerciciosCap08.ClasseRetangulo;
+
 /**
  * 8.4 (Classe Rectangle) Crie uma classe Rectangle com os 
  * atributos length e width, cada um dos quais assume o padrão de 1. 
