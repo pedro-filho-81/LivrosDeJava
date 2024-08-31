@@ -1,4 +1,3 @@
-package Matriz;
 
 public class MatrizBooleana16 {
     /**
