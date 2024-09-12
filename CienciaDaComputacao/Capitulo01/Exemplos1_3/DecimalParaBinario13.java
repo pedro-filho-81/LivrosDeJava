@@ -50,6 +50,8 @@ public class DecimalParaBinario13 {
 
         } // fim while
 
+        input.close();
+        
         System.out.println(); // pula linha
 
     } // fim main
