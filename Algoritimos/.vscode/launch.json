@@ -1,0 +1,266 @@
+{
+   // Use IntelliSense to learn about possible attributes.
+   // Hover to view descriptions of existing attributes.
+   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+   "version": "0.2.0",
+   "configurations": [
+      {
+         "type": "java",
+         "name": "positivo_negativo02",
+         "request": "launch",
+         "mainClass": "cap04_condicoes.exercicios.positivo_negativo02",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "diferenca_maior_menor01",
+         "request": "launch",
+         "mainClass": "cap04_condicoes.exercicios.diferenca_maior_menor01",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "Current File",
+         "request": "launch",
+         "mainClass": "${file}"
+      },
+      {
+         "type": "java",
+         "name": "CelsiusFahrenheit16",
+         "request": "launch",
+         "mainClass": "CelsiusFahrenheit16",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "ImparMultiplicarPorDois17",
+         "request": "launch",
+         "mainClass": "ImparMultiplicarPorDois17",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "IndiceParDividePorDois18",
+         "request": "launch",
+         "mainClass": "IndiceParDividePorDois18",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "LerMostrarEleentosA",
+         "request": "launch",
+         "mainClass": "LerMostrarEleentosA",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "MediaGeralV1",
+         "request": "launch",
+         "mainClass": "MediaGeralV1",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "MediaGeralV2",
+         "request": "launch",
+         "mainClass": "MediaGeralV2",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "MediaGeralV3",
+         "request": "launch",
+         "mainClass": "MediaGeralV3",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "NaoRpteVlrAleatorio00",
+         "request": "launch",
+         "mainClass": "NaoRpteVlrAleatorio00",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "PercentualNumImpares27",
+         "request": "launch",
+         "mainClass": "PercentualNumImpares27",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "SomaElementosPares3",
+         "request": "launch",
+         "mainClass": "SomaElementosPares3",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "SomaElementosVetor2",
+         "request": "launch",
+         "mainClass": "SomaElementosVetor2",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "SomaParesVetorA26",
+         "request": "launch",
+         "mainClass": "SomaParesVetorA26",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "TemperaturaCelsius15",
+         "request": "launch",
+         "mainClass": "TemperaturaCelsius15",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorAParesImpares23",
+         "request": "launch",
+         "mainClass": "VetorAParesImpares23",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorAparaVetorB2",
+         "request": "launch",
+         "mainClass": "VetorAparaVetorB2",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorBComParImparVtrA25",
+         "request": "launch",
+         "mainClass": "VetorBComParImparVtrA25",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorBMetadeDeVetorA13",
+         "request": "launch",
+         "mainClass": "VetorBMetadeDeVetorA13",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorBfatorialDeA5",
+         "request": "launch",
+         "mainClass": "VetorBfatorialDeA5",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorBfatorialDeVtrA11",
+         "request": "launch",
+         "mainClass": "VetorBfatorialDeVtrA11",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorBnegativoDeA12",
+         "request": "launch",
+         "mainClass": "VetorBnegativoDeA12",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorBquadradoDeA4",
+         "request": "launch",
+         "mainClass": "VetorBquadradoDeA4",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorBrecebeAroteV9",
+         "request": "launch",
+         "mainClass": "VetorBrecebeAroteV9",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorCQuadradoDeAmaisB24",
+         "request": "launch",
+         "mainClass": "VetorCQuadradoDeAmaisB24",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorCRecebeVtrAeVtrB20",
+         "request": "launch",
+         "mainClass": "VetorCRecebeVtrAeVtrB20",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorCRecebeVtrAeVtrB21",
+         "request": "launch",
+         "mainClass": "VetorCRecebeVtrAeVtrB21",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorCRecebeVtrAeVtrB22",
+         "request": "launch",
+         "mainClass": "VetorCRecebeVtrAeVtrB22",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorCrecebeString8",
+         "request": "launch",
+         "mainClass": "VetorCrecebeString8",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorCrecebeVetorAeB6",
+         "request": "launch",
+         "mainClass": "VetorCrecebeVetorAeB6",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorCrecebeVetorAeB7",
+         "request": "launch",
+         "mainClass": "VetorCrecebeVetorAeB7",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorCrecebeVetores3",
+         "request": "launch",
+         "mainClass": "VetorCrecebeVetores3",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorDrecebeVetorABC10",
+         "request": "launch",
+         "mainClass": "VetorDrecebeVetorABC10",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorParaVetorB",
+         "request": "launch",
+         "mainClass": "VetorParaVetorB",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorTabuada14",
+         "request": "launch",
+         "mainClass": "VetorTabuada14",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetoresA_B_C_D19",
+         "request": "launch",
+         "mainClass": "VetoresA_B_C_D19",
+         "projectName": "Algoritimos_df17ff9d"
+      }
+   ]
+}
