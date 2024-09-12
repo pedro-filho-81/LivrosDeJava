@@ -1,7 +1,6 @@
 package Exercicios1_2;
 
 public class QueImprime01 {
-
     /*
         1.2.1 Suponha que a e b são variáveis inteiras. O que a seguinte 
         sequência de afirmações faz? int t = a; b = t; a = b;
