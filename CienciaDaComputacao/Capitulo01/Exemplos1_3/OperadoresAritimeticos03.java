@@ -28,5 +28,8 @@ public class OperadoresAritimeticos03 {
         System.out.println( "Divisão => " + a + " / " + b + " = " + divisao);
         System.out.println( "Resto => " + a + " % " + b + " = " + resto);
         System.out.println( "Cálculos => " + a + " = " + divisao + " * " + b + " + " + resto);
+
+        input.close(); // fecha a entrada do usuário
+
     } // fim main
 } // fim classe
