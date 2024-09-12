@@ -41,5 +41,8 @@ public class ApostarGanharPerder14 {
         System.out.println(vitorias + " vitorias of " + objetivo);
         System.out.println("Percentual de jogadas = " + 100.0 * vitorias / objetivo);
         System.out.println("Apostas          = " + 1.0 * apostas / objetivo);
+
+        input.close();
+        
     } // fim main    
 } // fim classe
