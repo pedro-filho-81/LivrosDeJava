@@ -25,5 +25,8 @@ public class ReguaComFor10 {
             // imprime n vezes
             System.out.println(ruler);
         } // fim for
+
+        input.close();
+        
     } // fim main
 } // fim classe
