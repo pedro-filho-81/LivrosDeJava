@@ -26,8 +26,11 @@ public class Fatoracao15 {
         } // fim for
 
         // if biggest factor occurs only once, n > 1
+       
         if (n > 1) System.out.println(n);
         else       System.out.println();
+
+        input.close();
         
     } // fim main
 } // fim classe
