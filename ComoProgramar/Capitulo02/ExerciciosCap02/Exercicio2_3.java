@@ -34,8 +34,6 @@ public class Exercicio2_3 {
         // um valor digitado pelo usuário.
         Scanner input = new Scanner(System.in);
         System.out.print("\nDigite um inteiro: ");
-        int valor = input.nextInt();
-
         // d) Imprima “This is a Java program" em uma linha na janela de comando.
         // Use o método System.out.println.
         System.out.println("\nEste é um programa Java.");
