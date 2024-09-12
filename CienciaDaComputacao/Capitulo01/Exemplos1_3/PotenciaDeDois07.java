@@ -8,20 +8,32 @@ public class PotenciaDeDois07 {
         // cria o objeto input e inicializa da classe Scanner
         Scanner input = new Scanner(System.in);
 
+        int num;
+
         // entrada de dados
-        System.out.print("Digite um inteiro: ");
+        System.out.print("Potência:\nDigite um inteiro: ");
         // aguarda a entrada o usuário
-        int num = input.nextInt();
+        num = input.nextInt();
 
         int i = 0;
         int potenDeDois = 1;
 
+        System.out.print(" " + num + " x " + num);
+
         // enquanto i menor ou igual a num faça
         while (i <= num) {
-            // imprime
-            System.out.println(i + " " + potenDeDois);
-            potenDeDois = 2 * potenDeDois; // calcula a potência de 2
+
+            potenDeDois = i * num; // calcula a potência de 2
+
             i = i + 1; // soma 1
+
         } // fim while
+
+        // exibe resultado
+        System.out.println(" = " + potenDeDois + "\n");
+
+        // fecha o input
+        input.close();
+
     } // fim main
 } // fim classe
