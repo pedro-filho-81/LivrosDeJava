@@ -25,5 +25,7 @@ public class RaizQuadrada12 {
         // print out the estimate of the square root of c
         System.out.println(t);
 
+        input.close();
+        
     } // fim main
 } // fim classe
