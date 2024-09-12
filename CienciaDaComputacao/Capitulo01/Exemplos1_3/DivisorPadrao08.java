@@ -15,17 +15,24 @@ public class DivisorPadrao08 {
         // loop
         for (int i = 1; i <= num; i++) {
             for (int j = 1; j <= num; j++) {
-
-                if (i % j == 0 || j % i == 0) {
+                // se divisão i por j igual a zero
+                // ou divisão j po i igual a zero
+                if (i % j == 0 || j % i == 0) { // se verdade
+                    // exibe asterisco
                     System.out.print("* ");
                 } // fim if
-                else {
+                else { // se falso
+                    // exibe 2 espaços
                     System.out.print("  ");
                 } // fim else
                 
             } // fim for interno
-              // imprime i
+
+            // no final de cada linha 
+            // imprime o valor de i
             System.out.println(i);
+
         } // fim for externo
+        input.close();
     } // fim main
 } // fim classe
