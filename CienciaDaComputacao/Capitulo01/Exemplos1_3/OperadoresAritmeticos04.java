@@ -34,5 +34,8 @@ public class OperadoresAritmeticos04 {
         System.out.println(); // pula uma linha
         System.out.println("sin(pi/2) = " + Math.sin(Math.PI / 2));
         System.out.println("log(e)    = " + Math.log(Math.E));
+
+        input.close();
+        
     } // fim main
 } // fim classe
