@@ -34,8 +34,10 @@ public class CobraTaxaDeImposto09 {
             rate = 0.396;
 
         // imprime o resultado
-        System.out.println("Aliquota cobrada para quem ganha " + 
+        System.out.println("Aliquota cobrada para quem ganha R$ " + 
                             income + " é de " + rate + "%");
 
+        input.close();
+        
     } // fim main
 } // fim classe
