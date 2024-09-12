@@ -38,7 +38,6 @@ public class MatrizAmatrizBmatrizC19 {
         System.out.println("\nMatrizC é a soma da matrizA e Bs:");
         mostrarMtrz(matrizC, LINHA, COLUNA);
 
-
     } // fim main
 
     // adicionar matriz
