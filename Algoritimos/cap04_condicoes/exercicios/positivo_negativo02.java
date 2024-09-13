@@ -12,7 +12,7 @@ package cap04_condicoes.exercicios;
  */
 import java.util.Scanner;
 
-public class positivo_negativo02 {
+public class Positivo_negativo02 {
    public static void main(String[] args) {
       
       Scanner input = new Scanner(System.in);
