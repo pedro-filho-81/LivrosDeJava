@@ -6,6 +6,20 @@
    "configurations": [
       {
          "type": "java",
+         "name": "Notas_do_aluno04",
+         "request": "launch",
+         "mainClass": "cap04_condicoes.exercicios.Notas_do_aluno04",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "notas_do_aluno03",
+         "request": "launch",
+         "mainClass": "cap04_condicoes.exercicios.notas_do_aluno03",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
          "name": "positivo_negativo02",
          "request": "launch",
          "mainClass": "cap04_condicoes.exercicios.positivo_negativo02",
