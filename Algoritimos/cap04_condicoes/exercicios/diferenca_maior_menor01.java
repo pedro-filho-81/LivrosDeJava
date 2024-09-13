@@ -2,7 +2,7 @@ package cap04_condicoes.exercicios;
 
 import java.util.Scanner;
 
-public class diferenca_maior_menor01 {
+public class Diferenca_maior_menor01 {
    public static void main(String[] args) {
       
       Scanner input = new Scanner(System.in);
