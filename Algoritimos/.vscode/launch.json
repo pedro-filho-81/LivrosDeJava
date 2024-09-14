@@ -6,6 +6,41 @@
    "configurations": [
       {
          "type": "java",
+         "name": "Par_Impar09",
+         "request": "launch",
+         "mainClass": "cap04_condicoes.exercicios.Par_Impar09",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "Maior_entre_cinco08",
+         "request": "launch",
+         "mainClass": "cap04_condicoes.exercicios.Maior_entre_cinco08",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "Divisivel_dois_tres07",
+         "request": "launch",
+         "mainClass": "cap04_condicoes.exercicios.Divisivel_dois_tres07",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "Ordem_crescente06",
+         "request": "launch",
+         "mainClass": "cap04_condicoes.exercicios.Ordem_crescente06",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "Equacao_segundo_grau05",
+         "request": "launch",
+         "mainClass": "cap04_condicoes.exercicios.Equacao_segundo_grau05",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
          "name": "Notas_do_aluno04",
          "request": "launch",
          "mainClass": "cap04_condicoes.exercicios.Notas_do_aluno04",
