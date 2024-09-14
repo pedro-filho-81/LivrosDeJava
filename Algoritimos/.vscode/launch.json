@@ -6,6 +6,34 @@
    "configurations": [
       {
          "type": "java",
+         "name": "MatrizAmatrizBmatrizC19",
+         "request": "launch",
+         "mainClass": "Capitulo08.Matriz.Exercicios.MatrizAmatrizBmatrizC19",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "MatrizErecebeVetores18",
+         "request": "launch",
+         "mainClass": "Capitulo08.Matriz.Exercicios.MatrizErecebeVetores18",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "NomeSexoDoUsuario11",
+         "request": "launch",
+         "mainClass": "cap04_condicoes.exercicios.NomeSexoDoUsuario11",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "NaoMaiorQueTres10",
+         "request": "launch",
+         "mainClass": "cap04_condicoes.exercicios.NaoMaiorQueTres10",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
          "name": "Par_Impar09",
          "request": "launch",
          "mainClass": "cap04_condicoes.exercicios.Par_Impar09",
