@@ -1,6 +1,20 @@
 package cap04_condicoes.exercicios;
 /**
- * 
+ * e)Efetuar a leitura de três valores numéricos 
+ * (representados pelas variáveis A, B e C) e processar 
+ * o cálculo da equação completa de segundo grau, 
+ * utilizando a fórmula de Bhaskara (considerar para a 
+ * solução do problema todas as possíveis condições 
+ * para delta: delta < 0 – não há solução real, delta > 
+ * 0 – há duas soluções reais e diferentes e delta = 0 
+ * – há apenas uma solução real). Lembre-se de que é 
+ * completa a equação de segundo grau que possui todos 
+ * os coeficientes A, B e C diferentes de zero. O 
+ * programa deve apresentar respostas para todas as 
+ * condições estabelecidas para delta.
+ * JOSÉ AUGUSTO N. G. MANZANO, JAYR FIGUEIREDO DE 
+ * OLIVEIRA. Algoritmos (Portuguese Edition) 
+ * (pp. 220-221). Editora Saraiva. Edição do Kindle. 
  * Pedro, 13/09/2024
  */
 import java.util.Scanner;
@@ -11,82 +25,64 @@ public class Equacao_segundo_grau05 {
       Scanner input = new Scanner(System.in);
 
       // variáveis
-      String nome, msg = "";
-      double n1, n2, n3, n4, n5;
-      double soma;
-      double media = 0.0;
+      double a, b, c;
+      double delta = 0.0;
+      double raiz1, raiz2;
+      String msg = "";
 
       // entrada de dados
       System.out.println("Entrada dos dados");
-      System.out.print("Nome: ");
-      nome = input.nextLine();
-      System.out.print("Digite a primeira nota: ");
-      n1 = input.nextDouble();
-      System.out.print("Digite a segunda nota: ");
-      n2 = input.nextDouble();
-      System.out.print("Digite a terceira nota: ");
-      n3 = input.nextDouble();
-      System.out.print("Digite a quarta nota: ");
-      n4 = input.nextDouble();
+      System.out.print("Digite  o valor de A: ");
+      a = input.nextDouble();
+      System.out.print("Digite o valor de B: ");
+      b = input.nextDouble();
+      System.out.print("Digite o valor de C: ");
+      c = input.nextDouble();
   
-      // calcular
-      // soma recebe o resultado de n1 a n4
-      soma = n1 + n2 + n3 + n4;
-      media = soma / 4; // calcula a primeira média
-      // exibe a média1
-      System.out.printf("média 1 = %.1f", media);
+      // calcular a Discriminantes 
+      /*
+       * "Discriminante é a expressão presente dentro 
+       * da raiz na fórmula de Bhaskara. É comumente 
+       * representado pela letra grega Δ (Delta)"".
+       * Veja mais sobre "Fórmula de Bhaskara" em: 
+       * https://brasilescola.uol.com.br/matematica/
+       * formula-bhaskara.htm
+       */
+      // CONDIÇÃO PARA CALCULA A EQUAÇÃO DO 2º GRAU
+      // fórmula para calcular o delta: "b2 – 4ac"
+      // se a, b e c diferente de zero
+      if (a != 0 && b != 0 && c != 0) { // se verdade
+         // calcular o delta
+         delta = Math.pow(b, 2) - 4 * a * c;
+      } // end if
 
       // condições
-      // verifica se média é menor que zero
-      // ou se é maior que 10
-      if (media < 0.0 || media > 10.0) { // se verdade
-         // exibe
-         System.out.println("\nAs notas devem ser\nmaiores que 0 e menores que 11. ");
-      } else { // se não
-         // verifica se a média é maior ou igual a sete
-         // e se é menor ou igual a 10
-         if(media >= 7.0f && media <= 10.0) { // se verdade
-            // exibe
-            msg = "Aprovado";
+      // se o delta menor que zero
+      if (delta < 0.0) {
+         // exibir
+         msg = "Nâo possui resultado reais.";
 
-            // se não, verifica se a média é maior que 0
-            // e menor ou igual a 5
-         } else if(media > 0.0 && media <= 5.0f) { // se verdade
-            // entra com novos dados
-            System.out.print("\nFêz prova final.");
-            System.out.print("\nDigite a quinta nota: ");
+         // se o delta igual a zero
+      } else if (delta == 0) {
+         // exibir
+         msg = "\"A equação possui apenas um resultado real.\"";
 
-            // n5 recebe valor do usuário
-            n5 = input.nextDouble(); // entra com a quinta nota
-            
-            // calcula a nova média
-            soma += n5; // soma recebe o valor da quinta nota
-            // e exibe
-            System.out.println("soma 2 = " + soma);
-            media = soma / 5; // e calcula a média com a 5ª nota
+         // se delta maior que zero
+      } else if (delta > 0) {
+         // exiba
+         msg = "\"Possui dois resultados distintos reais.\"";
+      } // end if delta 
 
-            // verifica se a média é maior ou igual a 5 
-            // e menor que 7
-            if (media >= 5.0 && media < 7.0) { // se verdade
-               // imprime
-               msg = "Aprovado pelo exame.";
-            } else { // se não
-               // exibe
-               msg = "Reprovado.";
-            } // fim else 
-
-         } // end média menor que 5 
-      } // else principal
-
-      // verifica se a média está entre 0 e 10
-      if (media >= 0.0 && media <= 10.0) { // se verdade
-         // exibe o resultado
-         System.out.println("\n\nRelatória das Notas:");
-         System.out.printf("Aluno: %s", nome);
-         System.out.printf("\nTotal = %.1f", soma);
-         System.out.printf("\nmédia final = %.1f", media);
-         System.out.printf("\nResultado: %s", msg);
-      } // end if 
+      // calcular as raizes
+      raiz1 = (-b + Math.sqrt(delta)) / (2 * a);
+      raiz2 = (-b - Math.sqrt(delta)) / (2 * a);
+   
+      // exibe resultado
+      System.out.println("\nResultado");
+      System.out.printf("Delta = %.0f%n", delta);
+      System.out.printf("Delta: %s\n", msg);
+      System.out.println("Raiz 1 = " + raiz1);
+      System.out.println("Raiz 2 = " + raiz2);
 
       input.close(); // end input
 
