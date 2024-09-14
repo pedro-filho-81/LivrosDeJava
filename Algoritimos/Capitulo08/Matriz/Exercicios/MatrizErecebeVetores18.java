@@ -1,16 +1,26 @@
+package Capitulo08.Matriz.Exercicios;
+
 import java.security.SecureRandom;
 
 public class MatrizErecebeVetores18 {
     /**
-     * r)Elaborar um programa que leia quatro matrizes A, B, C e D
-     * de uma dimensão com quatro elementos. Construir uma matriz E
-     * de duas dimensões do tipo 4 × 4, sendo a primeira linha formada
-     * pelo dobro dos valores dos elementos da matriz A, a segunda linha
-     * formada pelo triplo dos valores dos elementos da matriz B,
-     * a terceira linha formada pelo quádruplo dos valores dos elementos
-     * da matriz C e a quarta linha formada pelo fatorial dos valores dos
+     * r)Elaborar um programa que leia quatro 
+     * matrizes A, B, C e D
+     * de uma dimensão com quatro elementos. 
+     * Construir uma matriz E
+     * de duas dimensões do tipo 4 × 4, sendo a 
+     * primeira linha formada
+     * pelo dobro dos valores dos elementos da 
+     * matriz A, a segunda linha
+     * formada pelo triplo dos valores dos 
+     * elementos da matriz B,
+     * a terceira linha formada pelo quádruplo dos 
+     * valores dos elementos
+     * da matriz C e a quarta linha formada pelo 
+     * fatorial dos valores dos
      * elementos da matriz D. Apresentar a matriz E.
-     * JOSE AUGUSTO NAVARRO GARCIA MANZANO. Algoritmos (p. 405).
+     * JOSE AUGUSTO NAVARRO GARCIA MANZANO. 
+     * Algoritmos (p. 405).
      * Editora Saraiva. Edição do Kindle.
      * Pedro, 08/02/2022
      */
@@ -56,7 +66,7 @@ public class MatrizErecebeVetores18 {
         SecureRandom aleatorio = new SecureRandom();
 
         for (int i = 0; i < vetor.length; i++) {
-            vetor[i] = 1 + aleatorio.nextInt(10);
+            vetor[i] = 1 + aleatorio.nextInt(20);
         } // fim for
 
     } // fim adicionar
