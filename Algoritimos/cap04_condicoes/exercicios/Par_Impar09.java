@@ -1,8 +1,12 @@
 package cap04_condicoes.exercicios;
 /**
- * j)Ler um valor numérico inteiro e apresentar uma 
- * mensagem informando se o valor fornecido é par ou 
- * ímpar.
+ * k)Efetuar a leitura de um valor numérico inteiro que 
+ * esteja na faixa de valores de 1 até 9. O programa 
+ * deve apresentar a mensagem “O valor está na faixa 
+ * permitida”, caso o valor informado esteja entre 1 e 
+ * 9. Se o valor estiver fora da faixa, o programa deve 
+ * apresentar a mensagem “O valor está fora da faixa 
+ * permitida”.
  * JOSÉ AUGUSTO N. G. MANZANO, JAYR FIGUEIREDO DE 
  * OLIVEIRA. Algoritmos (Portuguese Edition) (p. 221). 
  * Editora Saraiva. Edição do Kindle. 
@@ -21,14 +25,17 @@ public class Par_Impar09 {
 
       // entrada de dados
       System.out.println("Entrada dos dados");
-      System.out.print("Digite  o valor de A: ");
+      System.out.print("Digite  um valor entre 1 e 9: ");
       a = input.nextInt();
 
       // CONDIÇÕES
-      if(a % 2 == 0) {
-         msg = a + " é Par";
-      } else {
-         msg = a + " é Ìmpar";
+      // verifica se a multiplo de dois é par
+      if(a >= 1 && a < 10) {
+         // exibe
+         msg = a + " está na faixa permitida.";
+      } else { // se não
+         // exibr
+         msg = a + " não está na faixa permitida.";
       } // end else
 
       // exibe resultado
