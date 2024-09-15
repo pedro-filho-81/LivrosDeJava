@@ -1,4 +1,4 @@
-package Algoritimos.Capitulo07.arrays.exercicios;
+package Capitulo07.arrays.exercicios;
 
 import java.security.SecureRandom;
 import java.util.Scanner;
