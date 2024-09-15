@@ -6,6 +6,62 @@
    "configurations": [
       {
          "type": "java",
+         "name": "Diversus_expoentes07",
+         "request": "launch",
+         "mainClass": "cap05_loops.exercicios.Diversus_expoentes07",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "Divisiveis_por_quatro06",
+         "request": "launch",
+         "mainClass": "cap05_loops.exercicios.Divisiveis_por_quatro06",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "Exibe_impares05",
+         "request": "launch",
+         "mainClass": "cap05_loops.exercicios.Exibe_impares05",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "Soma_pares04",
+         "request": "launch",
+         "mainClass": "cap05_loops.exercicios.Soma_pares04",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "Soma_numeros03",
+         "request": "launch",
+         "mainClass": "cap05_loops.exercicios.Soma_numeros03",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "Tabuada02",
+         "request": "launch",
+         "mainClass": "cap05_loops.exercicios.Tabuada02",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "Quadrado_dos_inteiros01",
+         "request": "launch",
+         "mainClass": "cap05_loops.exercicios.Quadrado_dos_inteiros01",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "VetorBVlrAbsolutoDeA08",
+         "request": "launch",
+         "mainClass": "Capitulo07.arrays.exercicios.VetorBVlrAbsolutoDeA08",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
          "name": "MatrizAmatrizBmatrizC19",
          "request": "launch",
          "mainClass": "Capitulo08.Matriz.Exercicios.MatrizAmatrizBmatrizC19",
