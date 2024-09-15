@@ -6,6 +6,20 @@
    "configurations": [
       {
          "type": "java",
+         "name": "Fibonacci09",
+         "request": "launch",
+         "mainClass": "cap05_loops.exercicios.Fibonacci09",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "Base_expoente_quqlquer08",
+         "request": "launch",
+         "mainClass": "cap05_loops.exercicios.Base_expoente_quqlquer08",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
          "name": "Diversus_expoentes07",
          "request": "launch",
          "mainClass": "cap05_loops.exercicios.Diversus_expoentes07",
