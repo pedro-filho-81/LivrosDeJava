@@ -6,6 +6,13 @@
    "configurations": [
       {
          "type": "java",
+         "name": "Dobro_do_anterior11",
+         "request": "launch",
+         "mainClass": "cap05_loops.exercicios.Dobro_do_anterior11",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
          "name": "Celsius_Fahrenheit10",
          "request": "launch",
          "mainClass": "cap05_loops.exercicios.Celsius_Fahrenheit10",
