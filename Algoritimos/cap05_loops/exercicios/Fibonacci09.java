@@ -31,28 +31,36 @@ public class Fibonacci09 {
 
       // entrada de dados
       System.out.print("Digite o número inteiro: ");
-      proximo = input.nextInt();
+      proximo = input.nextInt(); // entrada do usuário
 
+      // imprime o valor 0 zero
       System.out.print(anterior + " ");
 
-      // loop para contar
+      // loop para contar até o valor do próximo
+      // informado pelo usuário
       for(int i = 1; i < proximo; i++) {
 
-         // se for o primeiro valor de i
+         // se i for igual a 1
          if (i == 1) {
-            // atual recebe 1
-            atual = 1;
-            // e o anterior recebe zero
-            anterior = 0;
-         } else { // se não
-            // o atual soma o valor anterior
-            atual += anterior;
+            // no início do loop
+            atual = 1; // atual recebe 1
+            anterior = 0; // e anterior recebe zero
+         } else { // quando i for diferente
+            // o atual soma seu valor
+            // com valor anterior
+            // no início atual é 1 
+            // e anterior é 0
+            atual += anterior; // soma = 1
+            
             // e o anterior recebe o valor atual
             // diminuido do anterior
-            anterior = atual - anterior;
-         } // end if
-         // e exibe o valor atual
-         System.out.print(atual + " ");
+            // atual = 1 e anterior = 0
+            anterior = atual - anterior; // = 1 - 0
+         } // end else
+
+            // e exibe o valor atual
+            System.out.print(atual + " ");// = 1
+
       } // end for
 
       input.close();
