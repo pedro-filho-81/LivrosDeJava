@@ -6,6 +6,13 @@
    "configurations": [
       {
          "type": "java",
+         "name": "Celsius_Fahrenheit10",
+         "request": "launch",
+         "mainClass": "cap05_loops.exercicios.Celsius_Fahrenheit10",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
          "name": "Fibonacci09",
          "request": "launch",
          "mainClass": "cap05_loops.exercicios.Fibonacci09",
