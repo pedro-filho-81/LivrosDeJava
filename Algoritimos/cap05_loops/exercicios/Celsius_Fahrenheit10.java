@@ -19,10 +19,12 @@ public class Celsius_Fahrenheit10 {
 
       // cabeçalho
       System.out.println("Celsius para fahrenheit.");
+      
       // loop para conversão c para f
+      // de 0ºC a 100ºC em Fahrenheit
       for(int celsius = 0; celsius <= 100; celsius += 10) {
          // calcular
-         // fórmula f = (c * 9/5) + 32.
+         // fórmula f = (c / 9/5) + 32.
          fahrenheit = celsius / 1.8 + 32;
 
          // exibe resultado
