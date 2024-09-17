@@ -6,6 +6,20 @@
    "configurations": [
       {
          "type": "java",
+         "name": "Area_total_casa13",
+         "request": "launch",
+         "mainClass": "cap05_loops.exercicios.Area_total_casa13",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
+         "name": "Soma_fatorial12",
+         "request": "launch",
+         "mainClass": "cap05_loops.exercicios.Soma_fatorial12",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
          "name": "Dobro_do_anterior11",
          "request": "launch",
          "mainClass": "cap05_loops.exercicios.Dobro_do_anterior11",
