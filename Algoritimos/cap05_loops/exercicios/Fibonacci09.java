@@ -45,7 +45,7 @@ public class Fibonacci09 {
             // no início do loop
             atual = 1; // atual recebe 1
             anterior = 0; // e anterior recebe zero
-         } else { // quando i for diferente
+         } else { // quando i for diferente de 1
             // o atual soma seu valor
             // com valor anterior
             // no início atual é 1 
