@@ -1,3 +1,4 @@
+package Capitulo08.Matriz.Exercicios;
 import java.security.SecureRandom;
 
 public class VetoresBeCrecebeDeMatrizA10 {
