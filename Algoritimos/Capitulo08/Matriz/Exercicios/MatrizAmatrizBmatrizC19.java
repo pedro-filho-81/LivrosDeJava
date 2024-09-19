@@ -117,6 +117,7 @@ public class MatrizAmatrizBmatrizC19 {
 
     // fatorial
     public static void fatorial(int[] vetor, int[][] matriz, int tamanho) {
+        
         int fat = 1;
         int j;
 
