@@ -6,6 +6,13 @@
    "configurations": [
       {
          "type": "java",
+         "name": "Divisiveis_tres_quatro20",
+         "request": "launch",
+         "mainClass": "Capitulo08.Matriz.Divisiveis_tres_quatro20",
+         "projectName": "Algoritimos_df17ff9d"
+      },
+      {
+         "type": "java",
          "name": "Area_total_casa13",
          "request": "launch",
          "mainClass": "cap05_loops.exercicios.Area_total_casa13",
