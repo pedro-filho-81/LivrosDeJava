@@ -16,7 +16,7 @@ public class Fatoracao001 {
 
         // for each potential factor
         for (long factor = 2; factor <= n / factor; factor++) {
-
+ 
             // if factor is a factor of n, repeatedly divide it out
             while (n % factor == 0) {
                 System.out.print(factor + " "); 
@@ -28,5 +28,8 @@ public class Fatoracao001 {
         // if biggest factor occurs only once, n > 1
         if (n > 1) System.out.println(n);
         else       System.out.println();
+
+        input.close();
+        
     } // fim main
 } // fim classe
