@@ -11,16 +11,22 @@ public class DeclaraCriaInicializa1 {
     public static void main(String[] args) {
         
         // declara e cria um vetor
-        double[] vetor = new double[1000];
+        int[] vetor = new int[1000];
 
         // loop for para inicializar o vetor com 1000 elementos
         for( int i = 0; i < 1000; i++ ) {
-
             // inicializa o vetor com mil elementos
-            vetor[i] = Math.random() * 2;
+            vetor[i] = (int) (1 + Math.random() * 100);
         } // fim for inicializa
 
-        // mostra o valor do elemento 1000 do vetor
-        System.out.printf("O valor do vetor[1000] = %5.2f%n", vetor[1000 - 1]);
+        for(int j = 0; j < 1000; j++) {
+            if (j % 10 == 0) {
+                System.out.println();
+            } // end if
+
+            // mostra o valor do elemento 1000 do vetor
+            System.out.printf("%5d", vetor[j]);
+
+        } // end for
     } // fim main
 } // fim classe
