@@ -22,35 +22,42 @@ public class Divisiveis_tres_quatro20 {
 
       public static void main(String[] args) {
 
-      // constantes
-      final int ROW = 6;
-      final int COLUmNS = 5;
-
-      // variables
+      // constantes índices
+      final int ROW = 4; // linha
+      final int COLUmNS = 5; // colunas
 
       // matrizes
       int [][] matrizA = new int[ROW][COLUmNS];
       int [][] matrizB = new int[ROW][COLUmNS];
-
-      // vetores
-      // int[] average = new int[ROW];
+      int [][] matrizC = new int[ROW][COLUmNS];
 
       // adiciona valores
-      add(matrizA, ROW, COLUmNS);
-      // add(matrizB, ROW, COLUmNS);
+      addArrayA(matrizA, ROW, COLUmNS);
+      addArrayB(matrizB, ROW, COLUmNS);
       // average(matrizA, ROW, COLUmNS, average);
 
       // result display => exibe resultado
       System.out.println("\nmatrizA: ");
       exibir(matrizA, ROW, COLUmNS);
-/*
+
       System.out.println("\nmatrizB: ");
       exibir(matrizB, ROW, COLUmNS);
-*/
+
+      // loop for para adicionar valores na matrizC
+      for(int i = 0; i < ROW; i++) {
+         for(int j = 0; j < COLUmNS; j++) {
+            // matrizC recebe os valores de matrizA menos matrizB
+            matrizC[i][j] = matrizA[i][j] - matrizB[i][j];
+         } // end for colunas
+      } // end for linhas
+
+      System.out.println("\nmatrizC = matrizA - matrizB:");
+      exibir(matrizC, ROW, COLUmNS);
+
    } // end main
    
-   // método adiciona valor
-   public static void add(int[][] matriz, int row, int columns) {
+   // método adiciona valores
+   public static void addArrayA(int[][] matriz, int row, int columns) {
 
       // objeto
       SecureRandom alea = new SecureRandom();
@@ -59,54 +66,106 @@ public class Divisiveis_tres_quatro20 {
       int i = 0, j = 0;
       int valor = 0;
       int item = 0;
-      int contar = 0;
 
-      // loop for linha
+      // loop enquando i menor que o tamanho da linha
       while (i < row) {
 
-         for(j = 0; j < columns; j++) {
+         // loop for para adicionar valores nas colunas
+         for(j = 0; j < columns;) {
             
-            // matriz recebe valor alea
+            // valor recebe valor aleatório
             valor = 1 + alea.nextInt(150);
+            // informa que o item existe
             item = 1;
 
-            // verificar se valor é divisivel por 3 e 4
-            if (valor % 3 == 0 && valor % 4 == 0) {
+            // verificar se o valor é divisivel por 3 e 4
+            if (valor % 3 == 0 && valor % 4 == 0) { // se verdade
+               // matriz recebe o valor
                matriz[i][j] = valor;
+               // o controlador item recebe zero
                item = 0;               
             } // end if
+
+            // verifica se item é igual a zero
+            // ou seja, quando enquantrar um  
+            // valor divisível por 3 e 4 transforme
+            // item igual a zero
+            if (item == 0) { // se verdade
+               // a variável j não é incrementado em 1
+               j++;
+            } // end if j
+
+            // se não, repete o loop até encontrar o valor
+            // conforme determinado
+            // e item ficar igual a zero
 
          } // end for
 
          // verifica se o item é igual a zero 0
          if (item == 0) { // se verdade
-            // System.out.println("iiiiii");
             i++; // incrementa i em 1
          } // end if item 0
 
+         // e adiciona uma nova linha até o limite.
+
       } // end for row
 
-   } // end método adicionar
-
-   // método adiciona valor
+   } // end método adicionar A
+   
+   // método adiciona valores
    public static void addArrayB(int[][] matriz, int row, int columns) {
 
       // objeto
       SecureRandom alea = new SecureRandom();
 
       // variáveis
-      int i, j;
+      int i = 0, j = 0;
+      int valor = 0;
+      int item = 0;
 
-      // loop for linha
-      for(i = 0; i < row; i++) {
-         // loop for coluna
-         for(j = 0; j < columns; j++) {
-            // matriz recebe valor alea
-            matriz[i][j] = 1 + alea.nextInt(50);
-         } // end for columns
+      // loop enquando i menor que o tamanho da linha
+      while (i < row) {
+
+         // loop for para adicionar valores nas colunas
+         for(j = 0; j < columns;) {
+            
+            // valor recebe valor aleatório
+            valor = 1 + alea.nextInt(150);
+            // informa que o item existe
+            item = 1;
+
+            // verificar se o valor é divisivel por 3 e 4
+            if (valor % 5 == 0 && valor % 6 == 0) { // se verdade
+               // matriz recebe o valor
+               matriz[i][j] = valor;
+               // o controlador item recebe zero
+               item = 0;               
+            } // end if
+
+            // verifica se item é igual a zero
+            // ou seja, quando enquantrar um  
+            // valor divisível por 3 e 4 transforme
+            // item igual a zero
+            if (item == 0) { // se verdade
+               // a variável j não é incrementado em 1
+               j++;
+            } // end if j
+
+            // se não, repete o loop até encontrar o valor
+            // e item ficar igual a zero
+
+         } // end for
+
+         // verifica se o item é igual a zero 0
+         if (item == 0) { // se verdade
+            i++; // incrementa i em 1
+         } // end if item 0
+
+         // e adiciona uma nova linha até o limite.
+
       } // end for row
 
-   } // end método adicionar
+   } // end método adicionar B
 
    // método adiciona valor
    public static void exibir(int[][] matriz, int row, int columns) {
