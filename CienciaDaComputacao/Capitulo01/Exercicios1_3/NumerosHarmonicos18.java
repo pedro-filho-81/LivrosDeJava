@@ -1,3 +1,5 @@
+package Exercicios1_3;
+
 public class NumerosHarmonicos18 {
     /**
      * 1.3.18 Ao contrário dos números harmônicos, a soma 1/12 + 1/22 

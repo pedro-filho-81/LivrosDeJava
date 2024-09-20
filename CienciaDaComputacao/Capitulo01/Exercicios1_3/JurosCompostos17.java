@@ -1,3 +1,4 @@
+package Exercicios1_3;
 import java.util.Scanner;
 
 public class JurosCompostos17 {
