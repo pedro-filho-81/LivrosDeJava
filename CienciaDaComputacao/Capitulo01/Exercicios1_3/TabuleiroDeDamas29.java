@@ -20,7 +20,8 @@ public class TabuleiroDeDamas29 {
         Scanner input = new Scanner(System.in);
 
         // entrada de dados
-        System.out.print("Digite um inteiro: ");
+        System.out.println("Tabuleiro de damas.");
+        System.out.print("Digite o tamanho do tabuleiro: ");
         int valor = input.nextInt();
 
         for (int i = 0; i < valor; i++) {

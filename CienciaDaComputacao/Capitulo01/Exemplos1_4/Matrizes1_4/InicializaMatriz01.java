@@ -21,7 +21,7 @@ public class InicializaMatriz01 {
             // loop para a coluna
             for( int j = 0; j < COLUNA; j++ )
                 // matriz recebe valores aleatórios
-                matriz[ i ][ j ] = Math.random() * 100;
+                matriz[ i ][ j ] = (int) (Math.random() * 100);
 
         // loop para mostrar os valores da matriz
         // loop para linha
@@ -30,7 +30,7 @@ public class InicializaMatriz01 {
             // loop para a coluna
             for( int j = 0; j < COLUNA; j++ ) {
                 // mostra os valores da matriz
-                System.out.print("  \t" + matriz[ i ][ j ]);
+                System.out.printf("%5.0f", matriz[ i ][ j ]);
             } // fim for internof
             
             System.out.println(); // pula uma linha

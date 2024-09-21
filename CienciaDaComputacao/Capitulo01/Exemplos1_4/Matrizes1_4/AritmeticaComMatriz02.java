@@ -24,8 +24,8 @@ public class AritmeticaComMatriz02 {
             for( int j = 0; j < COLUNA; j++ ) {
                 
                 // matriz recebe valores aleatórios
-                matriz1[ i ][ j ] = Math.random() * 100;
-                matriz2[ i ][ j ] = Math.random() * 100;
+                matriz1[ i ][ j ] = (int) (Math.random() * 100);
+                matriz2[ i ][ j ] = (int) (Math.random() * 100);
 
                 // soma a matriz1 com a matriz2 e atribui o resultado a matriz3
                 matriz3[ i ][ j ] = matriz1[ i ][ j ] + matriz2[ i ][ j ];
@@ -41,7 +41,7 @@ public class AritmeticaComMatriz02 {
             // loop para a coluna
             for( int j = 0; j < COLUNA; j++ ) {
                 // mostra os valores da matriz1
-                System.out.print("  \t" + matriz1[ i ][ j ]);
+                System.out.printf("%7.0f", matriz1[ i ][ j ]);
             } // fim for internof        
             System.out.println(); // pula uma linha
         } // fim for externo   
@@ -54,7 +54,7 @@ public class AritmeticaComMatriz02 {
             // loop para a coluna
             for( int j = 0; j < COLUNA; j++ ) {
                 // mostra os valores da matriz1
-                System.out.print("  \t" + matriz2[ i ][ j ]);
+                System.out.printf("%7.0f", matriz2[ i ][ j ]);
             } // fim for internof        
             System.out.println(); // pula uma linha
         } // fim for externo   
@@ -67,7 +67,7 @@ public class AritmeticaComMatriz02 {
             // loop para a coluna
             for( int j = 0; j < COLUNA; j++ ) {
                 // mostra os valores da matriz1
-                System.out.print("  \t" + matriz3[ i ][ j ]);
+                System.out.printf("%7.0f", matriz3[ i ][ j ]);
             } // fim for internof        
             System.out.println(); // pula uma linha
         } // fim for externo   
