@@ -13,12 +13,14 @@ public class Exemplo02 {
       var1 = 1024;
 
       // displar result
+      System.out.println("int var01 = " + var1);
       System.out.println("var01 contains: " + var1);
 
       // var02 receives var01 / 2
       var2 = var1 / 2;
 
       // display result
-      System.out.println("var2 contains var1 / 2: " + var2);
+      System.out.println("var2 = var1 / 2;");
+      System.out.println("var2 contains: " + var2);
    } // end main
 } // end class
